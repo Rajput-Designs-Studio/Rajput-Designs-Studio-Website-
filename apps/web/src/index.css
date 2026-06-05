@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  overflow-x: clip;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.hero-heading {
+  background: linear-gradient(135deg, #FFFFFF 20%, #85B7EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── hero-heading on light backgrounds ─────────────────────────────────── */
+.light-section .hero-heading,
+.light-section h2.hero-heading {
+  background: linear-gradient(135deg, #042C53 20%, #185FA5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-panel,
+.glass-effect {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(55, 138, 221, 0.08);
+  border: 1px solid rgba(133, 183, 235, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ─── glass-panel on light (#E6F1FB / white) backgrounds ────────────────── */
+.light-section .glass-panel,
+.light-section .glass-effect {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(55, 138, 221, 0.25);
+  color: #042C53;
+}
+
+/* Services section (bg-white) */
+.services-section .glass-panel,
+.services-section .glass-effect {
+  background: rgba(230, 241, 251, 0.7);
+  border: 1px solid rgba(55, 138, 221, 0.2);
+  color: #042C53;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 24px rgba(55, 138, 221, 0.45), 0 0 48px rgba(55, 138, 221, 0.15);
+}
+
+.glow-cyan-subtle {
+  box-shadow: 0 0 12px rgba(55, 138, 221, 0.2);
+}
+
+.glow-cyan-inset {
+  box-shadow: inset 0 0 16px rgba(55, 138, 221, 0.2);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(133, 183, 235, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #042C53;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #378ADD;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #85B7EB;
+}
+
+@layer base {
+  :root {
+    --background: 214 83% 18%;
+    --foreground: 0 0% 100%;
+    --card: 214 75% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 214 83% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 210 68% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 60% 70%;
+    --secondary-foreground: 214 83% 12%;
+    --muted: 214 50% 22%;
+    --muted-foreground: 210 40% 70%;
+    --accent: 210 68% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 60% 42%;
+    --input: 214 50% 20%;
+    --ring: 210 68% 54%;
+    --radius: 0.75rem;
+  }
+}
