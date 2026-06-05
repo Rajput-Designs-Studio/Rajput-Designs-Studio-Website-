@@ -444,6 +444,18 @@ const TestimonialCarouselMultiple = () => {
       text: 'They are amazing! Great creativity and clean design work. Excellent sense of color and layout. You deliver quality work on time. Very professional and easy to work with.',
       profilePhoto: null,
     },
+    {
+      id: 5,
+      initials: 'AM',
+      color: '#FAEEDA',
+      textColor: '#633806',
+      rating: 5,
+      date: 'Just now',
+      author: 'Aman Arshad',
+      role: 'Google Reviewer',
+      text: 'I really liked my experience here. The staff was friendly, professional, and very helpful. The service was excellent, and everything was handled smoothly. The quality exceeded my expectations, and I would definitely recommend this place to others. Looking forward to visiting again! Rajputs Designs Studio is the best design studio in Pakistan.',
+      profilePhoto: null,
+    },
   ];
 
   // Load manual reviews on mount
@@ -455,7 +467,7 @@ const TestimonialCarouselMultiple = () => {
 
     setTestimonials(formatted);
     setAvgRating(5);
-    setTotalReviews(4);
+    setTotalReviews(5);
     setLoading(false);
   }, []);
 
