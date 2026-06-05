@@ -106,9 +106,12 @@ const experience = [
 ];
 
 const certifications = [
+  { name: 'AI Fluency: Framework & Foundations', issuer: 'Anthropic', date: '2026' },
   { name: 'Foundations of User Experience (UX) Design', issuer: 'Google (via Coursera)', date: 'January 26, 2026' },
+  { name: 'Gemini Certified Student', issuer: 'Google for Education', date: 'December 4, 2025' },
   { name: 'Figma Design Basics and Features', issuer: 'Alison (CPD Certified)', date: 'November 5, 2024' },
-  { name: 'Graphic Designing Mastery', issuer: 'Hadi E-Learning System', date: 'September 4, 2024' }
+  { name: 'Graphic Designing Mastery', issuer: 'Hadi E-Learning System', date: 'September 4, 2024' },
+  { name: 'Learn Adobe Illustrator & Adobe Photoshop Course From Scratch', issuer: 'Eduonix Learning Solutions', date: 'September 1, 2024' },
 ];
 
 // ─── HELPER: Format relative time ─────────────────────────────────────────────
