@@ -19,7 +19,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Get Started',
-    paymentLink: 'https://buy.stripe.com/dRm9ATcUy62S8jselpdIA00'
+    paymentLink: 'https://rajputdesignsstudio.gumroad.com/l/pbgpsm'
   },
   {
     name: 'Professional',
@@ -36,7 +36,7 @@ const pricingPlans = [
     ],
     highlight: true,
     cta: 'Choose Professional',
-    paymentLink: 'https://buy.stripe.com/eVqfZh3jYezo57gdhldIA02'
+    paymentLink: 'https://rajputdesignsstudio.gumroad.com/l/kwoeak'
   },
   {
     name: 'Premium',
@@ -54,7 +54,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Choose Premium',
-    paymentLink: 'https://buy.stripe.com/7sY14ng6K4YOdDMb9ddIA01'
+    paymentLink: 'https://rajputdesignsstudio.gumroad.com/l/hqskdn'
   },
   {
     name: 'Custom',
