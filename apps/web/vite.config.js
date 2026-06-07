@@ -1,4 +1,5 @@
 import path from 'node:path';
+import sitemap from 'vite-plugin-sitemap';
 import react from '@vitejs/plugin-react';
 import { createLogger, defineConfig } from 'vite';
 import inlineEditPlugin from './plugins/visual-editor/vite-plugin-react-inline-editor.js';
@@ -290,10 +291,14 @@ export default defineConfig({
 	},
 	customLogger: logger,
 	plugins: [
-		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), selectionModePlugin(), iframeRouteRestorationPlugin(), pocketbaseAuthPlugin()] : []),
-		react(),
-		addTransformIndexHtml
-	],
+    ...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), selectionModePlugin(), iframeRouteRestorationPlugin(), pocketbaseAuthPlugin()] : []),
+    react(),
+    addTransformIndexHtml,
+    sitemap({
+        hostname: 'https://www.rajputdesignsstudio.com',
+        routes: ['/', '/portfolio-gallery', '/pricing'],
+    }),
+],
 	server: {
 		port: 3000,
 		cors: true,
