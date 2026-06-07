@@ -988,9 +988,10 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Rajput Designs Studio</title>
-        <meta name="description" content="Crafting simple, clear visuals that connect your brand with people." />
-      </Helmet>
+  <title>Rajput Designs Studio | Graphic Designer in Pakistan</title>
+  <meta name="description" content="Rajput Designs Studio offers professional logo design, brand identity, social media graphics, and digital visuals. Based in Pakistan, serving clients worldwide." />
+  <link rel="canonical" href="https://www.rajputdesignsstudio.com" />
+</Helmet>
 
       <div className="overflow-x-clip bg-background">
 

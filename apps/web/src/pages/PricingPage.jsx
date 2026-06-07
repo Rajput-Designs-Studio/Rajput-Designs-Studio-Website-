@@ -109,9 +109,10 @@ function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Pricing Plans | Rajput Designs Studio</title>
-        <meta name="description" content="Choose the perfect design package for your business needs." />
-      </Helmet>
+  <title>Pricing Plans | Rajput Designs Studio</title>
+  <meta name="description" content="Affordable graphic design packages for businesses in Pakistan and worldwide. Logo design, brand identity, social media graphics, and digital visuals. Choose the plan that fits your budget." />
+  <link rel="canonical" href="https://www.rajputdesignsstudio.com/pricing" />
+</Helmet>
 
       <div className="min-h-screen bg-[#042C53] text-foreground pb-24 overflow-x-hidden">
         {/* Header */}

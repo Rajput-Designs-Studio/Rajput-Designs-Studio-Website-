@@ -282,9 +282,10 @@ function PortfolioGalleryPage() {
   return (
     <>
       <Helmet>
-        <title>Projects | Rajput Designs Studio</title>
-        <meta name="description" content="Explore the complete portfolio of Rajput Designs Studio." />
-      </Helmet>
+  <title>Portfolio | Rajput Designs Studio</title>
+  <meta name="description" content="Explore projects by Rajput Designs Studio including logo design, brand identity, social media graphics, and digital visuals for clients in Pakistan and worldwide." />
+  <link rel="canonical" href="https://www.rajputdesignsstudio.com/portfolio-gallery" />
+</Helmet>
 
       {lightbox && (
         <Lightbox
