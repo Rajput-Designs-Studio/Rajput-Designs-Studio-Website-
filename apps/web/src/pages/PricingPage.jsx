@@ -73,6 +73,90 @@ const pricingPlans = [
   }
 ];
 
+const specialtyPackages = [
+  {
+    name: 'Full Branding Package',
+    icon: '🎨',
+    price: '$249',
+    description: 'Complete brand identity from scratch',
+    features: [
+      'Logo Design (3 Concepts)',
+      'Business Card Design',
+      'Letterhead & Envelope',
+      'Social Media Profile Kit',
+      'Brand Style Guide (Colors, Fonts)',
+      'All Source Files (AI/PSD)',
+      '7-10 Day Delivery',
+    ],
+    highlight: true,
+    badge: 'Best Value',
+    paymentLink: null,
+  },
+  {
+    name: 'Menu Design Package',
+    icon: '🍽️',
+    price: '$79',
+    description: 'Professional restaurant & cafe menus',
+    features: [
+      'Up to 2 Pages / Sides',
+      '2 Design Concepts',
+      '3 Revisions',
+      'Print-Ready PDF + Source File',
+      '3-5 Day Delivery',
+    ],
+    highlight: false,
+    paymentLink: null,
+  },
+  {
+    name: 'Promotion Poster',
+    icon: '📣',
+    price: '$39',
+    description: 'Eye-catching social media & print posters',
+    features: [
+      '1 Poster Design',
+      '3 Revisions',
+      'Social & Print Sizes Included',
+      'Source File (PSD/AI)',
+      '48-Hour Delivery',
+    ],
+    highlight: false,
+    paymentLink: null,
+  },
+  {
+    name: 'Banner Design Package',
+    icon: '🖼️',
+    price: '$55',
+    description: 'Web banners, social covers & digital ads',
+    features: [
+      'Up to 5 Banner Sizes',
+      '2 Design Concepts',
+      '3 Revisions',
+      'PNG + Source Files',
+      '2-3 Day Delivery',
+    ],
+    highlight: false,
+    paymentLink: null,
+  },
+  {
+    name: 'Bundle Package',
+    icon: '📦',
+    price: '$179',
+    description: 'Posters + Banners + Social Media Kit',
+    features: [
+      '5 Promotion Posters',
+      '5 Banner Designs',
+      'Social Media Profile Kit',
+      'Unlimited Revisions',
+      'All Source Files',
+      '7-10 Day Delivery',
+      'Priority Support',
+    ],
+    highlight: false,
+    badge: 'Save 40%',
+    paymentLink: null,
+  },
+];
+
 const faqs = [
   {
     question: "What is your typical turnaround time?",
@@ -209,6 +293,61 @@ function PricingPage() {
               </FadeIn>
             ))}
           </div>
+
+          {/* Specialty Packages */}
+          <FadeIn delay={0.1} y={30}>
+            <div className="mb-20 sm:mb-32">
+              <h2 className="text-center text-2xl md:text-4xl font-black uppercase text-white mb-4 tracking-wide">
+                <span style={{ color: '#ffffff' }}>Specialty </span>
+                <span style={{ color: '#378ADD' }}>Packages</span>
+              </h2>
+              <p className="text-center text-white opacity-70 mb-10 sm:mb-16 text-base font-light max-w-2xl mx-auto">
+                Purpose-built packages for specific design needs — straightforward pricing, no guesswork.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {specialtyPackages.map((pkg, index) => (
+                  <FadeIn key={pkg.name} delay={index * 0.08} y={30} className="h-full">
+                    <div className={`h-full flex flex-col p-5 sm:p-7 rounded-3xl relative transition-all duration-300 ${
+                      pkg.highlight
+                        ? 'bg-[hsla(var(--primary)/0.1)] border-2 border-[hsl(var(--primary))] glow-cyan'
+                        : 'glass-panel border border-[hsla(var(--primary)/0.2)] hover:border-[hsl(var(--primary))]'
+                    }`}>
+                      {pkg.badge && (
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full glow-cyan-subtle">
+                          {pkg.badge}
+                        </div>
+                      )}
+                      <div className="text-3xl mb-3">{pkg.icon}</div>
+                      <h3 className="text-white text-lg font-bold uppercase tracking-wider mb-1">{pkg.name}</h3>
+                      <p className="text-white opacity-60 text-xs mb-4">{pkg.description}</p>
+                      <div className="mb-5">
+                        <span className="text-2xl sm:text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{pkg.price}</span>
+                        <span className="text-white opacity-60 text-sm font-light ml-1">/ project</span>
+                      </div>
+                      <ul className="flex flex-col gap-3 mb-6 flex-grow">
+                        {pkg.features.map((f, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <Check className="w-4 h-4 text-[hsl(var(--primary))] shrink-0 mt-0.5" />
+                            <span className="text-white font-light text-sm">{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <button
+                        onClick={() => handlePayment(pkg)}
+                        className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${
+                          pkg.highlight
+                            ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
+                            : 'bg-[hsla(var(--primary)/0.1)] text-white hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] border border-[hsl(var(--primary))]'
+                        }`}
+                      >
+                        Get Started
+                      </button>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
 
           {/* FAQ Section */}
           <FadeIn delay={0.2} y={30}>

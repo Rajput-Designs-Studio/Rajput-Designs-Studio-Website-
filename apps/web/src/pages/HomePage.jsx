@@ -759,8 +759,8 @@ const TestimonialCarouselMultiple = () => {
                   }}>
                     {r.role}
                   </span>
-                  <span style={{ fontSize: '11px', color: '#9CA3AF' }}>
-                    Click to read more →
+                  <span style={{ fontSize: '12px', color: '#378ADD', fontWeight: '600' }}>
+                    Read full review →
                   </span>
                 </div>
               </div>

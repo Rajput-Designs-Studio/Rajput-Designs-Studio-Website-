@@ -321,6 +321,23 @@ function ProjectDetailPage() {
             </FadeIn>
           )}
 
+          {/* Pricing CTA */}
+          <FadeIn delay={0.15} y={20}>
+            <div className="bg-[#0C3A6B] border border-[hsla(var(--primary)/0.4)] p-6 sm:p-10 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
+              <div className="text-center md:text-left">
+                <h3 className="text-white text-xl sm:text-2xl font-bold uppercase tracking-wider mb-2">Love this work?</h3>
+                <p className="text-[#85B7EB] font-light text-base sm:text-lg">Get a similar design for your brand. Clear, upfront pricing — no surprises.</p>
+              </div>
+              <Link
+                to="/pricing"
+                className="px-8 py-4 rounded-full border-2 border-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[hsl(var(--primary))] transition-all duration-300 whitespace-nowrap flex items-center gap-2 group"
+              >
+                View Pricing
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </FadeIn>
+
           {/* Prev / Next Navigation */}
           <FadeIn delay={0.15} y={20}>
             <div className="border-t border-[hsla(var(--primary)/0.2)] pt-10 flex flex-col sm:flex-row items-stretch gap-4 mb-12">
