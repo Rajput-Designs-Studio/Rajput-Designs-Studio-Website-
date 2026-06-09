@@ -282,10 +282,21 @@ function PortfolioGalleryPage() {
   return (
     <>
       <Helmet>
-  <title>Portfolio | Rajput Designs Studio</title>
-  <meta name="description" content="Explore projects by Rajput Designs Studio including logo design, brand identity, social media graphics, and digital visuals for clients in Pakistan and worldwide." />
-  <link rel="canonical" href="https://www.rajputdesignsstudio.com/portfolio-gallery" />
-</Helmet>
+        <title>Portfolio | Rajput Designs Studio — Graphic Design Projects</title>
+        <meta name="description" content="Explore Rajput Designs Studio's portfolio — logo design, brand identity, social media graphics, food & restaurant branding, UI/UX design and more. Real projects for clients in Pakistan and worldwide." />
+        <meta name="keywords" content="graphic design portfolio Pakistan, logo design portfolio, brand identity examples, social media design work, UI UX design portfolio, Rajput Designs Studio portfolio" />
+        <link rel="canonical" href="https://www.rajputdesignsstudio.com/portfolio-gallery" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.rajputdesignsstudio.com/portfolio-gallery" />
+        <meta property="og:title" content="Portfolio | Rajput Designs Studio — Graphic Design Projects" />
+        <meta property="og:description" content="Logo design, brand identity, social media graphics, UI/UX and more. Real projects for clients in Pakistan and worldwide." />
+        <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+        <meta property="og:site_name" content="Rajput Designs Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio | Rajput Designs Studio — Graphic Design Projects" />
+        <meta name="twitter:description" content="Logo design, brand identity, social media graphics, UI/UX and more." />
+        <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+      </Helmet>
 
       {lightbox && (
         <Lightbox

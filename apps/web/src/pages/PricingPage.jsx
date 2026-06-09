@@ -109,10 +109,21 @@ function PricingPage() {
   return (
     <>
       <Helmet>
-  <title>Pricing Plans | Rajput Designs Studio</title>
-  <meta name="description" content="Affordable graphic design packages for businesses in Pakistan and worldwide. Logo design, brand identity, social media graphics, and digital visuals. Choose the plan that fits your budget." />
-  <link rel="canonical" href="https://www.rajputdesignsstudio.com/pricing" />
-</Helmet>
+        <title>Pricing Plans | Rajput Designs Studio — Affordable Graphic Design Packages</title>
+        <meta name="description" content="Affordable graphic design packages for businesses in Pakistan and worldwide. Choose from Starter, Professional, Premium or Enterprise plans. Logo design, brand identity, social media graphics and more — transparent pricing, no hidden fees." />
+        <meta name="keywords" content="graphic design pricing Pakistan, affordable logo design packages, brand identity pricing, social media design cost, cheap graphic designer Pakistan, design packages for small business" />
+        <link rel="canonical" href="https://www.rajputdesignsstudio.com/pricing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.rajputdesignsstudio.com/pricing" />
+        <meta property="og:title" content="Pricing Plans | Rajput Designs Studio — Affordable Graphic Design Packages" />
+        <meta property="og:description" content="Affordable graphic design packages for businesses in Pakistan and worldwide. Transparent pricing, no hidden fees." />
+        <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+        <meta property="og:site_name" content="Rajput Designs Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Pricing Plans | Rajput Designs Studio — Affordable Graphic Design Packages" />
+        <meta name="twitter:description" content="Affordable graphic design packages. Transparent pricing, no hidden fees." />
+        <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+      </Helmet>
 
       <div className="min-h-screen bg-[#042C53] text-foreground pb-24 overflow-x-hidden">
         {/* Header */}

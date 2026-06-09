@@ -988,10 +988,41 @@ function HomePage() {
   return (
     <>
       <Helmet>
-  <title>Rajput Designs Studio | Graphic Designer in Pakistan</title>
-  <meta name="description" content="Rajput Designs Studio offers professional logo design, brand identity, social media graphics, and digital visuals. Based in Pakistan, serving clients worldwide." />
-  <link rel="canonical" href="https://www.rajputdesignsstudio.com" />
-</Helmet>
+        <title>Rajput Designs Studio | Professional Graphic Designer in Pakistan</title>
+        <meta name="description" content="Rajput Designs Studio — Professional graphic designer in Pakistan. Expert in Logo Design, Brand Identity, Social Media Graphics, Flyers, Banners & Figma UI/UX. Serving clients worldwide with affordable, high-quality creative design." />
+        <meta name="keywords" content="graphic designer Pakistan, logo design, brand identity, social media design, flyer design, banner design, Figma designer, UI UX designer Pakistan, Adobe Illustrator, professional branding, Rajput Designs Studio" />
+        <link rel="canonical" href="https://www.rajputdesignsstudio.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.rajputdesignsstudio.com/" />
+        <meta property="og:title" content="Rajput Designs Studio | Professional Graphic Designer in Pakistan" />
+        <meta property="og:description" content="Expert in Logo Design, Brand Identity, Social Media Graphics, Flyers, Banners & UI/UX. Serving clients worldwide." />
+        <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+        <meta property="og:site_name" content="Rajput Designs Studio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Rajput Designs Studio | Professional Graphic Designer in Pakistan" />
+        <meta name="twitter:description" content="Expert in Logo Design, Brand Identity, Social Media Graphics, Flyers, Banners & UI/UX. Serving clients worldwide." />
+        <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Rajput Designs Studio",
+          "url": "https://www.rajputdesignsstudio.com/",
+          "image": "https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg",
+          "description": "Professional graphic design studio in Pakistan offering logo design, brand identity, social media graphics, flyers, banners and UI/UX design.",
+          "address": { "@type": "PostalAddress", "addressCountry": "PK" },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Graphic Design Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logo Design" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Identity Design" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Graphics" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flyer & Banner Design" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Figma UI/UX Design" } }
+            ]
+          }
+        })}</script>
+      </Helmet>
 
       <div className="overflow-x-clip bg-background">
 
