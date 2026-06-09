@@ -75,10 +75,28 @@ const pricingPlans = [
 
 const specialtyPackages = [
   {
+    name: 'Logo Design Package',
+    icon: '✏️',
+    price: '$65',
+    description: 'Professional logo that defines your brand',
+    image: 'https://i.postimg.cc/fbXspjM7/S-E-W-Logo-in-Dark-Blue-01.jpg',
+    features: [
+      '3 Logo Concepts',
+      '5 Revisions',
+      'All Formats (PNG, SVG, PDF, AI)',
+      'Transparent Background',
+      'Color + B&W Versions',
+      '3-5 Day Delivery',
+    ],
+    highlight: false,
+    paymentLink: null,
+  },
+  {
     name: 'Full Branding Package',
     icon: '🎨',
     price: '$249',
     description: 'Complete brand identity from scratch',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/7ea46274f50ddf435f18c05def36b613.png',
     features: [
       'Logo Design (3 Concepts)',
       'Business Card Design',
@@ -97,6 +115,7 @@ const specialtyPackages = [
     icon: '🍽️',
     price: '$79',
     description: 'Professional restaurant & cafe menus',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/6ff4a4421ec6b2f271683aff372cae47.jpg',
     features: [
       'Up to 2 Pages / Sides',
       '2 Design Concepts',
@@ -112,6 +131,7 @@ const specialtyPackages = [
     icon: '📣',
     price: '$39',
     description: 'Eye-catching social media & print posters',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/0d539764c663a87bef648a3a5ac4f680.jpg',
     features: [
       '1 Poster Design',
       '3 Revisions',
@@ -127,6 +147,7 @@ const specialtyPackages = [
     icon: '🖼️',
     price: '$55',
     description: 'Web banners, social covers & digital ads',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/137d29c2299119a30e31a18b3ddc35a0.jpg',
     features: [
       'Up to 5 Banner Sizes',
       '2 Design Concepts',
@@ -142,6 +163,7 @@ const specialtyPackages = [
     icon: '📦',
     price: '$179',
     description: 'Posters + Banners + Social Media Kit',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/6108b17e80dd90eda7d6f829a1638469.jpg',
     features: [
       '5 Promotion Posters',
       '5 Banner Designs',
@@ -313,8 +335,22 @@ function PricingPage() {
                         : 'glass-panel border border-[hsla(var(--primary)/0.2)] hover:border-[hsl(var(--primary))]'
                     }`}>
                       {pkg.badge && (
-                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full glow-cyan-subtle">
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full glow-cyan-subtle z-10">
                           {pkg.badge}
+                        </div>
+                      )}
+                      {pkg.image && (
+                        <div className="relative -mx-5 sm:-mx-7 -mt-5 sm:-mt-7 mb-5 h-44 overflow-hidden rounded-t-3xl">
+                          <img
+                            src={pkg.image}
+                            alt={`${pkg.name} sample`}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(4,44,83,0.55)]" />
+                          <div className="absolute bottom-3 left-4">
+                            <span className="text-[10px] text-white font-semibold opacity-75 uppercase tracking-widest">Sample Work</span>
+                          </div>
                         </div>
                       )}
                       <div className="text-3xl mb-3">{pkg.icon}</div>
