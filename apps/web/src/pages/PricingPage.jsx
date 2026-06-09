@@ -156,14 +156,14 @@ function PricingPage() {
   <span style={{ color: '#ffffff' }}>Pricing </span>
   <span style={{ color: '#378ADD' }}>Plan</span>
 </h1>
-              <p className="text-white opacity-80 text-lg sm:text-xl font-light">
+              <p className="text-white opacity-80 text-base sm:text-xl font-light">
                 Choose the perfect package for your design needs. Clear, upfront pricing with no hidden surprises.
               </p>
             </div>
           </FadeIn>
 
           {/* Pricing Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-32 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-32 items-stretch">
             {pricingPlans.map((plan, index) => (
               <FadeIn key={plan.name} delay={index * 0.1} y={30} className="h-full">
                 <div
@@ -180,7 +180,7 @@ function PricingPage() {
 
                   <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-2">{plan.name}</h3>
                   <div className="mb-4">
-                    <span className="text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{plan.price}</span>
+                    <span className="text-2xl sm:text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{plan.price}</span>
                     {plan.price !== 'Custom Quote' && <span className="text-white opacity-60 text-sm font-light ml-1">/ project</span>}
                   </div>
                   <p className="text-white opacity-70 text-sm font-light h-10 mb-8 border-b border-[hsla(var(--primary)/0.1)] pb-12">
@@ -213,7 +213,7 @@ function PricingPage() {
           {/* FAQ Section */}
           <FadeIn delay={0.2} y={30}>
             <div className="max-w-3xl mx-auto mb-24">
-              <h2 className="text-center text-3xl md:text-4xl font-black uppercase text-white mb-10 tracking-wide">
+              <h2 className="text-center text-2xl md:text-4xl font-black uppercase text-white mb-10 tracking-wide">
                 Frequently Asked Questions
               </h2>
 

@@ -192,14 +192,14 @@ function GalleryCardCarousel({ images, name, onImageClick }) {
         </button>
       </div>
 
-      <button onClick={scrollPrev} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full glass-panel flex items-center justify-center z-20 text-white hover:text-[hsl(var(--primary))] transition-all opacity-0 group-hover/carousel:opacity-100">
+      <button onClick={scrollPrev} className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full glass-panel flex items-center justify-center z-20 text-white hover:text-[hsl(var(--primary))] transition-all opacity-100 md:opacity-0 md:group-hover/carousel:opacity-100">
         <ChevronLeft className="w-5 h-5" />
       </button>
-      <button onClick={scrollNext} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full glass-panel flex items-center justify-center z-20 text-white hover:text-[hsl(var(--primary))] transition-all opacity-0 group-hover/carousel:opacity-100">
+      <button onClick={scrollNext} className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full glass-panel flex items-center justify-center z-20 text-white hover:text-[hsl(var(--primary))] transition-all opacity-100 md:opacity-0 md:group-hover/carousel:opacity-100">
         <ChevronRight className="w-5 h-5" />
       </button>
 
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-20 opacity-0 group-hover/carousel:opacity-100 transition-opacity">
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-20 opacity-100 md:opacity-0 md:group-hover/carousel:opacity-100 transition-opacity">
         {images.map((_, i) => (
           <button
             key={i}
@@ -284,7 +284,7 @@ function PortfolioGalleryPage() {
   <span style={{ color: '#ffffff' }}>Pro</span>
   <span style={{ color: '#378ADD' }}>jects</span>
 </h1>
-            <p className="text-center text-white opacity-80 max-w-2xl mx-auto mb-16 text-lg font-light">
+            <p className="text-center text-white opacity-80 max-w-2xl mx-auto mb-10 sm:mb-16 text-base sm:text-lg font-light">
               A curated collection of my best work across print, digital, and web design.
             </p>
           </FadeIn>
@@ -295,7 +295,7 @@ function PortfolioGalleryPage() {
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-6 py-2 rounded-full text-sm font-medium uppercase tracking-wider transition-all duration-300 ${activeFilter === filter
+                  className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider transition-all duration-300 ${activeFilter === filter
                     ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] glow-cyan-subtle'
                     : 'glass-panel text-white hover:text-[hsl(var(--primary))] hover:border-[hsl(var(--primary))]'
                     }`}

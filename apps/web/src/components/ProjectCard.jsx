@@ -35,17 +35,17 @@ function ProjectCard({ project, index, totalCards }) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div ref={ref} className="min-h-[500px] sm:min-h-[600px] lg:h-[80vh] flex items-center justify-center relative mb-16" style={{ top: `${index * 30}px` }}>
+    <div ref={ref} className="min-h-[420px] sm:min-h-[550px] lg:h-[80vh] flex items-center justify-center relative mb-10 sm:mb-16" style={{ top: `${index * 30}px` }}>
       <motion.div
         style={{ scale, background: '#F5F9FF', border: '1px solid #B5D4F4' }}
         className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 transition-colors duration-500"
       >
         {/* Left Content Area */}
-        <div className="flex flex-col justify-between w-full lg:w-5/12 h-full z-10 relative p-6 sm:p-8 md:p-12">
+        <div className="flex flex-col justify-between w-full lg:w-5/12 h-full z-10 relative p-5 sm:p-8 md:p-12">
           <div>
             <div
               className="text-[hsl(var(--primary))] font-black leading-none mb-6"
-              style={{ fontSize: 'clamp(4rem, 10vw, 100px)' }}
+              style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)' }}
             >
               {project.number}
             </div>
@@ -59,11 +59,11 @@ function ProjectCard({ project, index, totalCards }) {
               </h3>
             </div>
 
-            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base md:text-lg mb-8 max-w-md">
+            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base md:text-lg mb-6 max-w-md line-clamp-3 sm:line-clamp-none">
               {project.description}
             </p>
 
-            <div className="flex flex-wrap gap-6 mb-8">
+            <div className="flex flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-8">
               <div className="flex flex-col">
                 <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Role</span>
                 <span className="text-sm text-[#042C53] font-medium">{project.role}</span>
@@ -79,13 +79,13 @@ function ProjectCard({ project, index, totalCards }) {
             </div>
           </div>
 
-          <button className="self-start px-8 py-3 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-[#042C53] font-medium uppercase tracking-wider hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300">
+          <button className="self-start px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-[#042C53] font-medium uppercase tracking-wider hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300 text-sm sm:text-base">
             View Project
           </button>
         </div>
 
         {/* Right Image Area */}
-        <div className="w-full lg:w-7/12 h-[300px] lg:h-full relative overflow-hidden group/image">
+        <div className="w-full lg:w-7/12 h-[220px] sm:h-[280px] lg:h-full relative overflow-hidden group/image">
           {hasMultipleImages ? (
             <div className="h-full w-full relative">
               <div className="overflow-hidden h-full w-full" ref={emblaRef}>

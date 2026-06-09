@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from 'react-router-dom';
-import { Briefcase, Award, PenTool, Languages, Mail, Linkedin, Instagram, ArrowRight, Star } from 'lucide-react';
+import { Briefcase, Award, PenTool, Languages, Mail, Linkedin, Instagram, ArrowRight, Star, Menu, X } from 'lucide-react';
 import FadeIn from '@/components/FadeIn.jsx';
 import Magnet from '@/components/Magnet.jsx';
 import AnimatedText from '@/components/AnimatedText.jsx';
@@ -894,6 +894,7 @@ function HomePage() {
   const row1Ref = useRef(null);
   const row2Ref = useRef(null);
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     let animationFrameId;
@@ -984,16 +985,55 @@ function HomePage() {
 
       <div className="overflow-x-clip bg-background">
 
+        {/* ── MOBILE MENU OVERLAY ── */}
+        {menuOpen && (
+          <div
+            className="fixed inset-0 z-[100] bg-[#042C53] flex flex-col items-center justify-center gap-6 md:hidden"
+            style={{ animation: 'menuSlideIn 0.25s ease' }}
+          >
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-5 right-5 w-11 h-11 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] flex items-center justify-center hover:bg-[hsl(var(--primary))] hover:text-white transition-all"
+              aria-label="Close menu"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <img
+              src="https://i.postimg.cc/FFL8k0MJ/Rajput-Desgins-Logo-without-background-for-website-01.png"
+              alt="Rajput Designs Studio"
+              className="w-28 h-16 object-contain mb-4"
+            />
+            {[
+              { label: 'About',    id: 'about',    isRoute: false },
+              { label: 'Services', id: 'services', isRoute: false },
+              { label: 'Pricing',  path: '/pricing', isRoute: true },
+              { label: 'Projects', path: '/portfolio-gallery', isRoute: true },
+              { label: 'Contact',  id: 'contact',  isRoute: false },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.isRoute ? item.path : `#${item.id}`}
+                onClick={(e) => { setMenuOpen(false); handleNavClick(e, item); }}
+                className="text-2xl font-black uppercase tracking-widest text-white hover:text-[hsl(var(--primary))] transition-colors duration-200"
+              >
+                {item.label}
+              </a>
+            ))}
+            <style>{`@keyframes menuSlideIn { from { opacity:0; transform:translateY(-12px); } to { opacity:1; transform:translateY(0); } }`}</style>
+          </div>
+        )}
+
         {/* ── SECTION 1 · HERO ── */}
         <section id="hero" className="h-screen flex flex-col overflow-x-clip relative">
           <FadeIn delay={0} y={-20}>
-            <nav className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 px-5 pt-5 sm:pt-6 md:pt-8 relative z-20 max-w-7xl mx-auto w-full">
+            <nav className="flex items-center justify-between px-5 pt-5 sm:pt-6 md:pt-8 relative z-20 max-w-7xl mx-auto w-full">
               <img
                 src="https://i.postimg.cc/FFL8k0MJ/Rajput-Desgins-Logo-without-background-for-website-01.png"
                 alt="Rajput Designs Studio"
                 className="w-24 h-14 sm:w-28 sm:h-16 md:w-32 md:h-20 object-contain"
               />
-              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-5 md:gap-8">
+              {/* Desktop links */}
+              <div className="hidden md:flex items-center gap-5 md:gap-8">
                 {[
                   { label: 'About',    id: 'about',    isRoute: false },
                   { label: 'Services', id: 'services', isRoute: false },
@@ -1004,18 +1044,26 @@ function HomePage() {
                     key={item.label}
                     href={item.isRoute ? item.path : `#${item.id}`}
                     onClick={(e) => handleNavClick(e, item)}
-                    className="font-bold uppercase tracking-wider text-[10px] sm:text-xs md:text-base px-2 sm:px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300"
+                    className="font-bold uppercase tracking-wider text-xs md:text-base px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300"
                   >
                     {item.label}
                   </a>
                 ))}
                 <Link
                   to="/portfolio-gallery"
-                  className="font-bold uppercase tracking-wider text-[10px] sm:text-xs md:text-base px-2 sm:px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300 flex items-center gap-1"
+                  className="font-bold uppercase tracking-wider text-xs md:text-base px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300 flex items-center gap-1"
                 >
-                  Projects <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                  Projects <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
+              {/* Mobile hamburger */}
+              <button
+                onClick={() => setMenuOpen(true)}
+                className="md:hidden w-11 h-11 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] flex items-center justify-center hover:bg-[hsl(var(--primary))] hover:text-white transition-all"
+                aria-label="Open menu"
+              >
+                <Menu className="w-5 h-5" />
+              </button>
             </nav>
           </FadeIn>
 
@@ -1074,7 +1122,7 @@ function HomePage() {
         </section>
 
         {/* ── SECTION 3 · ABOUT ── */}
-        <section id="about" className="min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-24 relative bg-[#E6F1FB] border-t border-[#B5D4F4]">
+        <section id="about" className="min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-16 sm:py-24 relative bg-[#E6F1FB] border-t border-[#B5D4F4]">
           <FadeIn delay={0.1} x={-80} y={0} duration={0.9} className="absolute top-[5%] left-4 lg:left-12 xl:left-24">
             <div className="glass-panel p-4 rounded-2xl hidden md:block">
               <img src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png" alt="Moon icon" className="w-[100px] sm:w-[130px] md:w-[160px]" />
@@ -1087,7 +1135,7 @@ function HomePage() {
           </FadeIn>
           <div className="flex flex-col items-center gap-10 sm:gap-14 md:gap-16 relative z-10 w-full max-w-5xl mx-auto">
             <FadeIn delay={0} y={40}>
-              <h2 className="font-black uppercase leading-none tracking-tight text-center mb-4" style={{ fontSize: 'clamp(3rem, 10vw, 120px)', letterSpacing: '-0.02em' }}>
+              <h2 className="font-black uppercase leading-none tracking-tight text-center mb-4" style={{ fontSize: 'clamp(2rem, 8vw, 120px)', letterSpacing: '-0.02em' }}>
                 <span style={{ color: '#042C53' }}>About </span>
                 <span style={{ color: '#378ADD' }}>Me</span>
               </h2>
@@ -1102,7 +1150,7 @@ function HomePage() {
 
         {/* ── SECTION 4 · SERVICES ── */}
         <section id="services" className="services-section bg-[#042C53] px-5 sm:px-8 md:px-10 py-24 sm:py-32 relative z-10 border-t border-[#0C3A6B]">
-          <h2 className="font-black uppercase text-center mb-16 sm:mb-24" style={{ fontSize: 'clamp(3rem, 10vw, 120px)', letterSpacing: '-0.02em' }}>
+          <h2 className="font-black uppercase text-center mb-16 sm:mb-24" style={{ fontSize: 'clamp(2rem, 8vw, 120px)', letterSpacing: '-0.02em' }}>
             <span style={{ color: '#ffffff' }}>Ser</span>
             <span style={{ color: '#378ADD' }}>vices</span>
           </h2>
@@ -1130,7 +1178,7 @@ function HomePage() {
 
         {/* ── SECTION 5 · PROJECTS ── */}
         <section id="projects" className="bg-white px-5 sm:px-8 md:px-10 pt-24 pb-8 relative z-20 border-t border-[#B5D4F4]">
-          <h2 className="font-black uppercase text-center mb-16 sm:mb-24" style={{ fontSize: 'clamp(3rem, 10vw, 120px)', letterSpacing: '-0.02em' }}>
+          <h2 className="font-black uppercase text-center mb-12 sm:mb-24" style={{ fontSize: 'clamp(2rem, 8vw, 120px)', letterSpacing: '-0.02em' }}>
             <span style={{ color: '#042C53' }}>Pro</span>
             <span style={{ color: '#378ADD' }}>jects</span>
           </h2>
@@ -1178,7 +1226,7 @@ function HomePage() {
         <section id="resume" className="bg-[#042C53] px-5 sm:px-8 md:px-10 py-24 relative z-20 border-t border-[#0C3A6B]">
           <div className="max-w-7xl mx-auto">
             <FadeIn delay={0} y={30}>
-              <h2 className="font-black uppercase text-center mb-16 md:mb-24" style={{ fontSize: 'clamp(2.5rem, 8vw, 80px)', letterSpacing: '-0.02em' }}>
+              <h2 className="font-black uppercase text-center mb-12 md:mb-24" style={{ fontSize: 'clamp(1.8rem, 6vw, 80px)', letterSpacing: '-0.02em' }}>
                 <span style={{ color: '#ffffff' }}>My </span>
                 <span style={{ color: '#378ADD' }}>Expertise</span>
               </h2>
