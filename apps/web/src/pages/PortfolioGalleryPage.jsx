@@ -357,10 +357,13 @@ function PortfolioGalleryPage() {
                       <p className="text-white opacity-70 font-light text-sm leading-relaxed mb-6 flex-grow">
                         {project.description}
                       </p>
-                      <button className="flex items-center gap-2 text-[hsl(var(--primary))] font-medium uppercase tracking-wider text-sm group/btn mt-auto hover:text-white transition-colors">
+                      <Link
+                        to={`/project/${project.id}`}
+                        className="flex items-center gap-2 text-[hsl(var(--primary))] font-medium uppercase tracking-wider text-sm group/btn mt-auto hover:text-white transition-colors"
+                      >
                         View Details
                         <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </FadeIn>
