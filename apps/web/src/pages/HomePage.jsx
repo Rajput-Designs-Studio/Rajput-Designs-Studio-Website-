@@ -154,6 +154,7 @@ const ReviewModal = ({ review, onClose, onPrev, onNext, current, total }) => {
         backdropFilter: 'blur(6px)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '1rem',
+        overflowY: 'auto',
         animation: 'tmModalBgIn 0.25s ease',
       }}
     >
@@ -208,6 +209,8 @@ const ReviewModal = ({ review, onClose, onPrev, onNext, current, total }) => {
           padding: 'clamp(1.25rem, 5vw, 2.5rem)',
           position: 'relative',
           boxShadow: '0 32px 80px rgba(4,44,83,0.25)',
+          maxHeight: 'calc(100dvh - 2rem)',
+          overflowY: 'auto',
           animation: 'tmModalCardIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)',
         }}
       >
@@ -1072,14 +1075,14 @@ function HomePage() {
               <Magnet padding={200} strength={1} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
                 <h1
                   className="font-black uppercase tracking-tight leading-[1.1] text-balance mb-4 drop-shadow-md"
-                  style={{ fontSize: 'clamp(1.8rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
+                  style={{ fontSize: 'clamp(2.4rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
                 >
                   <span style={{ color: '#ffffff' }}>Designs That Make </span>
                   <span style={{ color: '#378ADD' }}>People Stop Scrolling</span>
                 </h1>
                 <p
-                  className="text-white font-light tracking-wide uppercase text-balance opacity-90"
-                  style={{ fontSize: 'clamp(0.75rem, 2vw, 1.5rem)' }}
+                  className="text-white font-light tracking-wide text-balance opacity-90"
+                  style={{ fontSize: 'clamp(1rem, 2vw, 1.5rem)' }}
                 >
                   I help brands look professional through branding, social media design, and digital visuals.
                 </p>

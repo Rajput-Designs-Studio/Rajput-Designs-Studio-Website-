@@ -143,7 +143,7 @@ function ProjectCard({ project, index, totalCards }) {
       <div ref={ref} className="min-h-[420px] sm:min-h-[550px] lg:h-[80vh] flex items-center justify-center relative mb-10 sm:mb-16" style={{ top: `${index * 30}px` }}>
         <motion.div
           style={{ scale, background: '#F5F9FF', border: '1px solid #B5D4F4' }}
-          className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 transition-colors duration-500"
+          className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] flex flex-col lg:flex-row gap-8 lg:gap-12 transition-colors duration-500"
         >
           {/* Left Content Area */}
           <div className="flex flex-col justify-between w-full lg:w-5/12 h-full z-10 relative p-5 sm:p-8 md:p-12">
