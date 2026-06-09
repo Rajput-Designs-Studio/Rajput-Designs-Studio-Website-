@@ -146,8 +146,8 @@ function ProjectCard({ project, index, totalCards }) {
           className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] flex flex-col lg:flex-row gap-8 lg:gap-12 transition-colors duration-500"
         >
           {/* Left Content Area */}
-          <div className="flex flex-col justify-between w-full lg:w-5/12 h-full z-10 relative p-5 sm:p-8 md:p-12">
-            <div>
+          <div className="flex flex-col w-full lg:w-5/12 h-full z-10 relative p-5 sm:p-8 md:p-12">
+            <div className="flex-1">
               <div
                 className="text-[hsl(var(--primary))] font-black leading-none mb-6"
                 style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)' }}
@@ -186,7 +186,7 @@ function ProjectCard({ project, index, totalCards }) {
 
             <Link
               to="/portfolio-gallery"
-              className="self-start px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-[#042C53] font-medium uppercase tracking-wider hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300 text-sm sm:text-base"
+              className="self-start mt-6 px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-[#042C53] font-medium uppercase tracking-wider hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300 text-sm sm:text-base"
             >
               View Project
             </Link>

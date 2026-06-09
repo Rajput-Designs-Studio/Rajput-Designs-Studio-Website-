@@ -233,20 +233,30 @@ function PortfolioGalleryPage() {
   return (
     <>
       <Helmet>
-        <title>Portfolio | Rajput Designs Studio — Graphic Design Projects</title>
-        <meta name="description" content="Explore Rajput Designs Studio's portfolio — logo design, brand identity, social media graphics, food & restaurant branding, UI/UX design and more. Real projects for clients in Pakistan and worldwide." />
-        <meta name="keywords" content="graphic design portfolio Pakistan, logo design portfolio, brand identity examples, social media design work, UI UX design portfolio, Rajput Designs Studio portfolio" />
+        <title>Portfolio | Logo Design, Branding &amp; UI/UX Projects — Rajput Designs Studio</title>
+        <meta name="description" content="View real client projects — food &amp; restaurant branding, web UI design, game app UI/UX, logo design, social media graphics and more. See the quality before you buy." />
+        <meta name="keywords" content="graphic design portfolio, logo design examples, brand identity portfolio, restaurant menu design, UI UX design portfolio, social media design examples, Rajput Designs Studio work" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="author" content="Rajput Designs Studio" />
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/portfolio-gallery" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/portfolio-gallery" />
-        <meta property="og:title" content="Portfolio | Rajput Designs Studio — Graphic Design Projects" />
-        <meta property="og:description" content="Logo design, brand identity, social media graphics, UI/UX and more. Real projects for clients in Pakistan and worldwide." />
+        <meta property="og:title" content="Portfolio | Logo Design, Branding &amp; UI/UX Projects — Rajput Designs Studio" />
+        <meta property="og:description" content="Real client projects — food &amp; restaurant branding, web UI, game UI/UX, logo design, and social media graphics. See the quality before you buy." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Portfolio | Rajput Designs Studio — Graphic Design Projects" />
-        <meta name="twitter:description" content="Logo design, brand identity, social media graphics, UI/UX and more." />
+        <meta name="twitter:title" content="Portfolio | Logo Design, Branding &amp; UI/UX Projects — Rajput Designs Studio" />
+        <meta name="twitter:description" content="Real client projects — restaurant branding, web UI, game UI/UX, logos and social media graphics. See quality before you buy." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rajputdesignsstudio.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://www.rajputdesignsstudio.com/portfolio-gallery" }
+          ]
+        })}</script>
       </Helmet>
 
       {lightbox && (

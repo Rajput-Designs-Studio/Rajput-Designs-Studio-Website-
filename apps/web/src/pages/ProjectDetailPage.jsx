@@ -63,13 +63,32 @@ function ProjectDetailPage() {
   return (
     <>
       <Helmet>
-        <title>{project.name} | Rajput Designs Studio</title>
+        <title>{project.name} | Graphic Design Portfolio — Rajput Designs Studio</title>
         <meta name="description" content={project.description.substring(0, 160)} />
+        <meta name="keywords" content={`${project.name}, ${project.category}, graphic design portfolio, Rajput Designs Studio`} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Rajput Designs Studio" />
         <link rel="canonical" href={`https://www.rajputdesignsstudio.com/project/${project.id}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta property="og:title" content={`${project.name} | Rajput Designs Studio`} />
         <meta property="og:description" content={project.description.substring(0, 160)} />
         <meta property="og:image" content={allImages[0]} />
         <meta property="og:url" content={`https://www.rajputdesignsstudio.com/project/${project.id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${project.name} | Rajput Designs Studio`} />
+        <meta name="twitter:description" content={project.description.substring(0, 160)} />
+        <meta name="twitter:image" content={allImages[0]} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": project.name,
+          "description": project.description,
+          "creator": { "@type": "Organization", "name": "Rajput Designs Studio", "url": "https://www.rajputdesignsstudio.com" },
+          "url": `https://www.rajputdesignsstudio.com/project/${project.id}`,
+          "image": allImages,
+          "genre": project.category,
+        })}</script>
       </Helmet>
 
       {/* Lightbox */}

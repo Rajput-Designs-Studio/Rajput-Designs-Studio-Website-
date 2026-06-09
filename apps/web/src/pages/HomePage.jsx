@@ -950,19 +950,22 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Rajput Designs Studio | Professional Graphic Designer in Pakistan</title>
-        <meta name="description" content="Rajput Designs Studio — Professional graphic designer in Pakistan. Expert in Logo Design, Brand Identity, Social Media Graphics, Flyers, Banners & Figma UI/UX. Serving clients worldwide with affordable, high-quality creative design." />
-        <meta name="keywords" content="graphic designer Pakistan, logo design, brand identity, social media design, flyer design, banner design, Figma designer, UI UX designer Pakistan, Adobe Illustrator, professional branding, Rajput Designs Studio" />
+        <title>Rajput Designs Studio | Freelance Graphic Designer — Logo, Branding &amp; UI/UX</title>
+        <meta name="description" content="Hire a professional graphic designer for logo design, brand identity, social media graphics, menus &amp; UI/UX. Affordable packages starting at $35. Serving clients worldwide." />
+        <meta name="keywords" content="freelance graphic designer, hire graphic designer online, logo design service, brand identity designer, affordable logo design, social media graphics designer, menu design service, UI UX designer, website design package, graphic design packages, Rajput Designs Studio, professional branding Pakistan" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="author" content="Rajput Designs Studio" />
+        <meta name="theme-color" content="#042C53" />
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/" />
-        <meta property="og:title" content="Rajput Designs Studio | Professional Graphic Designer in Pakistan" />
-        <meta property="og:description" content="Expert in Logo Design, Brand Identity, Social Media Graphics, Flyers, Banners & UI/UX. Serving clients worldwide." />
+        <meta property="og:title" content="Rajput Designs Studio | Freelance Graphic Designer — Logo, Branding &amp; UI/UX" />
+        <meta property="og:description" content="Hire a professional graphic designer for logo design, brand identity, social media graphics, menus &amp; UI/UX. Affordable packages starting at $35. Serving clients worldwide." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Rajput Designs Studio | Professional Graphic Designer in Pakistan" />
-        <meta name="twitter:description" content="Expert in Logo Design, Brand Identity, Social Media Graphics, Flyers, Banners & UI/UX. Serving clients worldwide." />
+        <meta name="twitter:title" content="Rajput Designs Studio | Freelance Graphic Designer — Logo, Branding &amp; UI/UX" />
+        <meta name="twitter:description" content="Hire a professional graphic designer for logo design, brand identity, social media graphics, menus &amp; UI/UX. Affordable packages starting at $35. Serving clients worldwide." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -970,19 +973,46 @@ function HomePage() {
           "name": "Rajput Designs Studio",
           "url": "https://www.rajputdesignsstudio.com/",
           "image": "https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg",
-          "description": "Professional graphic design studio in Pakistan offering logo design, brand identity, social media graphics, flyers, banners and UI/UX design.",
+          "description": "Professional freelance graphic designer offering logo design, brand identity, social media graphics, menu design, website design and UI/UX. Affordable packages starting at $35.",
+          "priceRange": "$35 - $249",
+          "areaServed": "Worldwide",
           "address": { "@type": "PostalAddress", "addressCountry": "PK" },
+          "email": "hello@rajputdesignsstudio.com",
+          "sameAs": [
+            "https://www.behance.net/rajputdesignsstudio",
+            "https://www.linkedin.com/in/rajputdesignsstudio",
+            "https://www.instagram.com/rajputdesignsstudio",
+            "https://www.facebook.com/rajputdesignsstudio"
+          ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Graphic Design Services",
+            "name": "Graphic Design Packages",
             "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logo Design" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Identity Design" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Graphics" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flyer & Banner Design" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Figma UI/UX Design" } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logo Design Package" }, "price": "65", "priceCurrency": "USD" },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Branding Package" }, "price": "249", "priceCurrency": "USD" },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Menu Design Package" }, "price": "79", "priceCurrency": "USD" },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Promotion Poster" }, "price": "39", "priceCurrency": "USD" },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Banner Design Package" }, "price": "55", "priceCurrency": "USD" },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bundle Package" }, "price": "179", "priceCurrency": "USD" },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Design Package" }, "price": "149", "priceCurrency": "USD" }
             ]
           }
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "How much does a logo design cost?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Logo design packages start at $65, including 3 concepts, 5 revisions, and all file formats (PNG, SVG, PDF, AI) with transparent background." } },
+            { "@type": "Question", "name": "How long does graphic design take?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Most projects deliver within 48 hours to 10 days. Logo design: 3-5 days. Full branding: 7-10 days. Posters and banners: 48 hours." } },
+            { "@type": "Question", "name": "Do you offer affordable graphic design packages?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Starter packages begin at $35. Specialty packages including logo, menu, banners, and website design range from $39 to $249." } },
+            { "@type": "Question", "name": "Can I hire a graphic designer online?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rajput Designs Studio works with clients worldwide. Contact via the website form, email at hello@rajputdesignsstudio.com, or WhatsApp to get started." } },
+            { "@type": "Question", "name": "What graphic design services do you offer?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Services include logo design, full brand identity, social media graphics, menu design, promotion posters, banner design, website UI design, and complete branding packages." } }
+          ]
         })}</script>
       </Helmet>
 

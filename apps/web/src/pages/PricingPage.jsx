@@ -237,20 +237,37 @@ function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Pricing Plans | Rajput Designs Studio — Affordable Graphic Design Packages</title>
-        <meta name="description" content="Affordable graphic design packages for businesses in Pakistan and worldwide. Choose from Starter, Professional, Premium or Enterprise plans. Logo design, brand identity, social media graphics and more — transparent pricing, no hidden fees." />
-        <meta name="keywords" content="graphic design pricing Pakistan, affordable logo design packages, brand identity pricing, social media design cost, cheap graphic designer Pakistan, design packages for small business" />
+        <title>Design Packages &amp; Pricing | Logo $65 · Branding $249 · Website $149 — Rajput Designs Studio</title>
+        <meta name="description" content="Affordable graphic design packages with transparent pricing. Logo design from $65, full branding from $249, website design $149. No hidden fees. Order online and get results in days." />
+        <meta name="keywords" content="logo design price, graphic design packages cost, affordable branding packages, buy logo design online, brand identity package price, menu design cost, website design package price, social media design price, cheap graphic designer online" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="author" content="Rajput Designs Studio" />
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/pricing" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/pricing" />
-        <meta property="og:title" content="Pricing Plans | Rajput Designs Studio — Affordable Graphic Design Packages" />
-        <meta property="og:description" content="Affordable graphic design packages for businesses in Pakistan and worldwide. Transparent pricing, no hidden fees." />
+        <meta property="og:title" content="Design Packages &amp; Pricing | Logo $65 · Branding $249 · Website $149 — Rajput Designs Studio" />
+        <meta property="og:description" content="Affordable graphic design packages with transparent pricing. Logo design from $65, full branding $249, website design $149. No hidden fees." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Pricing Plans | Rajput Designs Studio — Affordable Graphic Design Packages" />
-        <meta name="twitter:description" content="Affordable graphic design packages. Transparent pricing, no hidden fees." />
+        <meta name="twitter:title" content="Design Packages &amp; Pricing | Logo $65 · Branding $249 · Website $149" />
+        <meta name="twitter:description" content="Affordable graphic design packages. Logo $65, branding $249, website design $149. No hidden fees. Order online." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Graphic Design Packages",
+          "url": "https://www.rajputdesignsstudio.com/pricing",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Logo Design Package", "description": "Professional logo design with 3 concepts, 5 revisions, and all file formats (PNG, SVG, PDF, AI).", "offers": { "@type": "Offer", "price": "65", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Full Branding Package", "description": "Complete brand identity including logo, business card, letterhead, social media kit, and brand style guide.", "offers": { "@type": "Offer", "price": "249", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Menu Design Package", "description": "Professional restaurant and cafe menu design, print-ready PDF.", "offers": { "@type": "Offer", "price": "79", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Promotion Poster", "description": "Eye-catching social media and print posters for promotions.", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Banner Design Package", "description": "Web banners, social covers and digital ads in multiple sizes.", "offers": { "@type": "Offer", "price": "55", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Bundle Package", "description": "5 posters, 5 banners, social media kit, unlimited revisions.", "offers": { "@type": "Offer", "price": "179", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "Website Design Package", "description": "Modern mobile-ready website UI design, up to 5 pages, Figma/PSD source files.", "offers": { "@type": "Offer", "price": "149", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } }
+          ]
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-[#042C53] text-foreground pb-24 overflow-x-hidden">
