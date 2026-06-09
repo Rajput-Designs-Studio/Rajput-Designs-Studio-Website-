@@ -67,7 +67,7 @@ function Lightbox({ images, startIndex, projectName, onClose }) {
 
       {/* Image */}
       <div
-        className="relative max-w-5xl max-h-[85vh] w-full px-20"
+        className="relative max-w-5xl max-h-[85vh] w-full px-4 sm:px-12 md:px-20"
         onClick={(e) => e.stopPropagation()}
       >
         <img
@@ -152,7 +152,7 @@ function GalleryCardCarousel({ images, name, onImageClick }) {
 
   return (
     <div
-      className="relative h-64 overflow-hidden group/carousel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))]"
+      className="relative h-48 sm:h-64 overflow-hidden group/carousel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))]"
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
@@ -329,7 +329,7 @@ function PortfolioGalleryPage() {
                       </div>
                     ) : (
                       <div
-                        className="relative h-64 overflow-hidden cursor-zoom-in"
+                        className="relative h-48 sm:h-64 overflow-hidden cursor-zoom-in"
                         onClick={() => openLightbox(allImages, 0, project.name)}
                       >
                         <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-20 group-hover:opacity-0 transition-opacity z-10 pointer-events-none" />

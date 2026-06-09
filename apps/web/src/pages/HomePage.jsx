@@ -205,7 +205,7 @@ const ReviewModal = ({ review, onClose, onPrev, onNext, current, total }) => {
           borderRadius: '24px',
           maxWidth: '560px',
           width: '100%',
-          padding: '2.5rem',
+          padding: 'clamp(1.25rem, 5vw, 2.5rem)',
           position: 'relative',
           boxShadow: '0 32px 80px rgba(4,44,83,0.25)',
           animation: 'tmModalCardIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)',
@@ -1004,14 +1004,14 @@ function HomePage() {
                     key={item.label}
                     href={item.isRoute ? item.path : `#${item.id}`}
                     onClick={(e) => handleNavClick(e, item)}
-                    className="font-bold uppercase tracking-wider text-xs sm:text-sm md:text-base px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300"
+                    className="font-bold uppercase tracking-wider text-[10px] sm:text-xs md:text-base px-2 sm:px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300"
                   >
                     {item.label}
                   </a>
                 ))}
                 <Link
                   to="/portfolio-gallery"
-                  className="font-bold uppercase tracking-wider text-xs sm:text-sm md:text-base px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300 flex items-center gap-1"
+                  className="font-bold uppercase tracking-wider text-[10px] sm:text-xs md:text-base px-2 sm:px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300 flex items-center gap-1"
                 >
                   Projects <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Link>

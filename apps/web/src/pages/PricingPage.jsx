@@ -167,7 +167,7 @@ function PricingPage() {
             {pricingPlans.map((plan, index) => (
               <FadeIn key={plan.name} delay={index * 0.1} y={30} className="h-full">
                 <div
-                  className={`h-full flex flex-col p-8 rounded-3xl relative transition-all duration-300 ${plan.highlight
+                  className={`h-full flex flex-col p-5 sm:p-8 rounded-3xl relative transition-all duration-300 ${plan.highlight
                     ? 'bg-[hsla(var(--primary)/0.1)] border-2 border-[hsl(var(--primary))] glow-cyan scale-100 lg:scale-105 z-10'
                     : 'glass-panel border border-[hsla(var(--primary)/0.2)] hover:border-[hsl(var(--primary))]'
                     }`}
@@ -224,7 +224,7 @@ function PricingPage() {
                     value={`item-${index}`}
                     className="glass-panel border border-[hsla(var(--primary)/0.2)] rounded-2xl px-6 data-[state=open]:border-[hsl(var(--primary))] transition-colors"
                   >
-                    <AccordionTrigger className="text-white hover:text-[hsl(var(--primary))] hover:no-underline font-medium text-left text-lg py-6">
+                    <AccordionTrigger className="text-white hover:text-[hsl(var(--primary))] hover:no-underline font-medium text-left text-base sm:text-lg py-6">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-white opacity-80 font-light leading-relaxed pb-6 text-base">

@@ -35,10 +35,10 @@ function ProjectCard({ project, index, totalCards }) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div ref={ref} className="h-[80vh] min-h-[600px] flex items-center justify-center relative mb-16" style={{ top: `${index * 30}px` }}>
+    <div ref={ref} className="min-h-[500px] sm:min-h-[600px] lg:h-[80vh] flex items-center justify-center relative mb-16" style={{ top: `${index * 30}px` }}>
       <motion.div
         style={{ scale, background: '#F5F9FF', border: '1px solid #B5D4F4' }}
-        className="sticky top-24 md:top-32 w-full h-full max-h-[700px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 transition-colors duration-500"
+        className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden flex flex-col lg:flex-row gap-8 lg:gap-12 transition-colors duration-500"
       >
         {/* Left Content Area */}
         <div className="flex flex-col justify-between w-full lg:w-5/12 h-full z-10 relative p-6 sm:p-8 md:p-12">
@@ -104,13 +104,13 @@ function ProjectCard({ project, index, totalCards }) {
 
               <button
                 onClick={scrollPrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 flex items-center justify-center z-20 text-[#042C53] hover:text-[hsl(var(--primary))] transition-all opacity-0 group-hover/image:opacity-100"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 flex items-center justify-center z-20 text-[#042C53] hover:text-[hsl(var(--primary))] transition-all opacity-100 lg:opacity-0 lg:group-hover/image:opacity-100"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={scrollNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 flex items-center justify-center z-20 text-[#042C53] hover:text-[hsl(var(--primary))] transition-all opacity-0 group-hover/image:opacity-100"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 flex items-center justify-center z-20 text-[#042C53] hover:text-[hsl(var(--primary))] transition-all opacity-100 lg:opacity-0 lg:group-hover/image:opacity-100"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
