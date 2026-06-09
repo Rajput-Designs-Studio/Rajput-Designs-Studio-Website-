@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Check, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Check, ArrowRight, X } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import FadeIn from '@/components/FadeIn.jsx';
 
@@ -115,7 +115,11 @@ const specialtyPackages = [
     icon: '🍽️',
     price: '$79',
     description: 'Professional restaurant & cafe menus',
-    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/6ff4a4421ec6b2f271683aff372cae47.jpg',
+    image: 'https://i.postimg.cc/CMBD83tP/Dani-s-Fast-Food-Menu-Page-1.jpg',
+    images: [
+      'https://i.postimg.cc/CMBD83tP/Dani-s-Fast-Food-Menu-Page-1.jpg',
+      'https://i.postimg.cc/RVx3HNwW/Dani-s-Fast-Food-Menu-Page-2.jpg',
+    ],
     features: [
       'Up to 2 Pages / Sides',
       '2 Design Concepts',
@@ -177,6 +181,23 @@ const specialtyPackages = [
     badge: 'Save 40%',
     paymentLink: null,
   },
+  {
+    name: 'Website Design Package',
+    icon: '💻',
+    price: '$149',
+    description: 'Modern, mobile-ready website UI design',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/4016f71bbfb257d2ecafb261dddf6cfb.jpg',
+    features: [
+      'Up to 5 Pages',
+      '2 Design Concepts',
+      '5 Revisions',
+      'Mobile + Desktop Layouts',
+      'Figma / PSD Source Files',
+      '7-10 Day Delivery',
+    ],
+    highlight: false,
+    paymentLink: null,
+  },
 ];
 
 const faqs = [
@@ -203,6 +224,7 @@ const faqs = [
 ];
 
 function PricingPage() {
+  const [lightbox, setLightbox] = React.useState(null);
 
   const handlePayment = (plan) => {
     if (plan.paymentLink) {
@@ -340,7 +362,8 @@ function PricingPage() {
                         </div>
                       )}
                       {pkg.image && (
-                        <div className="relative -mx-5 sm:-mx-7 -mt-5 sm:-mt-7 mb-5 h-44 overflow-hidden rounded-t-3xl">
+                        <div className="relative -mx-5 sm:-mx-7 -mt-5 sm:-mt-7 mb-5 h-44 overflow-hidden rounded-t-3xl cursor-zoom-in"
+                          onClick={() => setLightbox({ images: pkg.images || [pkg.image], index: 0 })}>
                           <img
                             src={pkg.image}
                             alt={`${pkg.name} sample`}
@@ -422,6 +445,46 @@ function PricingPage() {
           </FadeIn>
         </main>
       </div>
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[999] flex items-center justify-center"
+          style={{ background: 'rgba(0,0,0,0.95)' }}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            onClick={() => setLightbox(null)}
+            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-10"
+          >
+            <X className="w-6 h-6" />
+          </button>
+          {lightbox.images.length > 1 && (
+            <>
+              <button
+                onClick={e => { e.stopPropagation(); setLightbox(p => ({ ...p, index: (p.index - 1 + p.images.length) % p.images.length })); }}
+                className="absolute left-4 w-11 h-11 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-10"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={e => { e.stopPropagation(); setLightbox(p => ({ ...p, index: (p.index + 1) % p.images.length })); }}
+                className="absolute right-20 w-11 h-11 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-10"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <div className="absolute bottom-5 text-white text-sm opacity-60 z-10">
+                {lightbox.index + 1} / {lightbox.images.length}
+              </div>
+            </>
+          )}
+          <img
+            src={lightbox.images[lightbox.index]}
+            alt="Full preview"
+            className="max-w-[92vw] max-h-[88vh] rounded-2xl object-contain shadow-2xl"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 }
