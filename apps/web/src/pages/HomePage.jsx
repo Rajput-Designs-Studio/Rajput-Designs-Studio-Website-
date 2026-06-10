@@ -1210,22 +1210,26 @@ function HomePage() {
         </section>
 
         {/* ── SECTION 5 · PROJECTS ── */}
-        <section id="projects" className="bg-white px-5 sm:px-8 md:px-10 pt-24 pb-8 relative z-20 border-t border-[#B5D4F4]">
-          <h2 className="font-black uppercase text-center mb-12 sm:mb-24" style={{ fontSize: 'clamp(2rem, 8vw, 120px)', letterSpacing: '-0.02em' }}>
-            <span style={{ color: '#042C53' }}>Pro</span>
-            <span style={{ color: '#378ADD' }}>jects</span>
-          </h2>
+        <section id="projects" className="bg-white px-4 sm:px-6 md:px-8 lg:px-10 py-16 sm:py-20 md:py-24 lg:py-32 relative z-20 border-t border-[#B5D4F4]">
+          <FadeIn delay={0} y={30} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <h2 className="font-black uppercase text-center" style={{ fontSize: 'clamp(1.8rem, 6vw, 120px)', letterSpacing: '-0.02em' }}>
+              <span style={{ color: '#042C53' }}>Pro</span>
+              <span style={{ color: '#378ADD' }}>jects</span>
+            </h2>
+          </FadeIn>
           <div className="max-w-7xl mx-auto">
-            {projects.map((project, index) => (
-              <ProjectCard key={project.number} project={project} index={index} totalCards={projects.length} />
-            ))}
-            <FadeIn delay={0} y={30} className="flex justify-center mt-24">
+            <div className="flex flex-col gap-8 sm:gap-12 md:gap-16">
+              {projects.map((project, index) => (
+                <ProjectCard key={project.number} project={project} index={index} totalCards={projects.length} />
+              ))}
+            </div>
+            <FadeIn delay={0} y={30} className="flex justify-center mt-16 sm:mt-20 md:mt-24 lg:mt-32">
               <Link
                 to="/portfolio-gallery"
-                className="px-6 py-4 rounded-full bg-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[#042C53] transition-all duration-300 flex items-center gap-3 group"
+                className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider text-sm sm:text-base hover:bg-[#042C53] transition-all duration-300 flex items-center gap-2 sm:gap-3 group"
               >
                 View All Projects
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </FadeIn>
           </div>
