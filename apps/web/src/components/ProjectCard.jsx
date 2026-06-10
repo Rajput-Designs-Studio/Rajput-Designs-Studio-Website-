@@ -140,13 +140,13 @@ function ProjectCard({ project, index, totalCards }) {
         </div>
       )}
 
-      <div ref={ref} className="min-h-[420px] sm:min-h-[550px] lg:h-[80vh] flex items-center justify-center relative mb-10 sm:mb-16" style={{ top: `${index * 30}px` }}>
+      <div ref={ref} className="min-h-[420px] sm:min-h-[550px] lg:h-[80vh] flex items-center justify-center relative mb-8 sm:mb-12 md:mb-16" style={{ top: `${index * 30}px` }}>
         <motion.div
           style={{ scale, background: '#F5F9FF', border: '1px solid #B5D4F4' }}
-          className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] flex flex-col lg:flex-row gap-8 lg:gap-12 transition-colors duration-500"
+          className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 transition-colors duration-500"
         >
           {/* Left Content Area */}
-          <div className="flex flex-col w-full lg:w-5/12 h-full z-10 relative p-5 sm:p-8 md:p-12">
+          <div className="flex flex-col w-full lg:w-5/12 h-full z-10 relative p-6 sm:p-8 md:p-10">
             <div className="flex-1">
               <div
                 className="text-[hsl(var(--primary))] font-black leading-none mb-6"
@@ -186,7 +186,7 @@ function ProjectCard({ project, index, totalCards }) {
 
             <Link
               to="/portfolio-gallery"
-              className="self-start mt-6 px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-[#042C53] font-medium uppercase tracking-wider hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300 text-sm sm:text-base"
+              className="self-start mt-6 px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-[hsl(var(--primary))] font-bold uppercase tracking-wider hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg"
             >
               View Project
             </Link>
