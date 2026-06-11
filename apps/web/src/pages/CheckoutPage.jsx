@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, Check, ShieldCheck, RefreshCw, Clock, Lock, Zap, Award, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Check, ShieldCheck, RefreshCw, Clock, Lock, Zap, Award, MessageCircle, ExternalLink } from 'lucide-react';
 import FadeIn from '@/components/FadeIn.jsx';
 
 const PACKAGES = {
@@ -331,14 +331,6 @@ function CheckoutPage() {
 
   if (!pkg) return <Navigate to="/pricing" replace />;
 
-  const handleCheckout = () => {
-    if (pkg.isContact) {
-      window.location.href = '/#contact';
-    } else {
-      window.open(pkg.gumroadLink, '_blank');
-    }
-  };
-
   const metaTitle = `Order ${pkg.name} Package — ${pkg.price} | Rajput Designs Studio`;
   const metaDesc = `${pkg.description} Secure checkout via Gumroad. ${pkg.deliveryDays} delivery, ${pkg.revisions} included.`;
 
@@ -545,17 +537,26 @@ function CheckoutPage() {
                     </div>
 
                     {/* CTA Button */}
-                    <button
-                      onClick={handleCheckout}
-                      className="w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 glow-cyan-subtle hover:brightness-110 active:scale-[0.98]"
-                      style={{ background: 'linear-gradient(135deg, #378ADD 0%, #1a5fa8 100%)', color: '#fff' }}
-                    >
-                      {pkg.isContact ? (
-                        <><MessageCircle className="w-5 h-5" /> Contact Us</>
-                      ) : (
-                        <><Lock className="w-4 h-4" /> Proceed to Secure Checkout</>
-                      )}
-                    </button>
+                    {pkg.isContact ? (
+                      <Link
+                        to="/#contact"
+                        className="w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 glow-cyan-subtle hover:brightness-110 active:scale-[0.98]"
+                        style={{ background: 'linear-gradient(135deg, #378ADD 0%, #1a5fa8 100%)', color: '#fff' }}
+                      >
+                        <MessageCircle className="w-5 h-5" /> Contact Us
+                      </Link>
+                    ) : (
+                      <a
+                        href={pkg.gumroadLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 glow-cyan-subtle hover:brightness-110 active:scale-[0.98]"
+                        style={{ background: 'linear-gradient(135deg, #378ADD 0%, #1a5fa8 100%)', color: '#fff' }}
+                      >
+                        <Lock className="w-4 h-4" /> Proceed to Secure Checkout
+                        <ExternalLink className="w-3.5 h-3.5 opacity-60 ml-1" />
+                      </a>
+                    )}
 
                     {!pkg.isContact && (
                       <div className="flex items-center justify-center gap-2 mt-3">
