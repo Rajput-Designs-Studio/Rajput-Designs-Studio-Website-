@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Check, ArrowRight, X } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import FadeIn from '@/components/FadeIn.jsx';
@@ -19,7 +19,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Get Started',
-    checkoutSlug: 'starter',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/pbgpsm',
   },
   {
     name: 'Professional',
@@ -36,7 +36,7 @@ const pricingPlans = [
     ],
     highlight: true,
     cta: 'Choose Professional',
-    checkoutSlug: 'professional',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/kwoeak',
   },
   {
     name: 'Premium',
@@ -54,7 +54,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Choose Premium',
-    checkoutSlug: 'premium',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/hqskdn',
   },
   {
     name: 'Custom',
@@ -69,7 +69,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Contact Us',
-    checkoutSlug: 'custom',
+    gumroadLink: null,
   }
 ];
 
@@ -89,7 +89,7 @@ const specialtyPackages = [
       '3-5 Day Delivery',
     ],
     highlight: false,
-    checkoutSlug: 'logo-design',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/lfusys',
   },
   {
     name: 'Full Branding Package',
@@ -108,7 +108,7 @@ const specialtyPackages = [
     ],
     highlight: true,
     badge: 'Best Value',
-    checkoutSlug: 'full-branding',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/xyoxh',
   },
   {
     name: 'Menu Design Package',
@@ -128,7 +128,7 @@ const specialtyPackages = [
       '3-5 Day Delivery',
     ],
     highlight: false,
-    checkoutSlug: 'menu-design',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/wjrpnc',
   },
   {
     name: 'Promotion Poster',
@@ -144,7 +144,7 @@ const specialtyPackages = [
       '48-Hour Delivery',
     ],
     highlight: false,
-    checkoutSlug: 'promotion-poster',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ncnkbh',
   },
   {
     name: 'Banner Design Package',
@@ -160,7 +160,7 @@ const specialtyPackages = [
       '2-3 Day Delivery',
     ],
     highlight: false,
-    checkoutSlug: 'banner-design',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/dbcfxs',
   },
   {
     name: 'Bundle Package',
@@ -179,7 +179,7 @@ const specialtyPackages = [
     ],
     highlight: false,
     badge: 'Save 40%',
-    checkoutSlug: 'bundle',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/kucwct',
   },
   {
     name: 'Website Design Package',
@@ -196,7 +196,7 @@ const specialtyPackages = [
       '7-10 Day Delivery',
     ],
     highlight: false,
-    checkoutSlug: 'website-design',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ghmoo',
   },
 ];
 
@@ -225,10 +225,13 @@ const faqs = [
 
 function PricingPage() {
   const [lightbox, setLightbox] = React.useState(null);
-  const navigate = useNavigate();
 
   const handleCheckout = (plan) => {
-    navigate(`/checkout/${plan.checkoutSlug}`);
+    if (plan.gumroadLink) {
+      window.open(plan.gumroadLink, '_blank', 'noopener,noreferrer');
+    } else {
+      window.location.href = '/#contact';
+    }
   };
 
   return (
