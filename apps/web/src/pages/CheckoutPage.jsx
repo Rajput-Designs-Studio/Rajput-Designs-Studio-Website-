@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, Check, ShieldCheck, RefreshCw, Clock, Zap, Award, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Check, ShieldCheck, RefreshCw, Clock, Lock, Zap, Award, MessageCircle } from 'lucide-react';
 import FadeIn from '@/components/FadeIn.jsx';
 
 const PACKAGES = {
@@ -30,7 +30,7 @@ const PACKAGES = {
       { step: '02', title: 'Share Your Brief', desc: 'Send your brand info, color preferences, and style notes via email.' },
       { step: '03', title: 'Receive Your Design', desc: 'Get polished, ready-to-use design files within 48 hours.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/pbgpsm',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/pbgpsm?wanted=true',
     isContact: false,
   },
   professional: {
@@ -59,7 +59,7 @@ const PACKAGES = {
       { step: '02', title: 'Discovery Brief', desc: 'A short questionnaire helps us understand your brand vision.' },
       { step: '03', title: 'Choose & Refine', desc: 'Pick your favourite concept and refine it until it\'s perfect.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/kwoeak',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/kwoeak?wanted=true',
     isContact: false,
   },
   premium: {
@@ -90,7 +90,7 @@ const PACKAGES = {
       { step: '02', title: 'Concept Presentation', desc: '5 fully developed design concepts delivered for your review.' },
       { step: '03', title: 'Perfect Delivery', desc: 'Refined to perfection — all files, assets, and guidelines included.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/hqskdn',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/hqskdn?wanted=true',
     isContact: false,
   },
   custom: {
@@ -147,7 +147,7 @@ const PACKAGES = {
       { step: '02', title: 'Brand Brief', desc: 'Share your industry, style preferences, and examples you love.' },
       { step: '03', title: 'Logo Delivered', desc: '3 concepts in 3–5 days. Choose, refine, receive all files.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/lfusys',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/lfusys?wanted=true',
     isContact: false,
   },
   'full-branding': {
@@ -177,7 +177,7 @@ const PACKAGES = {
       { step: '02', title: 'Brand Discovery', desc: 'Deep-dive questionnaire to capture your brand personality.' },
       { step: '03', title: 'Full Brand Delivery', desc: 'Logo, stationery, social kit, and guidelines — all delivered.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/xyoxh',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/xyoxh?wanted=true',
     isContact: false,
   },
   'menu-design': {
@@ -205,7 +205,7 @@ const PACKAGES = {
       { step: '02', title: 'Send Your Menu', desc: 'Share your menu items, brand colours, and any references.' },
       { step: '03', title: 'Print-Ready Delivery', desc: 'Receive print-ready PDF and editable source files.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/wjrpnc',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/wjrpnc?wanted=true',
     isContact: false,
   },
   'promotion-poster': {
@@ -233,7 +233,7 @@ const PACKAGES = {
       { step: '02', title: 'Share Your Brief', desc: 'Tell us the offer, event, or message to promote.' },
       { step: '03', title: 'Poster Ready', desc: 'High-resolution files ready for print and social in 48 hours.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ncnkbh',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ncnkbh?wanted=true',
     isContact: false,
   },
   'banner-design': {
@@ -261,7 +261,7 @@ const PACKAGES = {
       { step: '02', title: 'Share Requirements', desc: 'Tell us which platforms and what message to feature.' },
       { step: '03', title: 'Banners Delivered', desc: 'All sizes exported in PNG + editable source files.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/dbcfxs',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/dbcfxs?wanted=true',
     isContact: false,
   },
   bundle: {
@@ -291,7 +291,7 @@ const PACKAGES = {
       { step: '02', title: 'Campaign Brief', desc: 'Share your brand, promotions, and campaign goals.' },
       { step: '03', title: 'Full Kit Delivered', desc: 'All posters, banners, and social kit files — complete and ready.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/kucwct',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/kucwct?wanted=true',
     isContact: false,
   },
   'website-design': {
@@ -320,7 +320,7 @@ const PACKAGES = {
       { step: '02', title: 'Site Brief', desc: 'Share your brand, goals, pages needed, and any references.' },
       { step: '03', title: 'Design Delivered', desc: 'Figma + PSD files for all pages — desktop and mobile.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ghmoo',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ghmoo?wanted=true',
     isContact: false,
   },
 };
@@ -537,24 +537,32 @@ function CheckoutPage() {
                     </div>
 
                     {/* CTA Button */}
-                    <a
-                      href={pkg.isContact
-                        ? `mailto:hello@rajputdesignsstudio.com?subject=Custom%20Project%20Enquiry&body=Hi%2C%20I%27d%20like%20to%20discuss%20a%20custom%20project.`
-                        : `https://wa.me/923365843243?text=${encodeURIComponent(`Hi! I'd like to order the ${pkg.name} Package (${pkg.price}). Please guide me on next steps.`)}`
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 glow-cyan-subtle hover:brightness-110 active:scale-[0.98]"
-                      style={{ background: 'linear-gradient(135deg, #378ADD 0%, #1a5fa8 100%)', color: '#fff' }}
-                    >
-                      <MessageCircle className="w-5 h-5" />
-                      {pkg.isContact ? 'Send Enquiry' : 'Order via WhatsApp'}
-                    </a>
+                    {pkg.isContact ? (
+                      <Link
+                        to="/#contact"
+                        className="w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 glow-cyan-subtle hover:brightness-110 active:scale-[0.98]"
+                        style={{ background: 'linear-gradient(135deg, #378ADD 0%, #1a5fa8 100%)', color: '#fff' }}
+                      >
+                        <MessageCircle className="w-5 h-5" /> Contact Us
+                      </Link>
+                    ) : (
+                      <a
+                        href={pkg.gumroadLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all duration-300 flex items-center justify-center gap-2 glow-cyan-subtle hover:brightness-110 active:scale-[0.98]"
+                        style={{ background: 'linear-gradient(135deg, #378ADD 0%, #1a5fa8 100%)', color: '#fff' }}
+                      >
+                        <Lock className="w-4 h-4" /> Proceed to Secure Checkout
+                      </a>
+                    )}
 
-                    <div className="flex items-center justify-center gap-2 mt-3">
-                      <ShieldCheck className="w-3.5 h-3.5 text-white/30" />
-                      <span className="text-white/30 text-xs">We reply within a few hours</span>
-                    </div>
+                    {!pkg.isContact && (
+                      <div className="flex items-center justify-center gap-2 mt-3">
+                        <ShieldCheck className="w-3.5 h-3.5 text-white/30" />
+                        <span className="text-white/30 text-xs">Powered by Gumroad — 256-bit SSL</span>
+                      </div>
+                    )}
                   </div>
                 </div>
 
