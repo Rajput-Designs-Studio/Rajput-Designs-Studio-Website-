@@ -163,7 +163,7 @@ function ProjectCard({ project, index, totalCards }) {
               </h3>
             </div>
 
-            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 line-clamp-4 lg:line-clamp-none">
+            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 line-clamp-3 lg:line-clamp-none">
               {project.description}
             </p>
 
@@ -191,7 +191,7 @@ function ProjectCard({ project, index, totalCards }) {
           </div>
 
           {/* Right Image Area */}
-          <div className="w-full lg:w-7/12 h-[160px] sm:h-[220px] md:h-[280px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
+          <div className="w-full lg:w-7/12 h-[140px] sm:h-[200px] md:h-[260px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
             {hasMultipleImages ? (
               <div className="h-full w-full relative">
                 <div className="overflow-hidden h-full w-full" ref={emblaRef}>
