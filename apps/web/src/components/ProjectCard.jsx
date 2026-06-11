@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight, ZoomIn, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn, X, ArrowRight } from 'lucide-react';
 
 function ProjectCard({ project, index, totalCards }) {
   const ref = useRef(null);
@@ -143,7 +143,7 @@ function ProjectCard({ project, index, totalCards }) {
       <div ref={ref} className="min-h-[420px] sm:min-h-[550px] lg:h-[80vh] flex items-center justify-center relative mb-8 sm:mb-12 md:mb-16" style={{ top: `${index * 30}px` }}>
         <motion.div
           style={{ scale, background: '#F5F9FF', border: '1px solid #B5D4F4' }}
-          className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 transition-colors duration-500"
+          className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] overflow-hidden flex flex-col lg:flex-row transition-colors duration-500"
         >
           {/* Left Content Area */}
           <div className="flex flex-col w-full lg:w-5/12 h-full z-10 relative p-6 sm:p-8 md:p-10">
@@ -185,15 +185,15 @@ function ProjectCard({ project, index, totalCards }) {
             </div>
 
             <Link
-              to="/portfolio-gallery"
-              className="self-start mt-6 px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-[hsl(var(--primary))] font-bold uppercase tracking-wider hover:bg-[hsl(var(--primary))] hover:text-white transition-all duration-300 text-sm sm:text-base hover:shadow-lg"
+              to={`/project/${project.id}`}
+              className="self-start mt-6 px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[#042C53] transition-all duration-300 text-sm sm:text-base shadow-md hover:shadow-lg flex items-center gap-2 group"
             >
-              View Project
+              View Project <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
           {/* Right Image Area */}
-          <div className="w-full lg:w-7/12 h-[220px] sm:h-[280px] lg:h-full relative overflow-hidden group/image">
+          <div className="w-full lg:w-7/12 h-[220px] sm:h-[280px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
             {hasMultipleImages ? (
               <div className="h-full w-full relative">
                 <div className="overflow-hidden h-full w-full" ref={emblaRef}>
