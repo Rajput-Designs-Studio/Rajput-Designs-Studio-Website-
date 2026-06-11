@@ -146,7 +146,7 @@ function ProjectCard({ project, index, totalCards }) {
           className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] overflow-hidden flex flex-col lg:flex-row transition-colors duration-500"
         >
           {/* Left Content Area */}
-          <div className="flex flex-col w-full lg:w-5/12 lg:h-full z-10 relative p-4 sm:p-6 md:p-8 lg:p-10">
+          <div className="flex flex-col w-full lg:w-1/2 lg:h-full z-10 relative p-4 sm:p-6 md:p-8 lg:p-10">
             <div
               className="text-[hsl(var(--primary))] font-black leading-none mb-3 sm:mb-4"
               style={{ fontSize: 'clamp(1.8rem, 5vw, 80px)' }}
@@ -163,7 +163,7 @@ function ProjectCard({ project, index, totalCards }) {
               </h3>
             </div>
 
-            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 line-clamp-3 lg:line-clamp-none">
+            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 line-clamp-2 lg:line-clamp-none">
               {project.description}
             </p>
 
@@ -191,7 +191,7 @@ function ProjectCard({ project, index, totalCards }) {
           </div>
 
           {/* Right Image Area */}
-          <div className="w-full lg:w-7/12 h-[140px] sm:h-[200px] md:h-[260px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
+          <div className="w-full lg:w-1/2 h-[120px] sm:h-[180px] md:h-[240px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
             {hasMultipleImages ? (
               <div className="h-full w-full relative">
                 <div className="overflow-hidden h-full w-full" ref={emblaRef}>
