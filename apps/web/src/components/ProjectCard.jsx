@@ -140,17 +140,17 @@ function ProjectCard({ project, index, totalCards }) {
         </div>
       )}
 
-      <div ref={ref} className="min-h-[420px] sm:min-h-[550px] lg:h-[80vh] flex items-center justify-center relative mb-8 sm:mb-12 md:mb-16" style={{ top: `${index * 30}px` }}>
+      <div ref={ref} className="h-auto lg:min-h-[560px] lg:h-[85vh] flex items-center justify-center relative mb-6 sm:mb-8 md:mb-10 lg:mb-12" style={{ top: `${index * 30}px` }}>
         <motion.div
           style={{ scale, background: '#F5F9FF', border: '1px solid #B5D4F4' }}
           className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] overflow-hidden flex flex-col lg:flex-row transition-colors duration-500"
         >
           {/* Left Content Area */}
-          <div className="flex flex-col w-full lg:w-5/12 h-full z-10 relative p-6 sm:p-8 md:p-10">
+          <div className="flex flex-col w-full lg:w-5/12 lg:h-full z-10 relative p-5 sm:p-7 md:p-8 lg:p-10">
             <div className="flex-1">
               <div
                 className="text-[hsl(var(--primary))] font-black leading-none mb-6"
-                style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)' }}
+                style={{ fontSize: 'clamp(1.8rem, 5vw, 80px)' }}
               >
                 {project.number}
               </div>
@@ -159,16 +159,16 @@ function ProjectCard({ project, index, totalCards }) {
                 <span className="text-[hsl(var(--primary))] font-medium uppercase tracking-widest text-xs sm:text-sm">
                   {project.category}
                 </span>
-                <h3 className="text-[#042C53] font-bold uppercase text-2xl sm:text-3xl md:text-4xl leading-tight">
+                <h3 className="text-[#042C53] font-bold uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
                   {project.name}
                 </h3>
               </div>
 
-              <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base md:text-lg mb-6 max-w-md line-clamp-3 sm:line-clamp-none">
+              <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-5 sm:mb-6">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-8">
+              <div className="flex flex-wrap gap-2 sm:gap-5 mb-4 sm:mb-6">
                 <div className="flex flex-col">
                   <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Role</span>
                   <span className="text-sm text-[#042C53] font-medium">{project.role}</span>
@@ -186,14 +186,14 @@ function ProjectCard({ project, index, totalCards }) {
 
             <Link
               to={`/project/${project.id}`}
-              className="self-start mt-6 px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[#042C53] transition-all duration-300 text-sm sm:text-base shadow-md hover:shadow-lg flex items-center gap-2 group"
+              className="self-start mt-4 sm:mt-5 px-5 py-2 sm:px-7 sm:py-2.5 rounded-full bg-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[#042C53] transition-all duration-300 text-sm sm:text-base shadow-md hover:shadow-lg flex items-center gap-2 group"
             >
               View Project <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
           {/* Right Image Area */}
-          <div className="w-full lg:w-7/12 h-[220px] sm:h-[280px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
+          <div className="w-full lg:w-7/12 h-[200px] sm:h-[260px] md:h-[320px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
             {hasMultipleImages ? (
               <div className="h-full w-full relative">
                 <div className="overflow-hidden h-full w-full" ref={emblaRef}>
