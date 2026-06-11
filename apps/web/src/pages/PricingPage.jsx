@@ -275,7 +275,7 @@ function PricingPage() {
         })}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-[#E6F1FB] text-foreground pb-24 overflow-x-hidden">
+      <div className="min-h-screen bg-[#E6F1FB] text-[#042C53] pb-24 overflow-x-hidden">
         {/* Header */}
         <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#B5D4F4]">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
