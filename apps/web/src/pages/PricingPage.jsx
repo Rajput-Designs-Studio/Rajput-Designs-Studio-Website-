@@ -268,6 +268,14 @@ function PricingPage() {
             { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "Website Design Package", "description": "Modern mobile-ready website UI design, up to 5 pages, Figma/PSD source files.", "offers": { "@type": "Offer", "price": "149", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } }
           ]
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rajputdesignsstudio.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.rajputdesignsstudio.com/pricing" }
+          ]
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-[#042C53] text-foreground pb-24 overflow-x-hidden">

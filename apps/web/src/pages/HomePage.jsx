@@ -950,8 +950,8 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Rajput Designs Studio | Freelance Graphic Designer — Logo, Branding &amp; UI/UX</title>
-        <meta name="description" content="Hire a professional graphic designer for logo design, brand identity, social media graphics, menus &amp; UI/UX. Affordable packages starting at $35. Serving clients worldwide." />
+        <title>Graphic Designer | Rajput Designs Studio — Logo & Branding</title>
+        <meta name="description" content="Hire a graphic designer for logo design, brand identity, social media graphics & UI/UX. Packages from $35. Fast delivery. Clients worldwide." />
         <meta name="keywords" content="freelance graphic designer, hire graphic designer online, logo design service, brand identity designer, affordable logo design, social media graphics designer, menu design service, UI UX designer, website design package, graphic design packages, Rajput Designs Studio, professional branding Pakistan" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <meta name="author" content="Rajput Designs Studio" />
@@ -959,13 +959,13 @@ function HomePage() {
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/" />
-        <meta property="og:title" content="Rajput Designs Studio | Freelance Graphic Designer — Logo, Branding &amp; UI/UX" />
-        <meta property="og:description" content="Hire a professional graphic designer for logo design, brand identity, social media graphics, menus &amp; UI/UX. Affordable packages starting at $35. Serving clients worldwide." />
+        <meta property="og:title" content="Graphic Designer | Rajput Designs Studio — Logo & Branding" />
+        <meta property="og:description" content="Hire a graphic designer for logo design, brand identity, social media graphics & UI/UX. Packages from $35. Fast delivery. Clients worldwide." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Rajput Designs Studio | Freelance Graphic Designer — Logo, Branding &amp; UI/UX" />
-        <meta name="twitter:description" content="Hire a professional graphic designer for logo design, brand identity, social media graphics, menus &amp; UI/UX. Affordable packages starting at $35. Serving clients worldwide." />
+        <meta name="twitter:title" content="Graphic Designer | Rajput Designs Studio — Logo & Branding" />
+        <meta name="twitter:description" content="Hire a graphic designer for logo design, brand identity, social media graphics & UI/UX. Packages from $35. Fast delivery." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -1107,14 +1107,14 @@ function HomePage() {
                   className="font-black uppercase tracking-tight leading-[1.1] text-balance mb-4 drop-shadow-md"
                   style={{ fontSize: 'clamp(2.4rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
                 >
-                  <span style={{ color: '#ffffff' }}>Designs That Make </span>
+                  <span style={{ color: '#ffffff' }}>Graphic Design That Makes </span>
                   <span style={{ color: '#378ADD' }}>People Stop Scrolling</span>
                 </h1>
                 <p
                   className="text-white font-light tracking-wide text-balance opacity-90"
                   style={{ fontSize: 'clamp(1rem, 2vw, 1.5rem)' }}
                 >
-                  I help brands look professional through branding, social media design, and digital visuals.
+                  Professional graphic designer — logo design, brand identity, social media graphics &amp; UI/UX for clients worldwide.
                 </p>
               </Magnet>
             </FadeIn>

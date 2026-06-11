@@ -89,6 +89,15 @@ function ProjectDetailPage() {
           "image": allImages,
           "genre": project.category,
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rajputdesignsstudio.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://www.rajputdesignsstudio.com/portfolio-gallery" },
+            { "@type": "ListItem", "position": 3, "name": project.name, "item": `https://www.rajputdesignsstudio.com/project/${project.id}` }
+          ]
+        })}</script>
       </Helmet>
 
       {/* Lightbox */}
