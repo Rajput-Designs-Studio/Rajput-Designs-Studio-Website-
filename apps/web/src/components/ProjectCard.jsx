@@ -146,15 +146,15 @@ function ProjectCard({ project, index, totalCards }) {
           className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] overflow-hidden flex flex-col lg:flex-row transition-colors duration-500"
         >
           {/* Left Content Area */}
-          <div className="flex flex-col w-full lg:w-5/12 lg:h-full z-10 relative p-5 sm:p-7 md:p-8 lg:p-10">
+          <div className="flex flex-col w-full lg:w-5/12 lg:h-full z-10 relative p-4 sm:p-6 md:p-8 lg:p-10">
             <div
-              className="text-[hsl(var(--primary))] font-black leading-none mb-4 sm:mb-5"
+              className="text-[hsl(var(--primary))] font-black leading-none mb-3 sm:mb-4"
               style={{ fontSize: 'clamp(1.8rem, 5vw, 80px)' }}
             >
               {project.number}
             </div>
 
-            <div className="flex flex-col gap-1 sm:gap-2 mb-4 sm:mb-5">
+            <div className="flex flex-col gap-1 sm:gap-2 mb-3 sm:mb-4">
               <span className="text-[hsl(var(--primary))] font-medium uppercase tracking-widest text-xs sm:text-sm">
                 {project.category}
               </span>
@@ -163,11 +163,11 @@ function ProjectCard({ project, index, totalCards }) {
               </h3>
             </div>
 
-            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-4 sm:mb-5 line-clamp-4 lg:line-clamp-none">
+            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 line-clamp-4 lg:line-clamp-none">
               {project.description}
             </p>
 
-            <div className="flex flex-wrap gap-2 sm:gap-5 mb-4">
+            <div className="flex flex-wrap gap-2 sm:gap-5 mb-3">
               <div className="flex flex-col">
                 <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Role</span>
                 <span className="text-sm text-[#042C53] font-medium">{project.role}</span>
@@ -191,7 +191,7 @@ function ProjectCard({ project, index, totalCards }) {
           </div>
 
           {/* Right Image Area */}
-          <div className="w-full lg:w-7/12 h-[200px] sm:h-[260px] md:h-[320px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
+          <div className="w-full lg:w-7/12 h-[160px] sm:h-[220px] md:h-[280px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
             {hasMultipleImages ? (
               <div className="h-full w-full relative">
                 <div className="overflow-hidden h-full w-full" ref={emblaRef}>
