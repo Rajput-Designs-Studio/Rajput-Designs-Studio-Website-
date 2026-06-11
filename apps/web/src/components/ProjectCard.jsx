@@ -147,46 +147,44 @@ function ProjectCard({ project, index, totalCards }) {
         >
           {/* Left Content Area */}
           <div className="flex flex-col w-full lg:w-5/12 lg:h-full z-10 relative p-5 sm:p-7 md:p-8 lg:p-10">
-            <div className="flex-1">
-              <div
-                className="text-[hsl(var(--primary))] font-black leading-none mb-6"
-                style={{ fontSize: 'clamp(1.8rem, 5vw, 80px)' }}
-              >
-                {project.number}
+            <div
+              className="text-[hsl(var(--primary))] font-black leading-none mb-4 sm:mb-5"
+              style={{ fontSize: 'clamp(1.8rem, 5vw, 80px)' }}
+            >
+              {project.number}
+            </div>
+
+            <div className="flex flex-col gap-1 sm:gap-2 mb-4 sm:mb-5">
+              <span className="text-[hsl(var(--primary))] font-medium uppercase tracking-widest text-xs sm:text-sm">
+                {project.category}
+              </span>
+              <h3 className="text-[#042C53] font-bold uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
+                {project.name}
+              </h3>
+            </div>
+
+            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-4 sm:mb-5">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 sm:gap-5 mb-4">
+              <div className="flex flex-col">
+                <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Role</span>
+                <span className="text-sm text-[#042C53] font-medium">{project.role}</span>
               </div>
-
-              <div className="flex flex-col gap-2 mb-6">
-                <span className="text-[hsl(var(--primary))] font-medium uppercase tracking-widest text-xs sm:text-sm">
-                  {project.category}
-                </span>
-                <h3 className="text-[#042C53] font-bold uppercase text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
-                  {project.name}
-                </h3>
+              <div className="flex flex-col">
+                <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Client</span>
+                <span className="text-sm text-[#042C53] font-medium">{project.client}</span>
               </div>
-
-              <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-5 sm:mb-6">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 sm:gap-5 mb-4 sm:mb-6">
-                <div className="flex flex-col">
-                  <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Role</span>
-                  <span className="text-sm text-[#042C53] font-medium">{project.role}</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Client</span>
-                  <span className="text-sm text-[#042C53] font-medium">{project.client}</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Year</span>
-                  <span className="text-sm text-[#042C53] font-medium">{project.year}</span>
-                </div>
+              <div className="flex flex-col">
+                <span className="text-xs text-[#185FA5] opacity-70 uppercase tracking-wider mb-1">Year</span>
+                <span className="text-sm text-[#042C53] font-medium">{project.year}</span>
               </div>
             </div>
 
             <Link
               to={`/project/${project.id}`}
-              className="self-start mt-4 sm:mt-5 px-5 py-2 sm:px-7 sm:py-2.5 rounded-full bg-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[#042C53] transition-all duration-300 text-sm sm:text-base shadow-md hover:shadow-lg flex items-center gap-2 group"
+              className="self-start mt-4 lg:mt-auto px-6 py-2.5 rounded-full bg-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[#042C53] transition-all duration-300 text-sm shadow-md hover:shadow-lg flex items-center gap-2 group"
             >
               View Project <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
