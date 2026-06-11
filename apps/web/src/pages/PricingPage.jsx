@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Check, ArrowRight, X } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import FadeIn from '@/components/FadeIn.jsx';
@@ -19,7 +19,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Get Started',
-    paymentLink: 'https://rajputdesignsstudio.gumroad.com/l/pbgpsm'
+    checkoutSlug: 'starter',
   },
   {
     name: 'Professional',
@@ -36,7 +36,7 @@ const pricingPlans = [
     ],
     highlight: true,
     cta: 'Choose Professional',
-    paymentLink: 'https://rajputdesignsstudio.gumroad.com/l/kwoeak'
+    checkoutSlug: 'professional',
   },
   {
     name: 'Premium',
@@ -54,7 +54,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Choose Premium',
-    paymentLink: 'https://rajputdesignsstudio.gumroad.com/l/hqskdn'
+    checkoutSlug: 'premium',
   },
   {
     name: 'Custom',
@@ -69,7 +69,7 @@ const pricingPlans = [
     ],
     highlight: false,
     cta: 'Contact Us',
-    paymentLink: null
+    checkoutSlug: 'custom',
   }
 ];
 
@@ -89,7 +89,7 @@ const specialtyPackages = [
       '3-5 Day Delivery',
     ],
     highlight: false,
-    paymentLink: null,
+    checkoutSlug: 'logo-design',
   },
   {
     name: 'Full Branding Package',
@@ -108,7 +108,7 @@ const specialtyPackages = [
     ],
     highlight: true,
     badge: 'Best Value',
-    paymentLink: null,
+    checkoutSlug: 'full-branding',
   },
   {
     name: 'Menu Design Package',
@@ -128,7 +128,7 @@ const specialtyPackages = [
       '3-5 Day Delivery',
     ],
     highlight: false,
-    paymentLink: null,
+    checkoutSlug: 'menu-design',
   },
   {
     name: 'Promotion Poster',
@@ -144,7 +144,7 @@ const specialtyPackages = [
       '48-Hour Delivery',
     ],
     highlight: false,
-    paymentLink: null,
+    checkoutSlug: 'promotion-poster',
   },
   {
     name: 'Banner Design Package',
@@ -160,7 +160,7 @@ const specialtyPackages = [
       '2-3 Day Delivery',
     ],
     highlight: false,
-    paymentLink: null,
+    checkoutSlug: 'banner-design',
   },
   {
     name: 'Bundle Package',
@@ -179,7 +179,7 @@ const specialtyPackages = [
     ],
     highlight: false,
     badge: 'Save 40%',
-    paymentLink: null,
+    checkoutSlug: 'bundle',
   },
   {
     name: 'Website Design Package',
@@ -196,7 +196,7 @@ const specialtyPackages = [
       '7-10 Day Delivery',
     ],
     highlight: false,
-    paymentLink: null,
+    checkoutSlug: 'website-design',
   },
 ];
 
@@ -225,13 +225,10 @@ const faqs = [
 
 function PricingPage() {
   const [lightbox, setLightbox] = React.useState(null);
+  const navigate = useNavigate();
 
-  const handlePayment = (plan) => {
-    if (plan.paymentLink) {
-      window.open(plan.paymentLink, '_blank');
-    } else {
-      window.location.href = '/#contact';
-    }
+  const handleCheckout = (plan) => {
+    navigate(`/checkout/${plan.checkoutSlug}`);
   };
 
   return (
@@ -350,7 +347,7 @@ function PricingPage() {
                   </ul>
 
                   <button
-                    onClick={() => handlePayment(plan)}
+                    onClick={() => handleCheckout(plan)}
                     className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${plan.highlight
                       ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
                       : 'bg-[hsla(var(--primary)/0.1)] text-white hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] border border-[hsl(var(--primary))]'
@@ -417,7 +414,7 @@ function PricingPage() {
                         ))}
                       </ul>
                       <button
-                        onClick={() => handlePayment(pkg)}
+                        onClick={() => handleCheckout(pkg)}
                         className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${
                           pkg.highlight
                             ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
