@@ -147,7 +147,7 @@ const PACKAGES = {
       { step: '02', title: 'Brand Brief', desc: 'Share your industry, style preferences, and examples you love.' },
       { step: '03', title: 'Logo Delivered', desc: '3 concepts in 3–5 days. Choose, refine, receive all files.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/lfusys',
     isContact: false,
   },
   'full-branding': {
@@ -177,7 +177,7 @@ const PACKAGES = {
       { step: '02', title: 'Brand Discovery', desc: 'Deep-dive questionnaire to capture your brand personality.' },
       { step: '03', title: 'Full Brand Delivery', desc: 'Logo, stationery, social kit, and guidelines — all delivered.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/xyoxh',
     isContact: false,
   },
   'menu-design': {
@@ -205,7 +205,7 @@ const PACKAGES = {
       { step: '02', title: 'Send Your Menu', desc: 'Share your menu items, brand colours, and any references.' },
       { step: '03', title: 'Print-Ready Delivery', desc: 'Receive print-ready PDF and editable source files.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/wjrpnc',
     isContact: false,
   },
   'promotion-poster': {
@@ -233,7 +233,7 @@ const PACKAGES = {
       { step: '02', title: 'Share Your Brief', desc: 'Tell us the offer, event, or message to promote.' },
       { step: '03', title: 'Poster Ready', desc: 'High-resolution files ready for print and social in 48 hours.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ncnkbh',
     isContact: false,
   },
   'banner-design': {
@@ -261,7 +261,7 @@ const PACKAGES = {
       { step: '02', title: 'Share Requirements', desc: 'Tell us which platforms and what message to feature.' },
       { step: '03', title: 'Banners Delivered', desc: 'All sizes exported in PNG + editable source files.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/dbcfxs',
     isContact: false,
   },
   bundle: {
@@ -291,7 +291,7 @@ const PACKAGES = {
       { step: '02', title: 'Campaign Brief', desc: 'Share your brand, promotions, and campaign goals.' },
       { step: '03', title: 'Full Kit Delivered', desc: 'All posters, banners, and social kit files — complete and ready.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/kucwct',
     isContact: false,
   },
   'website-design': {
@@ -320,7 +320,7 @@ const PACKAGES = {
       { step: '02', title: 'Site Brief', desc: 'Share your brand, goals, pages needed, and any references.' },
       { step: '03', title: 'Design Delivered', desc: 'Figma + PSD files for all pages — desktop and mobile.' },
     ],
-    gumroadLink: 'https://rajputdesignsstudio.gumroad.com',
+    gumroadLink: 'https://rajputdesignsstudio.gumroad.com/l/ghmoo',
     isContact: false,
   },
 };
