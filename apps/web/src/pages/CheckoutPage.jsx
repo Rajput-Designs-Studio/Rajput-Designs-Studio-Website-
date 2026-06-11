@@ -540,7 +540,7 @@ function CheckoutPage() {
                     <a
                       href={pkg.isContact
                         ? `mailto:hello@rajputdesignsstudio.com?subject=Custom%20Project%20Enquiry&body=Hi%2C%20I%27d%20like%20to%20discuss%20a%20custom%20project.`
-                        : `https://wa.me/923001234567?text=${encodeURIComponent(`Hi! I'd like to order the ${pkg.name} Package (${pkg.price}). Please guide me on next steps.`)}`
+                        : `https://wa.me/923365843243?text=${encodeURIComponent(`Hi! I'd like to order the ${pkg.name} Package (${pkg.price}). Please guide me on next steps.`)}`
                       }
                       target="_blank"
                       rel="noopener noreferrer"
