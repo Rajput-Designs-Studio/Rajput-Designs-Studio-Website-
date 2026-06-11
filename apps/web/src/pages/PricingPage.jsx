@@ -275,13 +275,13 @@ function PricingPage() {
         })}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-[#042C53] text-foreground pb-24 overflow-x-hidden">
+      <div className="min-h-screen bg-[#E6F1FB] text-foreground pb-24 overflow-x-hidden">
         {/* Header */}
-        <header className="sticky top-0 z-50 glass-panel border-b border-[hsla(var(--primary)/0.1)]">
+        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#B5D4F4]">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <Link
               to="/"
-              className="flex items-center gap-2 text-white hover:text-[hsl(var(--primary))] transition-colors group"
+              className="flex items-center gap-2 text-[#042C53] hover:text-[hsl(var(--primary))] transition-colors group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
               <span className="font-medium uppercase tracking-wider text-sm">Back to Home</span>
@@ -300,13 +300,13 @@ function PricingPage() {
           <FadeIn delay={0} y={20}>
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h1
-  className="font-black uppercase tracking-tight leading-[1.1] text-balance mb-4 drop-shadow-md text-center"
-  style={{ fontSize: 'clamp(1.8rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
->
-  <span style={{ color: '#ffffff' }}>Pricing </span>
-  <span style={{ color: '#378ADD' }}>Plan</span>
-</h1>
-              <p className="text-white opacity-80 text-base sm:text-xl font-light">
+                className="font-black uppercase tracking-tight leading-[1.1] text-balance mb-4 drop-shadow-md text-center"
+                style={{ fontSize: 'clamp(1.8rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
+              >
+                <span style={{ color: '#042C53' }}>Pricing </span>
+                <span style={{ color: '#378ADD' }}>Plan</span>
+              </h1>
+              <p className="text-[#185FA5] text-base sm:text-xl font-light">
                 Choose the perfect package for your design needs. Clear, upfront pricing with no hidden surprises.
               </p>
             </div>
@@ -318,8 +318,8 @@ function PricingPage() {
               <FadeIn key={plan.name} delay={index * 0.1} y={30} className="h-full">
                 <div
                   className={`h-full flex flex-col p-5 sm:p-8 rounded-3xl relative transition-all duration-300 ${plan.highlight
-                    ? 'bg-[hsla(var(--primary)/0.1)] border-2 border-[hsl(var(--primary))] glow-cyan scale-100 lg:scale-105 z-10'
-                    : 'glass-panel border border-[hsla(var(--primary)/0.2)] hover:border-[hsl(var(--primary))]'
+                    ? 'bg-[#042C53] border-2 border-[hsl(var(--primary))] glow-cyan scale-100 lg:scale-105 z-10'
+                    : 'bg-white/90 border border-[#B5D4F4] hover:border-[hsl(var(--primary))] shadow-sm backdrop-blur-sm hover:shadow-md'
                     }`}
                 >
                   {plan.badge && (
@@ -328,12 +328,12 @@ function PricingPage() {
                     </div>
                   )}
 
-                  <h3 className="text-white text-xl font-bold uppercase tracking-wider mb-2">{plan.name}</h3>
+                  <h3 className={`text-xl font-bold uppercase tracking-wider mb-2 ${plan.highlight ? 'text-white' : 'text-[#042C53]'}`}>{plan.name}</h3>
                   <div className="mb-4">
                     <span className="text-2xl sm:text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{plan.price}</span>
-                    {plan.price !== 'Custom Quote' && <span className="text-white opacity-60 text-sm font-light ml-1">/ project</span>}
+                    {plan.price !== 'Custom Quote' && <span className={`text-sm font-light ml-1 ${plan.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>/ project</span>}
                   </div>
-                  <p className="text-white opacity-70 text-sm font-light h-10 mb-8 border-b border-[hsla(var(--primary)/0.1)] pb-12">
+                  <p className={`text-sm font-light h-10 mb-8 border-b pb-12 ${plan.highlight ? 'text-white opacity-70 border-[hsla(var(--primary)/0.2)]' : 'text-[#185FA5] border-[#B5D4F4]'}`}>
                     {plan.description}
                   </p>
 
@@ -341,7 +341,7 @@ function PricingPage() {
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-[hsl(var(--primary))] shrink-0 mt-0.5" />
-                        <span className="text-white font-light text-sm">{feature}</span>
+                        <span className={`font-light text-sm ${plan.highlight ? 'text-white' : 'text-[#185FA5]'}`}>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -350,7 +350,7 @@ function PricingPage() {
                     onClick={() => handleCheckout(plan)}
                     className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${plan.highlight
                       ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
-                      : 'bg-[hsla(var(--primary)/0.1)] text-white hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] border border-[hsl(var(--primary))]'
+                      : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
                       }`}
                   >
                     {plan.cta}
@@ -363,11 +363,11 @@ function PricingPage() {
           {/* Specialty Packages */}
           <FadeIn delay={0.1} y={30}>
             <div className="mb-20 sm:mb-32">
-              <h2 className="text-center text-2xl md:text-4xl font-black uppercase text-white mb-4 tracking-wide">
-                <span style={{ color: '#ffffff' }}>Specialty </span>
+              <h2 className="text-center text-2xl md:text-4xl font-black uppercase mb-4 tracking-wide">
+                <span style={{ color: '#042C53' }}>Specialty </span>
                 <span style={{ color: '#378ADD' }}>Packages</span>
               </h2>
-              <p className="text-center text-white opacity-70 mb-10 sm:mb-16 text-base font-light max-w-2xl mx-auto">
+              <p className="text-center text-[#185FA5] mb-10 sm:mb-16 text-base font-light max-w-2xl mx-auto">
                 Purpose-built packages for specific design needs — straightforward pricing, no guesswork.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
@@ -375,8 +375,8 @@ function PricingPage() {
                   <FadeIn key={pkg.name} delay={index * 0.08} y={30} className="h-full">
                     <div className={`h-full flex flex-col p-5 sm:p-7 rounded-3xl relative transition-all duration-300 ${
                       pkg.highlight
-                        ? 'bg-[hsla(var(--primary)/0.1)] border-2 border-[hsl(var(--primary))] glow-cyan'
-                        : 'glass-panel border border-[hsla(var(--primary)/0.2)] hover:border-[hsl(var(--primary))]'
+                        ? 'bg-[#042C53] border-2 border-[hsl(var(--primary))] glow-cyan'
+                        : 'bg-white/90 border border-[#B5D4F4] hover:border-[hsl(var(--primary))] shadow-sm backdrop-blur-sm hover:shadow-md'
                     }`}>
                       {pkg.badge && (
                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full glow-cyan-subtle z-10">
@@ -399,17 +399,17 @@ function PricingPage() {
                         </div>
                       )}
                       <div className="text-3xl mb-3">{pkg.icon}</div>
-                      <h3 className="text-white text-lg font-bold uppercase tracking-wider mb-1">{pkg.name}</h3>
-                      <p className="text-white opacity-60 text-xs mb-4">{pkg.description}</p>
+                      <h3 className={`text-lg font-bold uppercase tracking-wider mb-1 ${pkg.highlight ? 'text-white' : 'text-[#042C53]'}`}>{pkg.name}</h3>
+                      <p className={`text-xs mb-4 ${pkg.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>{pkg.description}</p>
                       <div className="mb-5">
                         <span className="text-2xl sm:text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{pkg.price}</span>
-                        <span className="text-white opacity-60 text-sm font-light ml-1">/ project</span>
+                        <span className={`text-sm font-light ml-1 ${pkg.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>/ project</span>
                       </div>
                       <ul className="flex flex-col gap-3 mb-6 flex-grow">
                         {pkg.features.map((f, i) => (
                           <li key={i} className="flex items-start gap-3">
                             <Check className="w-4 h-4 text-[hsl(var(--primary))] shrink-0 mt-0.5" />
-                            <span className="text-white font-light text-sm">{f}</span>
+                            <span className={`font-light text-sm ${pkg.highlight ? 'text-white' : 'text-[#185FA5]'}`}>{f}</span>
                           </li>
                         ))}
                       </ul>
@@ -418,7 +418,7 @@ function PricingPage() {
                         className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${
                           pkg.highlight
                             ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
-                            : 'bg-[hsla(var(--primary)/0.1)] text-white hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] border border-[hsl(var(--primary))]'
+                            : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
                         }`}
                       >
                         Get Started
@@ -433,7 +433,7 @@ function PricingPage() {
           {/* FAQ Section */}
           <FadeIn delay={0.2} y={30}>
             <div className="max-w-3xl mx-auto mb-24">
-              <h2 className="text-center text-2xl md:text-4xl font-black uppercase text-white mb-10 tracking-wide">
+              <h2 className="text-center text-2xl md:text-4xl font-black uppercase text-[#042C53] mb-10 tracking-wide">
                 Frequently Asked Questions
               </h2>
 
@@ -442,12 +442,12 @@ function PricingPage() {
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="glass-panel border border-[hsla(var(--primary)/0.2)] rounded-2xl px-6 data-[state=open]:border-[hsl(var(--primary))] transition-colors"
+                    className="bg-white/90 border border-[#B5D4F4] rounded-2xl px-6 data-[state=open]:border-[hsl(var(--primary))] transition-colors backdrop-blur-sm"
                   >
-                    <AccordionTrigger className="text-white hover:text-[hsl(var(--primary))] hover:no-underline font-medium text-left text-base sm:text-lg py-6">
+                    <AccordionTrigger className="text-[#042C53] hover:text-[hsl(var(--primary))] hover:no-underline font-medium text-left text-base sm:text-lg py-6">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-white opacity-80 font-light leading-relaxed pb-6 text-base">
+                    <AccordionContent className="text-[#185FA5] font-light leading-relaxed pb-6 text-base">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -458,7 +458,7 @@ function PricingPage() {
             <div className="flex justify-center pb-24">
               <Link
                 to="/#contact"
-                className="flex items-center gap-2 text-[hsl(var(--primary))] hover:text-white uppercase font-bold tracking-widest transition-colors group"
+                className="flex items-center gap-2 text-[hsl(var(--primary))] hover:text-[#042C53] uppercase font-bold tracking-widest transition-colors group"
               >
                 Still have questions? Contact Us
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

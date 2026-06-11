@@ -950,8 +950,8 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Graphic Designer | Rajput Designs Studio — Logo & Branding</title>
-        <meta name="description" content="Hire a graphic designer for logo design, brand identity, social media graphics & UI/UX. Packages from $35. Fast delivery. Clients worldwide." />
+        <title>Rajput Designs Studio — Logo Design, Brand Identity & Graphics | From $35</title>
+        <meta name="description" content="Professional freelance graphic designer — logo design, brand identity, social media & UI/UX. Packages from $35. Fast delivery. 100% satisfaction. Trusted worldwide." />
         <meta name="keywords" content="freelance graphic designer, hire graphic designer online, logo design service, brand identity designer, affordable logo design, social media graphics designer, menu design service, UI UX designer, website design package, graphic design packages, Rajput Designs Studio, professional branding Pakistan" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <meta name="author" content="Rajput Designs Studio" />
@@ -959,13 +959,13 @@ function HomePage() {
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/" />
-        <meta property="og:title" content="Graphic Designer | Rajput Designs Studio — Logo & Branding" />
-        <meta property="og:description" content="Hire a graphic designer for logo design, brand identity, social media graphics & UI/UX. Packages from $35. Fast delivery. Clients worldwide." />
+        <meta property="og:title" content="Rajput Designs Studio — Logo Design, Brand Identity & Graphics | From $35" />
+        <meta property="og:description" content="Professional freelance graphic designer — logo design, brand identity, social media & UI/UX. Packages from $35. Fast delivery. 100% satisfaction. Trusted worldwide." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Graphic Designer | Rajput Designs Studio — Logo & Branding" />
-        <meta name="twitter:description" content="Hire a graphic designer for logo design, brand identity, social media graphics & UI/UX. Packages from $35. Fast delivery." />
+        <meta name="twitter:title" content="Rajput Designs Studio — Logo Design, Brand Identity & Graphics | From $35" />
+        <meta name="twitter:description" content="Professional freelance graphic designer — logo design, brand identity, social media & UI/UX. Packages from $35. Fast delivery. Trusted worldwide." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
