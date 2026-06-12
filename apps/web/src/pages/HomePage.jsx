@@ -634,12 +634,12 @@ const TestimonialCarouselMultiple = () => {
           {/* Left fade */}
           <div
             className="pointer-events-none absolute left-0 top-0 bottom-0 z-10"
-            style={{ width: '60px', background: 'linear-gradient(to right, #ffffff, transparent)' }}
+            style={{ width: '60px', background: 'linear-gradient(to right, #E6F1FB, transparent)' }}
           />
           {/* Right fade */}
           <div
             className="pointer-events-none absolute right-0 top-0 bottom-0 z-10"
-            style={{ width: '60px', background: 'linear-gradient(to left, #ffffff, transparent)' }}
+            style={{ width: '60px', background: 'linear-gradient(to left, #E6F1FB, transparent)' }}
           />
 
           {/* Scrolling track */}
@@ -1057,7 +1057,7 @@ function HomePage() {
         )}
 
         {/* ── SECTION 1 · HERO ── */}
-        <section id="hero" className="h-screen flex flex-col overflow-x-clip relative">
+        <section id="hero" className="h-screen flex flex-col overflow-x-clip relative" style={{ background: 'linear-gradient(135deg, #031e3d 0%, #042C53 40%, #0C3A6B 70%, #042C53 100%)' }}>
           <FadeIn delay={0} y={-20}>
             <nav className="flex items-center justify-between px-5 pt-5 sm:pt-6 md:pt-8 relative z-20 max-w-7xl mx-auto w-full">
               <img
@@ -1122,7 +1122,7 @@ function HomePage() {
         </section>
 
         {/* ── SECTION 2 · MARQUEE ── */}
-        <section ref={marqueeRef} className="pt-10 pb-16 bg-background border-t border-[hsla(var(--primary)/0.1)]">
+        <section ref={marqueeRef} className="pt-10 pb-16 bg-white border-t border-[#B5D4F4]">
           <div className="flex flex-col gap-3">
             <div ref={row1Ref} className="flex gap-3" style={{ willChange: 'transform' }}>
               {[...row1Images, ...row1Images].map((src, index) => (
@@ -1182,7 +1182,7 @@ function HomePage() {
         </section>
 
         {/* ── SECTION 4 · SERVICES ── */}
-        <section id="services" className="services-section bg-[#042C53] px-5 sm:px-8 md:px-10 py-24 sm:py-32 relative z-10 border-t border-[#0C3A6B]">
+        <section id="services" className="services-section px-5 sm:px-8 md:px-10 py-24 sm:py-32 relative z-10 border-t border-[#0C3A6B]" style={{ background: 'linear-gradient(160deg, #042C53 0%, #0a3560 50%, #042C53 100%)' }}>
           <h2 className="font-black uppercase text-center mb-16 sm:mb-24" style={{ fontSize: 'clamp(2rem, 8vw, 120px)', letterSpacing: '-0.02em' }}>
             <span style={{ color: '#ffffff' }}>Ser</span>
             <span style={{ color: '#378ADD' }}>vices</span>
@@ -1193,14 +1193,17 @@ function HomePage() {
             ))}
           </div>
           <FadeIn delay={0.2} y={20} className="flex justify-center max-w-5xl mx-auto">
-            <div className="bg-[#0C3A6B] border border-[hsla(var(--primary)/0.4)] p-6 sm:p-10 rounded-3xl w-full flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="p-6 sm:p-10 rounded-3xl w-full flex flex-col md:flex-row items-center justify-between gap-6" style={{ background: 'linear-gradient(135deg, #378ADD 0%, #185FA5 100%)', boxShadow: '0 16px 48px rgba(55,138,221,0.4)' }}>
               <div className="text-center md:text-left">
                 <h3 className="text-white text-xl sm:text-2xl font-bold uppercase tracking-wider mb-2">Ready to start?</h3>
-                <p className="text-[#85B7EB] font-light text-base sm:text-lg">Check out our transparent pricing plans tailored for your needs.</p>
+                <p className="font-light text-base sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>Check out our transparent pricing plans tailored for your needs.</p>
               </div>
               <Link
                 to="/pricing"
-                className="px-8 py-4 rounded-full bg-transparent border-2 border-[hsl(var(--primary))] text-white font-bold uppercase tracking-wider hover:bg-[hsl(var(--primary))] transition-all duration-300 glow-cyan-subtle whitespace-nowrap flex items-center gap-2 group"
+                className="px-8 py-4 rounded-full font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap flex items-center gap-2 group"
+                style={{ background: '#ffffff', color: '#042C53' }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#042C53'; e.currentTarget.style.color = '#ffffff'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#042C53'; }}
               >
                 View Pricing
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -1210,7 +1213,7 @@ function HomePage() {
         </section>
 
         {/* ── SECTION 5 · PROJECTS ── */}
-        <section id="projects" className="bg-white px-4 sm:px-6 md:px-8 lg:px-10 py-16 sm:py-20 md:py-24 lg:py-32 relative z-20 border-t border-[#B5D4F4]">
+        <section id="projects" className="bg-[#F5F9FF] px-4 sm:px-6 md:px-8 lg:px-10 py-16 sm:py-20 md:py-24 lg:py-32 relative z-20 border-t border-[#B5D4F4]">
           <FadeIn delay={0} y={30} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
             <h2 className="font-black uppercase text-center" style={{ fontSize: 'clamp(1.8rem, 6vw, 120px)', letterSpacing: '-0.02em' }}>
               <span style={{ color: '#042C53' }}>Pro</span>
@@ -1236,7 +1239,7 @@ function HomePage() {
         </section>
 
         {/* ── SECTION 5.5 · TESTIMONIALS ── */}
-        <section className="bg-white px-5 sm:px-8 md:px-10 py-24 relative z-20 border-t border-[#B5D4F4]">
+        <section className="bg-[#E6F1FB] px-5 sm:px-8 md:px-10 py-24 relative z-20 border-t border-[#B5D4F4]">
           <div className="max-w-7xl mx-auto">
             <FadeIn delay={0} y={30} className="mb-8 text-center">
               <h2
@@ -1260,7 +1263,7 @@ function HomePage() {
         </section>
 
         {/* ── SECTION 6 · EXPERTISE ── */}
-        <section id="resume" className="bg-[#042C53] px-5 sm:px-8 md:px-10 py-24 relative z-20 border-t border-[#0C3A6B]">
+        <section id="resume" className="px-5 sm:px-8 md:px-10 py-24 relative z-20 border-t border-[#0C3A6B]" style={{ background: 'linear-gradient(135deg, #042C53 0%, #0C3A6B 50%, #042C53 100%)' }}>
           <div className="max-w-7xl mx-auto">
             <FadeIn delay={0} y={30}>
               <h2 className="font-black uppercase text-center mb-12 md:mb-24" style={{ fontSize: 'clamp(1.8rem, 6vw, 80px)', letterSpacing: '-0.02em' }}>

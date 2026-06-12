@@ -63,19 +63,23 @@ body {
 }
 
 .glow-cyan {
-  box-shadow: 0 0 24px rgba(55, 138, 221, 0.45), 0 0 48px rgba(55, 138, 221, 0.15);
+  box-shadow: 0 0 32px rgba(55, 138, 221, 0.55), 0 0 64px rgba(55, 138, 221, 0.2);
 }
 
 .glow-cyan-subtle {
-  box-shadow: 0 0 12px rgba(55, 138, 221, 0.2);
+  box-shadow: 0 0 16px rgba(55, 138, 221, 0.28);
 }
 
 .glow-cyan-inset {
-  box-shadow: inset 0 0 16px rgba(55, 138, 221, 0.2);
+  box-shadow: inset 0 0 20px rgba(55, 138, 221, 0.25);
 }
 
 .text-glow-cyan {
-  text-shadow: 0 0 12px rgba(133, 183, 235, 0.5);
+  text-shadow: 0 0 18px rgba(55, 138, 221, 0.6), 0 0 40px rgba(55, 138, 221, 0.2);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 18px rgba(55, 138, 221, 0.6), 0 0 40px rgba(55, 138, 221, 0.2);
 }
 
 ::-webkit-scrollbar {
