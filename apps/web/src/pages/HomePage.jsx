@@ -1056,51 +1056,53 @@ function HomePage() {
           </div>
         )}
 
+        {/* ── STICKY NAV BAR ── */}
+        <header className="sticky top-0 z-50 bg-[#E6F1FB] border-b-2 border-[#B5D4F4]" style={{ boxShadow: '0 2px 16px rgba(4,44,83,0.10)' }}>
+          <nav className="flex items-center justify-between px-5 py-3 max-w-7xl mx-auto w-full">
+            <img
+              src="https://i.postimg.cc/FFL8k0MJ/Rajput-Desgins-Logo-without-background-for-website-01.png"
+              alt="Rajput Designs Studio"
+              className="w-24 h-14 sm:w-28 sm:h-16 object-contain"
+              style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(44%) saturate(1317%) hue-rotate(193deg) brightness(96%) contrast(102%)' }}
+            />
+            {/* Desktop links */}
+            <div className="hidden md:flex items-center gap-5 md:gap-6">
+              {[
+                { label: 'About',    id: 'about',    isRoute: false },
+                { label: 'Services', id: 'services', isRoute: false },
+                { label: 'Pricing',  path: '/pricing', isRoute: true },
+                { label: 'Contact',  id: 'contact',  isRoute: false },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.isRoute ? item.path : `#${item.id}`}
+                  onClick={(e) => handleNavClick(e, item)}
+                  className="font-bold uppercase tracking-wider text-xs md:text-sm px-4 py-2 rounded-full border-2 border-[#042C53] text-[#042C53] hover:bg-[#042C53] hover:text-white transition-all duration-300"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <Link
+                to="/portfolio-gallery"
+                className="font-bold uppercase tracking-wider text-xs md:text-sm px-4 py-2 rounded-full border-2 border-[#042C53] text-[#042C53] hover:bg-[#042C53] hover:text-white transition-all duration-300 flex items-center gap-1"
+              >
+                Projects <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="md:hidden w-11 h-11 rounded-full border-2 border-[#042C53] text-[#042C53] flex items-center justify-center hover:bg-[#042C53] hover:text-white transition-all"
+              aria-label="Open menu"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
+          </nav>
+        </header>
+
         {/* ── SECTION 1 · HERO ── */}
         <section id="hero" className="h-screen flex flex-col overflow-x-clip relative" style={{ background: 'linear-gradient(135deg, #031e3d 0%, #042C53 40%, #0C3A6B 70%, #042C53 100%)' }}>
-          <FadeIn delay={0} y={-20}>
-            <nav className="flex items-center justify-between px-5 pt-5 sm:pt-6 md:pt-8 relative z-20 max-w-7xl mx-auto w-full">
-              <img
-                src="https://i.postimg.cc/FFL8k0MJ/Rajput-Desgins-Logo-without-background-for-website-01.png"
-                alt="Rajput Designs Studio"
-                className="w-24 h-14 sm:w-28 sm:h-16 md:w-32 md:h-20 object-contain"
-              />
-              {/* Desktop links */}
-              <div className="hidden md:flex items-center gap-5 md:gap-8">
-                {[
-                  { label: 'About',    id: 'about',    isRoute: false },
-                  { label: 'Services', id: 'services', isRoute: false },
-                  { label: 'Pricing',  path: '/pricing', isRoute: true },
-                  { label: 'Contact',  id: 'contact',  isRoute: false },
-                ].map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.isRoute ? item.path : `#${item.id}`}
-                    onClick={(e) => handleNavClick(e, item)}
-                    className="font-bold uppercase tracking-wider text-xs md:text-base px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300"
-                  >
-                    {item.label}
-                  </a>
-                ))}
-                <Link
-                  to="/portfolio-gallery"
-                  className="font-bold uppercase tracking-wider text-xs md:text-base px-4 py-2 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] hover:text-[hsl(var(--background))] hover:glow-cyan-subtle transition-all duration-300 flex items-center gap-1"
-                >
-                  Projects <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-              {/* Mobile hamburger */}
-              <button
-                onClick={() => setMenuOpen(true)}
-                className="md:hidden w-11 h-11 rounded-full border border-[hsl(var(--primary))] text-[hsl(var(--primary))] flex items-center justify-center hover:bg-[hsl(var(--primary))] hover:text-white transition-all"
-                aria-label="Open menu"
-              >
-                <Menu className="w-5 h-5" />
-              </button>
-            </nav>
-          </FadeIn>
-
-          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-4 z-10" style={{ paddingTop: '100px' }}>
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-4 z-10">
             <FadeIn delay={0.15} y={40} className="max-w-6xl mx-auto text-center pointer-events-auto">
               <Magnet padding={200} strength={1} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
                 <h1
