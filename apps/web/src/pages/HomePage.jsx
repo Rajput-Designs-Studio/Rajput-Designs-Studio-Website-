@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import { Briefcase, Award, PenTool, Languages, Mail, Linkedin, Instagram, ArrowRight, Star, Menu, X } from 'lucide-react';
 import FadeIn from '@/components/FadeIn.jsx';
@@ -1133,7 +1133,7 @@ function HomePage() {
                 <img
                   key={`r1-${index}`}
                   src={src}
-                  alt={`Showcase ${index + 1}`}
+                  alt={['Logo design portfolio example', 'Brand identity design showcase', 'Social media graphic design sample', 'Restaurant menu design example', 'Poster design for client project', 'Business card and branding design', 'UI UX design project showcase', 'Graphic design work by Rajput Designs Studio', 'Professional logo design sample', 'Marketing banner design example', 'Visual identity design portfolio'][index % 11]}
                   className="rounded-2xl object-cover glow-cyan-subtle opacity-80 hover:opacity-100 transition-opacity"
                   style={{ width: '380px', height: '240px', flexShrink: 0, backgroundColor: 'rgba(0,217,255,0.05)' }}
                   loading={index < 8 ? 'eager' : 'lazy'}
@@ -1147,7 +1147,7 @@ function HomePage() {
                 <img
                   key={`r2-${index}`}
                   src={src}
-                  alt={`Showcase ${index + 12}`}
+                  alt={['Creative branding design project', 'Social media post design sample', 'Logo and brand identity portfolio', 'Menu and packaging design work', 'Digital marketing graphic design', 'Flyer design for client branding', 'Professional graphic design sample', 'Banner and promotional design work', 'UI design and wireframe showcase', 'Typography and layout design'][index % 10]}
                   className="rounded-2xl object-cover glow-cyan-subtle opacity-80 hover:opacity-100 transition-opacity"
                   style={{ width: '380px', height: '240px', flexShrink: 0, backgroundColor: 'rgba(0,217,255,0.05)' }}
                   loading="lazy"

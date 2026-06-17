@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, ChevronLeft, ChevronRight, Play, Pause, X, ZoomIn } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';

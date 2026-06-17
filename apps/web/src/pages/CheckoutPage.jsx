@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { ArrowLeft, Check, ShieldCheck, RefreshCw, Clock, Lock, Zap, Award, MessageCircle } from 'lucide-react';
 import FadeIn from '@/components/FadeIn.jsx';
