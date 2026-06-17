@@ -280,6 +280,7 @@ function PortfolioGalleryPage() {
                 src="https://i.postimg.cc/FFL8k0MJ/Rajput-Desgins-Logo-without-background-for-website-01.png"
                 alt="Rajput Designs Studio"
                 className="w-24 h-14 object-contain"
+                data-nosnippet
               />
             </Link>
           </div>

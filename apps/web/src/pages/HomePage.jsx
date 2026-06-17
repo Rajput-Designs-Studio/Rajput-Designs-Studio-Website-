@@ -1035,6 +1035,7 @@ function HomePage() {
               src="https://i.postimg.cc/FFL8k0MJ/Rajput-Desgins-Logo-without-background-for-website-01.png"
               alt="Rajput Designs Studio"
               className="w-28 h-16 object-contain mb-4"
+              data-nosnippet
             />
             {[
               { label: 'About',    id: 'about',    isRoute: false },
@@ -1064,6 +1065,7 @@ function HomePage() {
               alt="Rajput Designs Studio"
               className="w-24 h-14 sm:w-28 sm:h-16 object-contain"
               style={{ filter: 'brightness(0) saturate(100%) invert(14%) sepia(44%) saturate(1317%) hue-rotate(193deg) brightness(96%) contrast(102%)' }}
+              data-nosnippet
             />
             {/* Desktop links */}
             <div className="hidden md:flex items-center gap-5 md:gap-6">
