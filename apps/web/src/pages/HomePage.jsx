@@ -973,16 +973,25 @@ function HomePage() {
           "name": "Rajput Designs Studio",
           "url": "https://www.rajputdesignsstudio.com/",
           "image": "https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg",
-          "description": "Professional freelance graphic designer offering logo design, brand identity, social media graphics, menu design, website design and UI/UX. Affordable packages starting at $35.",
+          "description": "Professional freelance graphic design by Muhammad Ismail in Jhelum and Islamabad, Pakistan — logo design, brand identity, social media graphics, menu design, website UI design. Packages from $35.",
           "priceRange": "$35 - $249",
-          "areaServed": "Worldwide",
-          "address": { "@type": "PostalAddress", "addressCountry": "PK" },
+          "areaServed": ["Jhelum", "Islamabad", "Pakistan", "Worldwide"],
+          "address": { "@type": "PostalAddress", "addressLocality": "Jhelum / Islamabad", "addressCountry": "PK" },
+          "founder": { "@type": "Person", "name": "Muhammad Ismail" },
           "email": "hello@rajputdesignsstudio.com",
+          "telephone": "+923365843243",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
           "sameAs": [
-            "https://www.behance.net/rajputdesignsstudio",
-            "https://www.linkedin.com/in/rajputdesignsstudio",
-            "https://www.instagram.com/rajputdesignsstudio",
-            "https://www.facebook.com/rajputdesignsstudio"
+            "https://www.behance.net/RajputDesigns",
+            "https://www.linkedin.com/in/rajputdesigns/",
+            "https://www.instagram.com/RajputDesignsStudio",
+            "https://facebook.com/RajputDesignsStudio"
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -990,6 +999,7 @@ function HomePage() {
             "itemListElement": [
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logo Design Package" }, "price": "65", "priceCurrency": "USD" },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Branding Package" }, "price": "249", "priceCurrency": "USD" },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Design Package" }, "price": "35", "priceCurrency": "USD" },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Menu Design Package" }, "price": "79", "priceCurrency": "USD" },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Promotion Poster" }, "price": "39", "priceCurrency": "USD" },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Banner Design Package" }, "price": "55", "priceCurrency": "USD" },
@@ -1003,15 +1013,25 @@ function HomePage() {
           "@type": "FAQPage",
           "mainEntity": [
             { "@type": "Question", "name": "How much does a logo design cost?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Logo design packages start at $65, including 3 concepts, 5 revisions, and all file formats (PNG, SVG, PDF, AI) with transparent background." } },
+              "acceptedAnswer": { "@type": "Answer", "text": "Logo design packages start at $65, including 3 original concepts, unlimited revisions, and all file formats (PNG, SVG, PDF, AI) with transparent background." } },
             { "@type": "Question", "name": "How long does graphic design take?",
               "acceptedAnswer": { "@type": "Answer", "text": "Most projects deliver within 48 hours to 10 days. Logo design: 3-5 days. Full branding: 7-10 days. Posters and banners: 48 hours." } },
             { "@type": "Question", "name": "Do you offer affordable graphic design packages?",
               "acceptedAnswer": { "@type": "Answer", "text": "Yes. Starter packages begin at $35. Specialty packages including logo, menu, banners, and website design range from $39 to $249." } },
             { "@type": "Question", "name": "Can I hire a graphic designer online?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rajput Designs Studio works with clients worldwide. Contact via the website form, email at hello@rajputdesignsstudio.com, or WhatsApp to get started." } },
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Muhammad Ismail at Rajput Designs Studio works with clients worldwide from Jhelum and Islamabad, Pakistan. Contact via email at hello@rajputdesignsstudio.com or WhatsApp at +923365843243." } },
             { "@type": "Question", "name": "What graphic design services do you offer?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Services include logo design, full brand identity, social media graphics, menu design, promotion posters, banner design, website UI design, and complete branding packages." } }
+              "acceptedAnswer": { "@type": "Answer", "text": "Services include logo design, full brand identity, social media graphics, menu design, promotion posters, banner design, website UI design, and complete branding packages." } },
+            { "@type": "Question", "name": "What file formats do you deliver?",
+              "acceptedAnswer": { "@type": "Answer", "text": "All file formats are included: PNG, SVG, AI, PDF, EPS, and JPG. Source files (AI/PSD) are always provided so you own your designs and can make future edits." } },
+            { "@type": "Question", "name": "Do you offer unlimited revisions?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. All packages include unlimited revisions until you are 100% satisfied with the final design. No hidden revision fees." } },
+            { "@type": "Question", "name": "What is included in a brand identity design package?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The full branding package includes logo design, color palette, typography guide, business card, letterhead, and a brand guidelines document — everything needed to build a consistent professional brand." } },
+            { "@type": "Question", "name": "Do you work with international clients?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rajput Designs Studio accepts clients worldwide. Based in Jhelum and Islamabad, Pakistan, all work is delivered remotely via email and WhatsApp." } },
+            { "@type": "Question", "name": "Who is the designer behind Rajput Designs Studio?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Muhammad Ismail — a certified freelance graphic designer based in Jhelum and Islamabad, Pakistan, with 1+ year of professional experience and certifications from Google, Anthropic, Alison, and Eduonix." } }
           ]
         })}</script>
       </Helmet>
@@ -1320,6 +1340,10 @@ function HomePage() {
                 { q: 'Do you offer affordable graphic design packages?', a: 'Yes. Starter packages begin at $35. Specialty packages including logo, menu, banners, and website design range from $39 to $249.' },
                 { q: 'Can I hire a graphic designer online?', a: 'Yes. Muhammad Ismail at Rajput Designs Studio works with clients worldwide from Jhelum and Islamabad, Pakistan. Contact via email at hello@rajputdesignsstudio.com or WhatsApp at +923365843243.' },
                 { q: 'Why hire a professional designer instead of using Canva or Fiverr?', a: 'A professional designer creates original, custom designs tailored to your brand — not templates anyone else can use. You get unique concepts, full source files, brand consistency, and a designer who understands your business goals.' },
+                { q: 'What file formats do you deliver?', a: 'All file formats are included: PNG, SVG, AI, PDF, EPS, and JPG. Source files (AI/PSD) are always provided so you own your designs and can make future edits without coming back.' },
+                { q: 'Do you offer unlimited revisions?', a: 'Yes. All packages include unlimited revisions until you are 100% satisfied with the final design. No hidden revision fees — your satisfaction is the only goal.' },
+                { q: 'What is included in a brand identity design package?', a: 'The full branding package ($249) includes logo design, color palette, typography guide, business card, letterhead, and a complete brand guidelines document — everything to build a consistent professional brand from scratch.' },
+                { q: 'Do you work with international clients?', a: 'Yes. Muhammad Ismail at Rajput Designs Studio accepts clients worldwide. Based in Jhelum and Islamabad, Pakistan, all work is delivered remotely via email and WhatsApp.' },
               ].map((item, i) => (
                 <FadeIn key={i} delay={i * 0.05} y={15}>
                   <div className="py-6 border-b border-[#B5D4F4]">
