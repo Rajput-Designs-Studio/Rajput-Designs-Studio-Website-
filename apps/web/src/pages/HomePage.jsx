@@ -38,10 +38,10 @@ const row1Images = allImages.slice(0, 11);
 const row2Images = allImages.slice(11, 21);
 
 const services = [
-  { number: '01', name: 'Graphic Design', description: 'Creating visually compelling designs for marketing materials, branding, and digital assets that communicate brand identity and engage audiences.' },
-  { number: '02', name: 'Adobe Creative Suite', description: 'Expert proficiency in Photoshop, Illustrator, and InDesign for professional print and digital design work.' },
-  { number: '03', name: 'Figma Design', description: 'Modern UI/UX design and prototyping using Figma for web and app interfaces with attention to user experience.' },
-  { number: '04', name: 'Print Design', description: 'Professional print design including branding materials, proposals, and marketing collateral for high-stakes projects.' }
+  { number: '01', name: 'Logo Design', description: 'Professional logo design with 3 original concepts, unlimited revisions, and all file formats — PNG, SVG, AI, PDF with transparent background. Delivered in 3–5 days.' },
+  { number: '02', name: 'Brand Identity', description: 'Complete brand identity design including logo, color palette, typography, business card, letterhead, and brand guidelines. Build a cohesive professional brand from scratch.' },
+  { number: '03', name: 'Social Media Design', description: 'Custom social media graphics, posts, stories, and cover images designed to build brand consistency and grow your audience on Instagram, Facebook, and LinkedIn.' },
+  { number: '04', name: 'Menu & Print Design', description: 'Restaurant menus, promotional posters, flyers, banners, and standees crafted with bold typography and strategic layout. Print-ready files for both digital and physical use.' },
 ];
 
 
