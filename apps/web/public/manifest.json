@@ -1,0 +1,18 @@
+{
+  "name": "Rajput Designs Studio",
+  "short_name": "Rajput Designs",
+  "description": "Professional freelance graphic designer — logo design, brand identity & social media graphics by Muhammad Ismail in Jhelum and Islamabad, Pakistan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#042C53",
+  "theme_color": "#042C53",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/bNgFD9F3/Rajput-Desgins-Logo-in-Circle.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
