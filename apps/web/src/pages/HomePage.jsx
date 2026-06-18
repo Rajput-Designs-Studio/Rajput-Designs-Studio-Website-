@@ -1178,7 +1178,7 @@ function HomePage() {
               </h2>
             </FadeIn>
             <AnimatedText
-              text="Graphic designer with 1+ year of experience in branding, social media design, and digital visuals. I use Photoshop, Illustrator, Figma, and InDesign to turn ideas into clean, professional designs that connect with the right people."
+              text="My name is Muhammad Ismail — a freelance graphic designer based in Jhelum and Islamabad, Pakistan. With 1+ year of professional experience in logo design, brand identity, social media graphics, and digital visuals, I use Photoshop, Illustrator, Figma, and InDesign to turn ideas into clean, professional designs that connect with the right people."
               className="text-[#0D1F3C] font-medium text-center leading-relaxed"
               style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }}
             />
@@ -1262,7 +1262,73 @@ function HomePage() {
               </p>
             </FadeIn>
 
+            {/* Static featured reviews — visible to crawlers without JS */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              {[
+                {
+                  author: 'Saddar Engineering Works',
+                  role: 'CEO & Founder',
+                  text: 'I came to Rajput Designs Studio needing a complete brand identity — logo, website, business card, letterhead, and stamp. They delivered on all of it. The logo feels professional and fits the engineering industry well. If you are a business owner in Pakistan looking for someone to handle your branding professionally, I would recommend Rajput Designs Studio without hesitation.',
+                  initials: 'SE',
+                  color: '#E6F1FB',
+                  textColor: '#0C447C',
+                },
+                {
+                  author: 'Eman Arshad',
+                  role: 'Google Reviewer',
+                  text: 'Working with Rajput Designs Studio has been an absolute pleasure! His work is highly professional and reflects pure perfection in every detail. Lightning fast delivery and incredible responsiveness. He communicates exceptionally well and is always open to feedback. I highly recommend him to anyone looking for top tier results!',
+                  initials: 'EA',
+                  color: '#EAF3DE',
+                  textColor: '#27500A',
+                },
+              ].map((r, i) => (
+                <div key={i} className="bg-white border border-[#E8EEF5] rounded-2xl p-6 flex flex-col gap-4">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, s) => <Star key={s} size={14} className="fill-[#F59E0B] text-[#F59E0B]" />)}
+                  </div>
+                  <p className="text-[#4B5563] text-sm leading-relaxed flex-1">"{r.text}"</p>
+                  <div className="flex items-center gap-3 pt-2 border-t border-[#E8EEF5]">
+                    <div style={{ width: 36, height: 36, borderRadius: '50%', background: r.color, color: r.textColor, fontSize: 13, fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{r.initials}</div>
+                    <div>
+                      <p className="text-[#042C53] font-bold text-sm m-0">{r.author}</p>
+                      <p className="text-[#185FA5] text-xs m-0">{r.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
             <TestimonialCarouselMultiple />
+          </div>
+        </section>
+
+        {/* ── FAQ SECTION ── */}
+        <section id="faq" className="bg-white px-5 sm:px-8 md:px-10 py-24 border-t border-[#B5D4F4] relative z-20">
+          <div className="max-w-4xl mx-auto">
+            <FadeIn delay={0} y={30} className="mb-12 text-center">
+              <h2 className="font-black uppercase tracking-tight mb-4" style={{ fontSize: 'clamp(1.8rem, 5vw, 60px)', letterSpacing: '-0.02em' }}>
+                <span style={{ color: '#042C53' }}>Frequently Asked </span>
+                <span style={{ color: '#378ADD' }}>Questions</span>
+              </h2>
+              <p className="text-[#185FA5] font-light max-w-xl mx-auto">Everything you need to know before hiring a graphic designer.</p>
+            </FadeIn>
+            <div className="flex flex-col">
+              {[
+                { q: 'How much does a logo design cost?', a: 'Logo design packages start at $65, including 3 original concepts, unlimited revisions, and all file formats — PNG, SVG, PDF, AI — with transparent background.' },
+                { q: 'How long does graphic design take?', a: 'Most projects are delivered within 48 hours to 10 days. Logo design: 3–5 days. Full branding packages: 7–10 days. Posters and banners: 48 hours.' },
+                { q: 'What graphic design services do you offer?', a: 'Services include logo design, full brand identity, social media graphics, restaurant menu design, promotion posters, banner design, website UI design, and complete branding packages.' },
+                { q: 'Do you offer affordable graphic design packages?', a: 'Yes. Starter packages begin at $35. Specialty packages including logo, menu, banners, and website design range from $39 to $249.' },
+                { q: 'Can I hire a graphic designer online?', a: 'Yes. Muhammad Ismail at Rajput Designs Studio works with clients worldwide from Jhelum and Islamabad, Pakistan. Contact via email at hello@rajputdesignsstudio.com or WhatsApp at +923365843243.' },
+                { q: 'Why hire a professional designer instead of using Canva or Fiverr?', a: 'A professional designer creates original, custom designs tailored to your brand — not templates anyone else can use. You get unique concepts, full source files, brand consistency, and a designer who understands your business goals.' },
+              ].map((item, i) => (
+                <FadeIn key={i} delay={i * 0.05} y={15}>
+                  <div className="py-6 border-b border-[#B5D4F4]">
+                    <h3 className="text-[#042C53] font-bold text-base sm:text-lg mb-2">{item.q}</h3>
+                    <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base m-0">{item.a}</p>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
           </div>
         </section>
 
