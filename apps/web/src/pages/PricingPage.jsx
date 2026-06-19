@@ -22,6 +22,7 @@ const specialtyPackages = [
     ],
     highlight: false,
     contactOnly: true,
+    payoneerLink: 'https://link.payoneer.com/Token?t=7F83BBEE046F4AB3B8A27A9C06F937CE&src=pl',
     checkoutSlug: 'promotion-poster',
   },
   {
@@ -40,6 +41,7 @@ const specialtyPackages = [
     ],
     highlight: false,
     contactOnly: true,
+    payoneerLink: 'https://link.payoneer.com/Token?t=652718AC5C65470F9A7A91F087928673&src=pl',
     checkoutSlug: 'banner-design',
   },
   {
@@ -57,6 +59,7 @@ const specialtyPackages = [
       '3-5 Day Delivery',
     ],
     highlight: false,
+    payoneerLink: 'https://link.payoneer.com/Token?t=6BB2A2351861479BA30A7F3F0D27560B&src=pl',
     checkoutSlug: 'logo-design',
   },
   {
@@ -77,6 +80,7 @@ const specialtyPackages = [
       '3-5 Day Delivery',
     ],
     highlight: false,
+    payoneerLink: 'https://link.payoneer.com/Token?t=70F9E889E35C4014ABBF1DC12E553DB6&src=pl',
     checkoutSlug: 'menu-design',
   },
   {
@@ -94,6 +98,7 @@ const specialtyPackages = [
       '7-10 Day Delivery',
     ],
     highlight: false,
+    payoneerLink: 'https://link.payoneer.com/Token?t=BF3395283F8D4D0E91B96086B008923C&src=pl',
     checkoutSlug: 'website-design',
   },
   {
@@ -113,6 +118,7 @@ const specialtyPackages = [
     ],
     highlight: false,
     badge: 'Save 48%',
+    payoneerLink: 'https://link.payoneer.com/Token?t=196DEB4930704FEC92430D2E97007B3B&src=pl',
     checkoutSlug: 'bundle',
   },
   {
@@ -304,13 +310,29 @@ function PricingPage() {
                           </li>
                         ))}
                       </ul>
-                      {pkg.contactOnly ? (
-                        <Link
-                          to="/#contact"
-                          className="w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))] text-center text-sm block"
-                        >
-                          For Individual: Contact Me
-                        </Link>
+                      {pkg.payoneerLink ? (
+                        <div className="flex flex-col gap-2">
+                          <a
+                            href={pkg.payoneerLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 text-center block ${
+                              pkg.highlight
+                                ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
+                                : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
+                            }`}
+                          >
+                            Pay with Payoneer
+                          </a>
+                          {pkg.contactOnly && (
+                            <Link
+                              to="/#contact"
+                              className="w-full text-center text-xs text-[#185FA5] hover:text-[hsl(var(--primary))] transition-colors"
+                            >
+                              For Individual order — Contact Me
+                            </Link>
+                          )}
+                        </div>
                       ) : (
                         <button
                           onClick={() => handleCheckout(pkg)}
