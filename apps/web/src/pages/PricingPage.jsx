@@ -138,6 +138,7 @@ const specialtyPackages = [
     ],
     highlight: true,
     badge: 'Best Value',
+    payoneerLink: 'https://link.payoneer.com/Token?t=B3274606B1AD40B3A602352782B20DC5&src=pl',
     checkoutSlug: 'full-branding',
   },
 ];
