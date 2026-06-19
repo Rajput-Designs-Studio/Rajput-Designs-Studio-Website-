@@ -9,39 +9,43 @@ const specialtyPackages = [
   {
     name: 'Promotion Poster',
     icon: '📣',
-    price: '$9',
+    price: '$20',
     description: 'Eye-catching social media & print posters',
+    subNote: '2 Posters Included',
     image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/0d539764c663a87bef648a3a5ac4f680.jpg',
     features: [
-      '1 Poster Design',
+      '2 Poster Designs',
       '3 Revisions',
       'Social & Print Sizes Included',
       'Source File (PSD/AI)',
       '48-Hour Delivery',
     ],
     highlight: false,
+    contactOnly: true,
     checkoutSlug: 'promotion-poster',
   },
   {
     name: 'Banner Design Package',
     icon: '🖼️',
-    price: '$14',
+    price: '$20',
     description: 'Web banners, social covers & digital ads',
+    subNote: '2 Sizes Included',
     image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/137d29c2299119a30e31a18b3ddc35a0.jpg',
     features: [
-      'Up to 5 Banner Sizes',
+      '2 Banner Sizes',
       '2 Design Concepts',
       '3 Revisions',
       'PNG + Source Files',
       '2-3 Day Delivery',
     ],
     highlight: false,
+    contactOnly: true,
     checkoutSlug: 'banner-design',
   },
   {
     name: 'Logo Design Package',
     icon: '✏️',
-    price: '$19',
+    price: '$20',
     description: 'Professional logo that defines your brand',
     image: 'https://i.postimg.cc/fbXspjM7/S-E-W-Logo-in-Dark-Blue-01.jpg',
     features: [
@@ -166,21 +170,21 @@ function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Design Packages &amp; Pricing | Poster $9 · Logo $19 · Branding $100 — Rajput Designs Studio</title>
-        <meta name="description" content="Affordable graphic design packages with transparent pricing. Poster from $9, logo design $19, menu design $29, full branding $100. No hidden fees. Order online and get results fast." />
-        <meta name="keywords" content="cheap logo design, affordable graphic design packages, logo design $19, menu design price, brand identity package, banner design online, cheap graphic designer, poster design cheap" />
+        <title>Design Packages &amp; Pricing | Poster $20 · Logo $20 · Branding $100 — Rajput Designs Studio</title>
+        <meta name="description" content="Affordable graphic design packages with transparent pricing. 2 posters $20, logo design $20, menu design $29, full branding $100. No hidden fees. Order online and get results fast." />
+        <meta name="keywords" content="cheap logo design, affordable graphic design packages, logo design $20, menu design price, brand identity package, banner design online, cheap graphic designer, poster design cheap" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <meta name="author" content="Rajput Designs Studio" />
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/pricing" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/pricing" />
-        <meta property="og:title" content="Design Packages &amp; Pricing | Poster $9 · Logo $19 · Branding $100 — Rajput Designs Studio" />
-        <meta property="og:description" content="Affordable graphic design packages. Poster $9, logo $19, menu $29, full branding $100. No hidden fees. Order online." />
+        <meta property="og:title" content="Design Packages &amp; Pricing | Poster $20 · Logo $20 · Branding $100 — Rajput Designs Studio" />
+        <meta property="og:description" content="Affordable graphic design packages. 2 Posters $20, logo $20, menu $29, full branding $100. No hidden fees. Order online." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Design Packages &amp; Pricing | Poster $9 · Logo $19 · Branding $100" />
-        <meta name="twitter:description" content="Affordable graphic design packages. Poster $9, logo $19, menu $29, full branding $100. No hidden fees. Order online." />
+        <meta name="twitter:title" content="Design Packages &amp; Pricing | Poster $20 · Logo $20 · Branding $100" />
+        <meta name="twitter:description" content="Affordable graphic design packages. 2 Posters $20, logo $20, menu $29, full branding $100. No hidden fees. Order online." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -188,9 +192,9 @@ function PricingPage() {
           "name": "Graphic Design Packages",
           "url": "https://www.rajputdesignsstudio.com/pricing",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Promotion Poster", "description": "Eye-catching social media and print posters for promotions.", "offers": { "@type": "Offer", "price": "9", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Banner Design Package", "description": "Web banners, social covers and digital ads in multiple sizes.", "offers": { "@type": "Offer", "price": "14", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Logo Design Package", "description": "Professional logo design with 3 concepts, 5 revisions, and all file formats (PNG, SVG, PDF, AI).", "offers": { "@type": "Offer", "price": "19", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Promotion Poster", "description": "2 eye-catching social media and print posters for promotions.", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Banner Design Package", "description": "2 web banners, social covers and digital ads in multiple sizes.", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Logo Design Package", "description": "Professional logo design with 3 concepts, 5 revisions, and all file formats (PNG, SVG, PDF, AI).", "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
             { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Menu Design Package", "description": "Professional restaurant and cafe menu design, print-ready PDF.", "offers": { "@type": "Offer", "price": "29", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
             { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Website Design Package", "description": "Modern mobile-ready website UI design, up to 5 pages, Figma/PSD source files.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
             { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Bundle Package", "description": "5 posters, 5 banners, social media kit, unlimited revisions.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
@@ -284,7 +288,10 @@ function PricingPage() {
                       )}
                       <div className="text-3xl mb-3">{pkg.icon}</div>
                       <h3 className={`text-lg font-bold uppercase tracking-wider mb-1 ${pkg.highlight ? 'text-white' : 'text-[#042C53]'}`}>{pkg.name}</h3>
-                      <p className={`text-xs mb-4 ${pkg.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>{pkg.description}</p>
+                      <p className={`text-xs mb-1 ${pkg.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>{pkg.description}</p>
+                      {pkg.subNote && (
+                        <p className="text-xs font-semibold text-[hsl(var(--primary))] mb-3">{pkg.subNote}</p>
+                      )}
                       <div className="mb-5">
                         <span className="text-2xl sm:text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{pkg.price}</span>
                         <span className={`text-sm font-light ml-1 ${pkg.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>/ project</span>
@@ -297,16 +304,25 @@ function PricingPage() {
                           </li>
                         ))}
                       </ul>
-                      <button
-                        onClick={() => handleCheckout(pkg)}
-                        className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${
-                          pkg.highlight
-                            ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
-                            : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
-                        }`}
-                      >
-                        Get Started
-                      </button>
+                      {pkg.contactOnly ? (
+                        <Link
+                          to="/#contact"
+                          className="w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))] text-center text-sm block"
+                        >
+                          For Individual: Contact Me
+                        </Link>
+                      ) : (
+                        <button
+                          onClick={() => handleCheckout(pkg)}
+                          className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${
+                            pkg.highlight
+                              ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
+                              : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
+                          }`}
+                        >
+                          Get Started
+                        </button>
+                      )}
                     </div>
                   </FadeIn>
                 ))}
