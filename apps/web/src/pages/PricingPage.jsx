@@ -5,79 +5,43 @@ import { ArrowLeft, Check, ArrowRight, X } from 'lucide-react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import FadeIn from '@/components/FadeIn.jsx';
 
-const pricingPlans = [
-  {
-    name: 'Starter',
-    price: '$35',
-    description: 'Best for: Freelancers and small businesses',
-    features: [
-      '1 Design Concept',
-      '2 Revisions',
-      'Source Files (PSD/AI)',
-      '48-hour Delivery',
-      'Email Support'
-    ],
-    highlight: false,
-    cta: 'Get Started',
-    checkoutSlug: 'starter',
-  },
-  {
-    name: 'Professional',
-    price: '$75',
-    description: 'Best for: Small to medium businesses',
-    badge: 'Most Popular',
-    features: [
-      '3 Design Concepts',
-      '5 Revisions',
-      'Source Files (PSD/AI)',
-      '3-7 Days Delivery',
-      'Priority Email Support',
-      'Brand Guidelines'
-    ],
-    highlight: true,
-    cta: 'Choose Professional',
-    checkoutSlug: 'professional',
-  },
-  {
-    name: 'Premium',
-    price: '$149.99',
-    description: 'Best for: Large enterprises, complex projects',
-    features: [
-      '5 Design Concepts',
-      'Unlimited Revisions',
-      'All Source Files + Assets',
-      '5-7 Day Delivery',
-      '24/7 Priority Support',
-      'Brand Guidelines',
-      'Prototype/Animation',
-      'Dedicated Account Manager'
-    ],
-    highlight: false,
-    cta: 'Choose Premium',
-    checkoutSlug: 'premium',
-  },
-  {
-    name: 'Custom',
-    price: 'Custom Quote',
-    description: 'Best for: Unique, large-scale projects',
-    features: [
-      'Fully Customized Package',
-      'Dedicated Team',
-      'Flexible Timeline',
-      'All Deliverables',
-      'Ongoing Support'
-    ],
-    highlight: false,
-    cta: 'Contact Us',
-    checkoutSlug: 'custom',
-  }
-];
-
 const specialtyPackages = [
+  {
+    name: 'Promotion Poster',
+    icon: '📣',
+    price: '$9',
+    description: 'Eye-catching social media & print posters',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/0d539764c663a87bef648a3a5ac4f680.jpg',
+    features: [
+      '1 Poster Design',
+      '3 Revisions',
+      'Social & Print Sizes Included',
+      'Source File (PSD/AI)',
+      '48-Hour Delivery',
+    ],
+    highlight: false,
+    checkoutSlug: 'promotion-poster',
+  },
+  {
+    name: 'Banner Design Package',
+    icon: '🖼️',
+    price: '$14',
+    description: 'Web banners, social covers & digital ads',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/137d29c2299119a30e31a18b3ddc35a0.jpg',
+    features: [
+      'Up to 5 Banner Sizes',
+      '2 Design Concepts',
+      '3 Revisions',
+      'PNG + Source Files',
+      '2-3 Day Delivery',
+    ],
+    highlight: false,
+    checkoutSlug: 'banner-design',
+  },
   {
     name: 'Logo Design Package',
     icon: '✏️',
-    price: '$65',
+    price: '$19',
     description: 'Professional logo that defines your brand',
     image: 'https://i.postimg.cc/fbXspjM7/S-E-W-Logo-in-Dark-Blue-01.jpg',
     features: [
@@ -92,28 +56,9 @@ const specialtyPackages = [
     checkoutSlug: 'logo-design',
   },
   {
-    name: 'Full Branding Package',
-    icon: '🎨',
-    price: '$249',
-    description: 'Complete brand identity from scratch',
-    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/7ea46274f50ddf435f18c05def36b613.png',
-    features: [
-      'Logo Design (3 Concepts)',
-      'Business Card Design',
-      'Letterhead & Envelope',
-      'Social Media Profile Kit',
-      'Brand Style Guide (Colors, Fonts)',
-      'All Source Files (AI/PSD)',
-      '7-10 Day Delivery',
-    ],
-    highlight: true,
-    badge: 'Best Value',
-    checkoutSlug: 'full-branding',
-  },
-  {
     name: 'Menu Design Package',
     icon: '🍽️',
-    price: '$79',
+    price: '$29',
     description: 'Professional restaurant & cafe menus',
     image: 'https://i.postimg.cc/CMBD83tP/Dani-s-Fast-Food-Menu-Page-1.jpg',
     images: [
@@ -131,60 +76,9 @@ const specialtyPackages = [
     checkoutSlug: 'menu-design',
   },
   {
-    name: 'Promotion Poster',
-    icon: '📣',
-    price: '$39',
-    description: 'Eye-catching social media & print posters',
-    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/0d539764c663a87bef648a3a5ac4f680.jpg',
-    features: [
-      '1 Poster Design',
-      '3 Revisions',
-      'Social & Print Sizes Included',
-      'Source File (PSD/AI)',
-      '48-Hour Delivery',
-    ],
-    highlight: false,
-    checkoutSlug: 'promotion-poster',
-  },
-  {
-    name: 'Banner Design Package',
-    icon: '🖼️',
-    price: '$55',
-    description: 'Web banners, social covers & digital ads',
-    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/137d29c2299119a30e31a18b3ddc35a0.jpg',
-    features: [
-      'Up to 5 Banner Sizes',
-      '2 Design Concepts',
-      '3 Revisions',
-      'PNG + Source Files',
-      '2-3 Day Delivery',
-    ],
-    highlight: false,
-    checkoutSlug: 'banner-design',
-  },
-  {
-    name: 'Bundle Package',
-    icon: '📦',
-    price: '$179',
-    description: 'Posters + Banners + Social Media Kit',
-    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/6108b17e80dd90eda7d6f829a1638469.jpg',
-    features: [
-      '5 Promotion Posters',
-      '5 Banner Designs',
-      'Social Media Profile Kit',
-      'Unlimited Revisions',
-      'All Source Files',
-      '7-10 Day Delivery',
-      'Priority Support',
-    ],
-    highlight: false,
-    badge: 'Save 40%',
-    checkoutSlug: 'bundle',
-  },
-  {
     name: 'Website Design Package',
     icon: '💻',
-    price: '$149',
+    price: '$60',
     description: 'Modern, mobile-ready website UI design',
     image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/4016f71bbfb257d2ecafb261dddf6cfb.jpg',
     features: [
@@ -197,6 +91,44 @@ const specialtyPackages = [
     ],
     highlight: false,
     checkoutSlug: 'website-design',
+  },
+  {
+    name: 'Bundle Package',
+    icon: '📦',
+    price: '$60',
+    description: 'Posters + Banners + Social Media Kit',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/6108b17e80dd90eda7d6f829a1638469.jpg',
+    features: [
+      '5 Promotion Posters',
+      '5 Banner Designs',
+      'Social Media Profile Kit',
+      'Unlimited Revisions',
+      'All Source Files',
+      '7-10 Day Delivery',
+      'Priority Support',
+    ],
+    highlight: false,
+    badge: 'Save 48%',
+    checkoutSlug: 'bundle',
+  },
+  {
+    name: 'Full Branding Package',
+    icon: '🎨',
+    price: '$100',
+    description: 'Complete brand identity from scratch',
+    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/7ea46274f50ddf435f18c05def36b613.png',
+    features: [
+      'Logo Design (3 Concepts)',
+      'Business Card Design',
+      'Letterhead & Envelope',
+      'Social Media Profile Kit',
+      'Brand Style Guide (Colors, Fonts)',
+      'All Source Files (AI/PSD)',
+      '7-10 Day Delivery',
+    ],
+    highlight: true,
+    badge: 'Best Value',
+    checkoutSlug: 'full-branding',
   },
 ];
 
@@ -234,21 +166,21 @@ function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Design Packages &amp; Pricing | Logo $65 · Branding $249 · Website $149 — Rajput Designs Studio</title>
-        <meta name="description" content="Affordable graphic design packages with transparent pricing. Logo design from $65, full branding from $249, website design $149. No hidden fees. Order online and get results in days." />
-        <meta name="keywords" content="logo design price, graphic design packages cost, affordable branding packages, buy logo design online, brand identity package price, menu design cost, website design package price, social media design price, cheap graphic designer online" />
+        <title>Design Packages &amp; Pricing | Poster $9 · Logo $19 · Branding $100 — Rajput Designs Studio</title>
+        <meta name="description" content="Affordable graphic design packages with transparent pricing. Poster from $9, logo design $19, menu design $29, full branding $100. No hidden fees. Order online and get results fast." />
+        <meta name="keywords" content="cheap logo design, affordable graphic design packages, logo design $19, menu design price, brand identity package, banner design online, cheap graphic designer, poster design cheap" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <meta name="author" content="Rajput Designs Studio" />
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/pricing" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/pricing" />
-        <meta property="og:title" content="Design Packages &amp; Pricing | Logo $65 · Branding $249 · Website $149 — Rajput Designs Studio" />
-        <meta property="og:description" content="Affordable graphic design packages with transparent pricing. Logo design from $65, full branding $249, website design $149. No hidden fees." />
+        <meta property="og:title" content="Design Packages &amp; Pricing | Poster $9 · Logo $19 · Branding $100 — Rajput Designs Studio" />
+        <meta property="og:description" content="Affordable graphic design packages. Poster $9, logo $19, menu $29, full branding $100. No hidden fees. Order online." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Design Packages &amp; Pricing | Logo $65 · Branding $249 · Website $149" />
-        <meta name="twitter:description" content="Affordable graphic design packages. Logo $65, branding $249, website design $149. No hidden fees. Order online." />
+        <meta name="twitter:title" content="Design Packages &amp; Pricing | Poster $9 · Logo $19 · Branding $100" />
+        <meta name="twitter:description" content="Affordable graphic design packages. Poster $9, logo $19, menu $29, full branding $100. No hidden fees. Order online." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -256,13 +188,13 @@ function PricingPage() {
           "name": "Graphic Design Packages",
           "url": "https://www.rajputdesignsstudio.com/pricing",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Logo Design Package", "description": "Professional logo design with 3 concepts, 5 revisions, and all file formats (PNG, SVG, PDF, AI).", "offers": { "@type": "Offer", "price": "65", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Full Branding Package", "description": "Complete brand identity including logo, business card, letterhead, social media kit, and brand style guide.", "offers": { "@type": "Offer", "price": "249", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Menu Design Package", "description": "Professional restaurant and cafe menu design, print-ready PDF.", "offers": { "@type": "Offer", "price": "79", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Promotion Poster", "description": "Eye-catching social media and print posters for promotions.", "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Banner Design Package", "description": "Web banners, social covers and digital ads in multiple sizes.", "offers": { "@type": "Offer", "price": "55", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Bundle Package", "description": "5 posters, 5 banners, social media kit, unlimited revisions.", "offers": { "@type": "Offer", "price": "179", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
-            { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "Website Design Package", "description": "Modern mobile-ready website UI design, up to 5 pages, Figma/PSD source files.", "offers": { "@type": "Offer", "price": "149", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } }
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Promotion Poster", "description": "Eye-catching social media and print posters for promotions.", "offers": { "@type": "Offer", "price": "9", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Banner Design Package", "description": "Web banners, social covers and digital ads in multiple sizes.", "offers": { "@type": "Offer", "price": "14", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Logo Design Package", "description": "Professional logo design with 3 concepts, 5 revisions, and all file formats (PNG, SVG, PDF, AI).", "offers": { "@type": "Offer", "price": "19", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Menu Design Package", "description": "Professional restaurant and cafe menu design, print-ready PDF.", "offers": { "@type": "Offer", "price": "29", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Website Design Package", "description": "Modern mobile-ready website UI design, up to 5 pages, Figma/PSD source files.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "Bundle Package", "description": "5 posters, 5 banners, social media kit, unlimited revisions.", "offers": { "@type": "Offer", "price": "60", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } },
+            { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "Full Branding Package", "description": "Complete brand identity including logo, business card, letterhead, social media kit, and brand style guide.", "offers": { "@type": "Offer", "price": "100", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } } }
           ]
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
@@ -312,63 +244,15 @@ function PricingPage() {
             </div>
           </FadeIn>
 
-          {/* Pricing Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-32 items-stretch">
-            {pricingPlans.map((plan, index) => (
-              <FadeIn key={plan.name} delay={index * 0.1} y={30} className="h-full">
-                <div
-                  className={`h-full flex flex-col p-5 sm:p-8 rounded-3xl relative transition-all duration-300 ${plan.highlight
-                    ? 'bg-[#042C53] border-2 border-[hsl(var(--primary))] glow-cyan scale-100 lg:scale-105 z-10'
-                    : 'bg-white/90 border border-[#B5D4F4] hover:border-[hsl(var(--primary))] shadow-sm backdrop-blur-sm hover:shadow-md'
-                    }`}
-                >
-                  {plan.badge && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full glow-cyan-subtle">
-                      {plan.badge}
-                    </div>
-                  )}
-
-                  <h3 className={`text-xl font-bold uppercase tracking-wider mb-2 ${plan.highlight ? 'text-white' : 'text-[#042C53]'}`}>{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-2xl sm:text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{plan.price}</span>
-                    {plan.price !== 'Custom Quote' && <span className={`text-sm font-light ml-1 ${plan.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>/ project</span>}
-                  </div>
-                  <p className={`text-sm font-light h-10 mb-8 border-b pb-12 ${plan.highlight ? 'text-white opacity-70 border-[hsla(var(--primary)/0.2)]' : 'text-[#185FA5] border-[#B5D4F4]'}`}>
-                    {plan.description}
-                  </p>
-
-                  <ul className="flex flex-col gap-4 mb-8 flex-grow">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-[hsl(var(--primary))] shrink-0 mt-0.5" />
-                        <span className={`font-light text-sm ${plan.highlight ? 'text-white' : 'text-[#185FA5]'}`}>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button
-                    onClick={() => handleCheckout(plan)}
-                    className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${plan.highlight
-                      ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
-                      : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
-                      }`}
-                  >
-                    {plan.cta}
-                  </button>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          {/* Specialty Packages */}
+          {/* Packages Grid */}
           <FadeIn delay={0.1} y={30}>
             <div className="mb-20 sm:mb-32">
               <h2 className="text-center text-2xl md:text-4xl font-black uppercase mb-4 tracking-wide">
-                <span style={{ color: '#042C53' }}>Specialty </span>
+                <span style={{ color: '#042C53' }}>Our </span>
                 <span style={{ color: '#378ADD' }}>Packages</span>
               </h2>
               <p className="text-center text-[#185FA5] mb-10 sm:mb-16 text-base font-light max-w-2xl mx-auto">
-                Purpose-built packages for specific design needs — straightforward pricing, no guesswork.
+                Clear pricing for every design need — no hidden fees, no guesswork.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 {specialtyPackages.map((pkg, index) => (
