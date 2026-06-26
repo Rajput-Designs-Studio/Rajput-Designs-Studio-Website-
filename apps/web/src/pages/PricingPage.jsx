@@ -311,41 +311,28 @@ function PricingPage() {
                           </li>
                         ))}
                       </ul>
-                      {pkg.payoneerLink ? (
-                        <div className="flex flex-col gap-2">
-                          <a
-                            href={pkg.payoneerLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 text-center block ${
-                              pkg.highlight
-                                ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
-                                : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
-                            }`}
-                          >
-                            Pay with Payoneer
-                          </a>
-                          {pkg.contactOnly && (
-                            <Link
-                              to="/#contact"
-                              className="w-full text-center text-xs text-[#185FA5] hover:text-[hsl(var(--primary))] transition-colors"
-                            >
-                              For Individual order — Contact Me
-                            </Link>
-                          )}
-                        </div>
-                      ) : (
-                        <button
-                          onClick={() => handleCheckout(pkg)}
-                          className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 ${
+                      <div className="flex flex-col gap-2">
+                        <Link
+                          to={`/order/${pkg.checkoutSlug}`}
+                          className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 text-center block ${
                             pkg.highlight
                               ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
                               : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
                           }`}
                         >
                           Get Started
-                        </button>
-                      )}
+                        </Link>
+                        {pkg.payoneerLink && (
+                          <a
+                            href={pkg.payoneerLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full text-center text-xs text-[#185FA5] hover:text-[hsl(var(--primary))] transition-colors py-1"
+                          >
+                            Already ordered? Pay directly →
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </FadeIn>
                 ))}
