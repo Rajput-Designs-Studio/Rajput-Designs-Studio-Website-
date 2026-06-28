@@ -950,22 +950,22 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Rajput Designs Studio — Logo Design, Brand Identity & Graphics | From $35</title>
-        <meta name="description" content="Professional freelance graphic designer — logo design, brand identity, social media & UI/UX. Packages from $35. Fast delivery. 100% satisfaction. Trusted worldwide." />
-        <meta name="keywords" content="freelance graphic designer, hire graphic designer online, logo design service, brand identity designer, affordable logo design, social media graphics designer, menu design service, UI UX designer, website design package, graphic design packages, Rajput Designs Studio, professional branding Pakistan" />
+        <title>Rajput Designs Studio — Freelance Graphic Designer Pakistan | Logo $20 · Branding $100</title>
+        <meta name="description" content="Professional freelance graphic designer in Pakistan — logo design $20, menu design $29, full branding $100. Fast delivery, 100% satisfaction. Trusted by clients worldwide." />
+        <meta name="keywords" content="freelance graphic designer Pakistan, logo design Pakistan, hire graphic designer online, brand identity designer, affordable logo design, social media graphics designer, menu design Pakistan, UI UX designer, graphic design packages, Rajput Designs Studio, graphic designer Jhelum, professional branding Pakistan" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <meta name="author" content="Rajput Designs Studio" />
         <meta name="theme-color" content="#042C53" />
         <link rel="canonical" href="https://www.rajputdesignsstudio.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.rajputdesignsstudio.com/" />
-        <meta property="og:title" content="Rajput Designs Studio — Logo Design, Brand Identity & Graphics | From $35" />
-        <meta property="og:description" content="Professional freelance graphic designer — logo design, brand identity, social media & UI/UX. Packages from $35. Fast delivery. 100% satisfaction. Trusted worldwide." />
+        <meta property="og:title" content="Rajput Designs Studio — Freelance Graphic Designer Pakistan | Logo $20 · Branding $100" />
+        <meta property="og:description" content="Professional freelance graphic designer in Pakistan — logo design $20, menu design $29, full branding $100. Fast delivery, 100% satisfaction. Trusted worldwide." />
         <meta property="og:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <meta property="og:site_name" content="Rajput Designs Studio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Rajput Designs Studio — Logo Design, Brand Identity & Graphics | From $35" />
-        <meta name="twitter:description" content="Professional freelance graphic designer — logo design, brand identity, social media & UI/UX. Packages from $35. Fast delivery. Trusted worldwide." />
+        <meta name="twitter:title" content="Rajput Designs Studio — Freelance Graphic Designer Pakistan | Logo $20 · Branding $100" />
+        <meta name="twitter:description" content="Professional freelance graphic designer in Pakistan — logo $20, menu $29, full branding $100. Fast delivery. Trusted worldwide." />
         <meta name="twitter:image" content="https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
