@@ -978,7 +978,7 @@ function HomePage() {
           "areaServed": ["Jhelum", "Islamabad", "Pakistan", "Worldwide"],
           "address": { "@type": "PostalAddress", "addressLocality": "Jhelum / Islamabad", "addressCountry": "PK" },
           "founder": { "@type": "Person", "name": "Muhammad Ismail" },
-          "email": "hello@rajputdesignsstudio.com",
+          "email": "rajputdesigns.studio@gmail.com",
           "telephone": "+923365843243",
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -1019,7 +1019,7 @@ function HomePage() {
             { "@type": "Question", "name": "Do you offer affordable graphic design packages?",
               "acceptedAnswer": { "@type": "Answer", "text": "Yes. Starter packages begin at $35. Specialty packages including logo, menu, banners, and website design range from $39 to $249." } },
             { "@type": "Question", "name": "Can I hire a graphic designer online?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Muhammad Ismail at Rajput Designs Studio works with clients worldwide from Jhelum and Islamabad, Pakistan. Contact via email at hello@rajputdesignsstudio.com or WhatsApp at +923365843243." } },
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Muhammad Ismail at Rajput Designs Studio works with clients worldwide from Jhelum and Islamabad, Pakistan. Contact via email at rajputdesigns.studio@gmail.com or WhatsApp at +923365843243." } },
             { "@type": "Question", "name": "What graphic design services do you offer?",
               "acceptedAnswer": { "@type": "Answer", "text": "Services include logo design, full brand identity, social media graphics, menu design, promotion posters, banner design, website UI design, and complete branding packages." } },
             { "@type": "Question", "name": "What file formats do you deliver?",
@@ -1338,7 +1338,7 @@ function HomePage() {
                 { q: 'How long does graphic design take?', a: 'Most projects are delivered within 48 hours to 10 days. Logo design: 3–5 days. Full branding packages: 7–10 days. Posters and banners: 48 hours.' },
                 { q: 'What graphic design services do you offer?', a: 'Services include logo design, full brand identity, social media graphics, restaurant menu design, promotion posters, banner design, website UI design, and complete branding packages.' },
                 { q: 'Do you offer affordable graphic design packages?', a: 'Yes. Starter packages begin at $35. Specialty packages including logo, menu, banners, and website design range from $39 to $249.' },
-                { q: 'Can I hire a graphic designer online?', a: 'Yes. Muhammad Ismail at Rajput Designs Studio works with clients worldwide from Jhelum and Islamabad, Pakistan. Contact via email at hello@rajputdesignsstudio.com or WhatsApp at +923365843243.' },
+                { q: 'Can I hire a graphic designer online?', a: 'Yes. Muhammad Ismail at Rajput Designs Studio works with clients worldwide from Jhelum and Islamabad, Pakistan. Contact via email at rajputdesigns.studio@gmail.com or WhatsApp at +923365843243.' },
                 { q: 'Why hire a professional designer instead of using Canva or Fiverr?', a: 'A professional designer creates original, custom designs tailored to your brand — not templates anyone else can use. You get unique concepts, full source files, brand consistency, and a designer who understands your business goals.' },
                 { q: 'What file formats do you deliver?', a: 'All file formats are included: PNG, SVG, AI, PDF, EPS, and JPG. Source files (AI/PSD) are always provided so you own your designs and can make future edits without coming back.' },
                 { q: 'Do you offer unlimited revisions?', a: 'Yes. All packages include unlimited revisions until you are 100% satisfied with the final design. No hidden revision fees — your satisfaction is the only goal.' },
@@ -1492,7 +1492,7 @@ function HomePage() {
                       const name = e.target.name.value;
                       const email = e.target.email.value;
                       const message = e.target.message.value;
-                      window.location.href = `mailto:hello@rajputdesignsstudio.com?subject=${encodeURIComponent(`Project Inquiry from ${name}`)}&body=${encodeURIComponent(`${message}\n\nFrom: ${email}`)}`;
+                      window.location.href = `mailto:rajputdesigns.studio@gmail.com?subject=${encodeURIComponent(`Project Inquiry from ${name}`)}&body=${encodeURIComponent(`${message}\n\nFrom: ${email}`)}`;
                     }}
                     className="flex flex-col gap-4 w-full"
                   >
@@ -1512,7 +1512,7 @@ function HomePage() {
                 <div className="w-full h-px bg-[#B5D4F4]" />
 
                 <div className="flex flex-wrap items-center justify-center gap-4">
-                  <SocialBtn href="https://mail.google.com/mail/?view=cm&to=hello@rajputdesignsstudio.com" icon={<Mail className="w-5 h-5" />} title="Email" />
+                  <SocialBtn href="https://mail.google.com/mail/?view=cm&to=rajputdesigns.studio@gmail.com" icon={<Mail className="w-5 h-5" />} title="Email" />
                   <SocialBtn href="https://wa.me/923365843243" icon={<WhatsAppIcon />} title="WhatsApp" />
                   <SocialBtn href="https://www.behance.net/RajputDesigns" icon={<BehanceIcon />} title="Behance" />
                   <SocialBtn href="https://www.linkedin.com/in/rajputdesigns/" icon={<Linkedin className="w-5 h-5" />} title="LinkedIn" />
