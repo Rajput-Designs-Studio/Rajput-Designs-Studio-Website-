@@ -973,7 +973,7 @@ function HomePage() {
           "name": "Rajput Designs Studio",
           "url": "https://www.rajputdesignsstudio.com/",
           "image": "https://i.postimg.cc/zBhyWx99/Facebook-Cover-Elevate-Your-Brand-with-Design.jpg",
-          "description": "Professional freelance graphic design by Muhammad Ismail in Jhelum and Islamabad, Pakistan — logo design, brand identity, social media graphics, menu design, website UI design. Packages from $35.",
+          "description": "Professional freelance graphic design by Muhammad Ismail in Pakistan — logo design, brand identity, social media graphics, menu design, website UI design. Packages from $35.",
           "priceRange": "$35 - $249",
           "areaServed": ["Jhelum", "Islamabad", "Pakistan", "Worldwide"],
           "address": { "@type": "PostalAddress", "addressLocality": "Jhelum / Islamabad", "addressCountry": "PK" },
@@ -1198,7 +1198,7 @@ function HomePage() {
               </h2>
             </FadeIn>
             <AnimatedText
-              text="My name is Muhammad Ismail — a freelance graphic designer based in Jhelum and Islamabad, Pakistan. With 1+ year of professional experience in logo design, brand identity, social media graphics, and digital visuals, I use Photoshop, Illustrator, Figma, and InDesign to turn ideas into clean, professional designs that connect with the right people."
+              text="My name is Muhammad Ismail — a freelance graphic designer based in Pakistan. With 1+ year of professional experience in logo design, brand identity, social media graphics, and digital visuals, I use Photoshop, Illustrator, Figma, and InDesign to turn ideas into clean, professional designs that connect with the right people."
               className="text-[#0D1F3C] font-medium text-center leading-relaxed"
               style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }}
             />
