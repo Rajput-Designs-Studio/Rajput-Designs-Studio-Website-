@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight, ZoomIn, X, ArrowRight } from 'lucide-react';
+import { WIDE_FORMAT_CATEGORIES } from '@/data/projects.js';
 
 function ProjectCard({ project, index, totalCards }) {
+  const isWideFormat = WIDE_FORMAT_CATEGORIES.includes(project.category);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -191,7 +193,11 @@ function ProjectCard({ project, index, totalCards }) {
           </div>
 
           {/* Right Image Area */}
-          <div className="w-full lg:w-1/2 h-[120px] sm:h-[180px] md:h-[240px] lg:h-full relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px]">
+          <div
+            className={`w-full lg:w-1/2 relative overflow-hidden group/image rounded-b-[24px] sm:rounded-b-[32px] md:rounded-b-[40px] lg:rounded-b-none lg:rounded-r-[40px] ${
+              isWideFormat ? 'aspect-video' : 'h-[120px] sm:h-[180px] md:h-[240px] lg:h-full'
+            }`}
+          >
             {hasMultipleImages ? (
               <div className="h-full w-full relative">
                 <div className="overflow-hidden h-full w-full" ref={emblaRef}>

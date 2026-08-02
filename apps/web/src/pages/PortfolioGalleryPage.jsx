@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, ChevronLeft, ChevronRight, Play, Pause, X, ZoomIn } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import FadeIn from '@/components/FadeIn.jsx';
-import { projects } from '@/data/projects.js';
+import { projects, WIDE_FORMAT_CATEGORIES } from '@/data/projects.js';
 
-const filters = ['All', 'Print & Digital', 'Print Design', 'Digital Design', 'Web Design', 'UI/UX App Design'];
+// Filter buttons are generated from whatever categories exist in projects.js —
+// add a project with a new category and it shows up here automatically.
+const filters = ['All', ...Array.from(new Set(projects.map((p) => p.category)))];
 
 // Lightbox Component
 function Lightbox({ images, startIndex, projectName, onClose }) {
@@ -110,7 +112,7 @@ function Lightbox({ images, startIndex, projectName, onClose }) {
 }
 
 // Carousel Component
-function GalleryCardCarousel({ images, name, onImageClick }) {
+function GalleryCardCarousel({ images, name, onImageClick, isWideFormat }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -152,7 +154,9 @@ function GalleryCardCarousel({ images, name, onImageClick }) {
 
   return (
     <div
-      className="relative h-48 sm:h-64 overflow-hidden group/carousel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))]"
+      className={`relative overflow-hidden group/carousel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))] ${
+        isWideFormat ? 'aspect-video w-full' : 'h-48 sm:h-64'
+      }`}
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
@@ -226,8 +230,7 @@ function PortfolioGalleryPage() {
 
   const filteredProjects = projects.filter(project => {
     if (activeFilter === 'All') return true;
-    if (activeFilter === 'Digital Design' && project.category.includes('Digital')) return true;
-    return project.category.includes(activeFilter);
+    return project.category === activeFilter;
   });
 
   return (
@@ -322,6 +325,7 @@ function PortfolioGalleryPage() {
               const hasMultipleImages = project.images && project.images.length > 1;
               const displayImage = project.image || (project.images && project.images[0]);
               const allImages = project.images || [project.image];
+              const isWideFormat = WIDE_FORMAT_CATEGORIES.includes(project.category);
 
               return (
                 <FadeIn key={project.id} delay={index * 0.1} y={30}>
@@ -333,6 +337,7 @@ function PortfolioGalleryPage() {
                           images={project.images}
                           name={project.name}
                           onImageClick={(i) => openLightbox(project.images, i, project.name)}
+                          isWideFormat={isWideFormat}
                         />
                         <div className="absolute top-4 right-4 z-20 glass-panel px-3 py-1 rounded-full text-[hsl(var(--primary))] text-xs font-bold uppercase tracking-wider pointer-events-none">
                           {project.category}
@@ -340,7 +345,9 @@ function PortfolioGalleryPage() {
                       </div>
                     ) : (
                       <div
-                        className="relative h-48 sm:h-64 overflow-hidden cursor-zoom-in"
+                        className={`relative overflow-hidden cursor-zoom-in ${
+                          isWideFormat ? 'aspect-video w-full' : 'h-48 sm:h-64'
+                        }`}
                         onClick={() => openLightbox(allImages, 0, project.name)}
                       >
                         <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-20 group-hover:opacity-0 transition-opacity z-10 pointer-events-none" />
