@@ -3,24 +3,20 @@
 export const WIDE_FORMAT_CATEGORIES = ['Billboard Designs', 'Business Card'];
 
 export const projects = [
-  {
+    {
     id: 1,
     number: '01',
-    name: "Print & Digital Design - Food & Restaurant Branding",
-    category: 'Print & Digital',
-    description: "Comprehensive design suite for food and restaurant brands including promotional flyers, menu designs, and marketing materials. Features bold typography, vibrant color schemes, compelling visual hierarchy, and strategic use of food imagery to drive customer engagement and brand recognition. Includes designs for multiple restaurant concepts with consistent branding and promotional messaging.",
+    name: "Social Media Post Set",
+    category: 'Social Media Posts',
+    description: "Description of this social media project.",
     images: [
       'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/7ea46274f50ddf435f18c05def36b613.png',
-      'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/6ff4a4421ec6b2f271683aff372cae47.jpg',
-      'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/0d539764c663a87bef648a3a5ac4f680.jpg',
-      'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/137d29c2299119a30e31a18b3ddc35a0.jpg',
-      'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/6108b17e80dd90eda7d6f829a1638469.jpg',
-      'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/3b85874f92af44f489b1b30d55460856.png',
-      'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/1851e7253a46ce84ad0f7ef916a00af6.png'
+      'https://i.postimg.cc/05nbMtn9/Untitled-design.jpg',
+      'https://i.postimg.cc/tgzHScYW/Untitled-design-1.jpg',
     ],
     role: 'Graphic Designer',
-    year: '2025',
-    client: "Multiple Food & Restaurant Brands"
+    year: '2026',
+    client: "lavish"
   },
   {
     id: 2,
@@ -86,21 +82,6 @@ export const projects = [
   {
     id: 6,
     number: '06',
-    name: "Social Media Post Set",
-    category: 'Social Media Posts',
-    description: "Description of this social media project.",
-    images: [
-      'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/7ea46274f50ddf435f18c05def36b613.png',
-      'https://i.postimg.cc/05nbMtn9/Untitled-design.jpg',
-      'https://i.postimg.cc/tgzHScYW/Untitled-design-1.jpg',
-    ],
-    role: 'Graphic Designer',
-    year: '2026',
-    client: "lavish"
-  },
-  {
-    id: 7,
-    number: '07',
     name: "Business Card Design",
     category: 'Business Card',
     description: "Description of this business card project. Displayed at 1920x1080.",
@@ -113,8 +94,8 @@ export const projects = [
     client: "Client Name"
   },
   {
-    id: 8,
-    number: '08',
+    id: 7,
+    number: '07',
     name: "Packaging Design",
     category: 'Packaging Designs',
     description: "A commissioned packaging design project for Pakola Ice Cream Soda Flavoured Milk (235ml), developed as a full Tetra Brik Aseptic layout. The concept draws on Pakistan's national identity — incorporating the Minar-e-Pakistan, Pakistan's geographic outline, and the national green and white color palette to create a bold, patriotic visual that stays true to Pakola's brand heritage. Deliverables included the complete die-cut flat layout with all panel faces, a photorealistic 3D carton mockup, multilingual label content (English, French, Arabic), nutritional information table, Halal and Pakistan Standards compliance badges, and barcode integration. Tools: Adobe Illustrator, Adobe Photoshop Output: Print-ready AI + PDF, PNG mockup",
