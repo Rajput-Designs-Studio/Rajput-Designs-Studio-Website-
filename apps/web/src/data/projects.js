@@ -1,3 +1,7 @@
+// Categories displayed at 1920x1080 (16:9) on the homepage and Projects page.
+// Add or remove category names here — everything else keeps its normal crop.
+export const WIDE_FORMAT_CATEGORIES = ['Billboard Designs', 'Business Card'];
+
 export const projects = [
   {
     id: 1,
