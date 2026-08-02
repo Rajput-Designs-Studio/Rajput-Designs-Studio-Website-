@@ -8,7 +8,7 @@ export const projects = [
     number: '01',
     name: "Social Media Post Set",
     category: 'Social Media Posts',
-    description: "Description of this social media project.",
+    description: "High-converting social media post designs engineered with strategic visual hierarchy, engaging graphic layouts, and brand-consistent aesthetics to maximize audience engagement across platforms.",
     images: [
       'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/7ea46274f50ddf435f18c05def36b613.png',
       'https://i.postimg.cc/05nbMtn9/Untitled-design.jpg',
@@ -54,7 +54,7 @@ export const projects = [
     number: '04',
     name: "Restaurant Menu Design",
     category: 'Menu Designs',
-    description: "Description of this menu design project.",
+    description: "A comprehensive restaurant menu design built with strategic visual hierarchy, custom typography, and print-ready CMYK formatting to elevate brand identity and drive sales.",
     images: [
       'https://i.postimg.cc/yY787FCM/Dani-s-Fast-Food-Menu-Page-1.jpg',
       'https://i.postimg.cc/28CSC4fY/Dani-s-Fast-Food-Menu-Page-2.jpg',
@@ -84,14 +84,14 @@ export const projects = [
     number: '06',
     name: "Business Card Design",
     category: 'Business Card',
-    description: "Description of this business card project. Displayed at 1920x1080.",
+    description: "A minimalist, high-impact business card design crafted with precise typography, custom layout structure, and print-ready vector assets to leave a lasting professional impression.",
     images: [
       'https://i.postimg.cc/Hk2Sf19C/S-E-W-Card-1.jpg',
       'https://i.postimg.cc/htrCHR1S/S-E-W-Card.jpg',
     ],
     role: 'Graphic Designer',
     year: '2026',
-    client: "Client Name"
+    client: "Saddar Engineering Works"
   },
   {
     id: 7,
