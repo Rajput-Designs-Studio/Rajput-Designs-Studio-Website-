@@ -165,7 +165,7 @@ function ProjectCard({ project, index, totalCards }) {
               </h3>
             </div>
 
-            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 line-clamp-2 lg:line-clamp-none">
+            <p className="text-[#185FA5] font-light leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 line-clamp-3 lg:line-clamp-4">
               {project.description}
             </p>
 
