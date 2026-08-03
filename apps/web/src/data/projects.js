@@ -105,7 +105,7 @@ export const projects = [
     ],
     role: 'Graphic Designer',
     year: '2026',
-    client: "A commissioned packaging design project for Pakola Ice Cream Soda Flavoured Milk (235ml)"
+    client: "Pakola"
   },
   {
     id: 8,
