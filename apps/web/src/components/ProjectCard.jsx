@@ -13,7 +13,10 @@ function ProjectCard({ project, index, totalCards }) {
     offset: ['start end', 'start 15%']
   });
 
-  const targetScale = 1 - (totalCards - 1 - index) * 0.04;
+  // Capped so the stacking effect stays subtle no matter how many total projects exist —
+  // uncapped, this shrank early cards too aggressively once the list grew past ~3-4 items.
+  const cardsBehind = Math.min(totalCards - 1 - index, 3);
+  const targetScale = 1 - cardsBehind * 0.04;
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
   const hasMultipleImages = project.images && project.images.length > 1;
@@ -142,7 +145,7 @@ function ProjectCard({ project, index, totalCards }) {
         </div>
       )}
 
-      <div ref={ref} className="h-auto lg:min-h-[560px] lg:h-[85vh] flex items-center justify-center relative mb-6 sm:mb-8 md:mb-10 lg:mb-12" style={{ top: `${index * 30}px` }}>
+      <div ref={ref} className="h-auto lg:min-h-[560px] lg:h-[85vh] flex items-center justify-center relative mb-6 sm:mb-8 md:mb-10 lg:mb-12" style={{ top: `${Math.min(index, 3) * 30}px` }}>
         <motion.div
           style={{ scale, background: '#F5F9FF', border: '1px solid #B5D4F4' }}
           className="sticky top-24 md:top-32 w-full h-auto lg:h-full max-h-none lg:max-h-[700px] rounded-[24px] sm:rounded-[32px] md:rounded-[40px] overflow-hidden flex flex-col lg:flex-row transition-colors duration-500"
