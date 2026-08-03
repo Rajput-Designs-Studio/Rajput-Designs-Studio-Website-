@@ -31,7 +31,7 @@ const specialtyPackages = [
     price: '$20',
     description: 'Web banners, social covers & digital ads',
     subNote: '2 Sizes Included',
-    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/137d29c2299119a30e31a18b3ddc35a0.jpg',
+    image: 'https://i.postimg.cc/59LX44Y5/SEW-Bill-Board-Banner-01-01.jpg',
     features: [
       '2 Banner Sizes',
       '2 Design Concepts',
@@ -126,7 +126,11 @@ const specialtyPackages = [
     icon: '🎨',
     price: '$100',
     description: 'Complete brand identity from scratch',
-    image: 'https://horizons-cdn.hostinger.com/a0966b37-06c7-4331-9849-3d170f68d2ed/7ea46274f50ddf435f18c05def36b613.png',
+    image: 'https://i.postimg.cc/Hk2Sf19C/S-E-W-Card-1.jpg',
+    images: [
+      'https://i.postimg.cc/Hk2Sf19C/S-E-W-Card-1.jpg',
+      'https://i.postimg.cc/htrCHR1S/S-E-W-Card.jpg',
+    ],
     features: [
       'Logo Design (3 Concepts)',
       'Business Card Design',
@@ -267,58 +271,115 @@ function PricingPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 {specialtyPackages.map((pkg, index) => (
-                  <FadeIn key={pkg.name} delay={index * 0.08} y={30} className="h-full">
-                    <div className={`h-full flex flex-col p-5 sm:p-7 rounded-3xl relative transition-all duration-300 ${
-                      pkg.highlight
-                        ? 'bg-[#042C53] border-2 border-[hsl(var(--primary))] glow-cyan'
-                        : 'bg-white/90 border border-[#B5D4F4] hover:border-[hsl(var(--primary))] shadow-sm backdrop-blur-sm hover:shadow-md'
-                    }`}>
+                  <FadeIn
+                    key={pkg.name}
+                    delay={index * 0.08}
+                    y={30}
+                    className={`h-full ${pkg.highlight ? 'sm:col-span-2 lg:col-span-3' : ''}`}
+                  >
+                    {pkg.highlight ? (
+                      // Featured / Best Value package — wide banner spanning the full row
+                      <div className="bg-[#042C53] border-2 border-[hsl(var(--primary))] glow-cyan rounded-3xl relative overflow-hidden flex flex-col md:flex-row">
+                        {pkg.badge && (
+                          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full glow-cyan-subtle z-10">
+                            {pkg.badge}
+                          </div>
+                        )}
+                        {pkg.image && (
+                          <div
+                            className="relative w-full md:w-2/5 h-56 md:h-auto overflow-hidden cursor-zoom-in bg-[#031E3D] shrink-0"
+                            onClick={() => setLightbox({ images: pkg.images || [pkg.image], index: 0 })}
+                          >
+                            <img
+                              src={pkg.image}
+                              alt={`${pkg.name} sample`}
+                              className="w-full h-full object-contain"
+                              loading="lazy"
+                            />
+                            <div className="absolute bottom-3 left-4">
+                              <span className="text-[10px] text-white font-semibold opacity-75 uppercase tracking-widest">Sample Work</span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="flex flex-col flex-grow p-6 sm:p-8 md:p-10">
+                          <div className="text-3xl mb-3">{pkg.icon}</div>
+                          <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-wider mb-1 text-white">{pkg.name}</h3>
+                          <p className="text-sm mb-3 text-white opacity-60">{pkg.description}</p>
+                          <div className="mb-5">
+                            <span className="text-3xl sm:text-4xl font-black text-[hsl(var(--primary))] glow-text-cyan">{pkg.price}</span>
+                            <span className="text-sm font-light ml-1 text-white opacity-60">/ project</span>
+                          </div>
+                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                            {pkg.features.map((f, i) => (
+                              <li key={i} className="flex items-start gap-3">
+                                <Check className="w-4 h-4 text-[hsl(var(--primary))] shrink-0 mt-0.5" />
+                                <span className="font-light text-sm text-white">{f}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
+                            <Link
+                              to={`/order/${pkg.checkoutSlug}`}
+                              className="py-3 px-8 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 text-center bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle"
+                            >
+                              Get Started
+                            </Link>
+                            {pkg.payoneerLink && (
+                              <a
+                                href={pkg.payoneerLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-center text-xs text-white opacity-70 hover:opacity-100 hover:text-[hsl(var(--primary))] transition-colors"
+                              >
+                                Already ordered? Pay directly →
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="h-full flex flex-col p-5 sm:p-7 rounded-3xl relative transition-all duration-300 bg-white/90 border border-[#B5D4F4] hover:border-[hsl(var(--primary))] shadow-sm backdrop-blur-sm hover:shadow-md">
                       {pkg.badge && (
                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full glow-cyan-subtle z-10">
                           {pkg.badge}
                         </div>
                       )}
                       {pkg.image && (
-                        <div className="relative -mx-5 sm:-mx-7 -mt-5 sm:-mt-7 mb-5 h-44 overflow-hidden rounded-t-3xl cursor-zoom-in"
+                        <div className="relative -mx-5 sm:-mx-7 -mt-5 sm:-mt-7 mb-5 h-48 sm:h-56 overflow-hidden rounded-t-3xl cursor-zoom-in bg-[#042C53]"
                           onClick={() => setLightbox({ images: pkg.images || [pkg.image], index: 0 })}>
                           <img
                             src={pkg.image}
                             alt={`${pkg.name} sample`}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(4,44,83,0.55)]" />
                           <div className="absolute bottom-3 left-4">
-                            <span className="text-[10px] text-white font-semibold opacity-75 uppercase tracking-widest">Sample Work</span>
+                            <span className="text-[10px] text-white font-semibold opacity-75 uppercase tracking-widest bg-black/30 px-2 py-1 rounded-full">Sample Work</span>
                           </div>
                         </div>
                       )}
                       <div className="text-3xl mb-3">{pkg.icon}</div>
-                      <h3 className={`text-lg font-bold uppercase tracking-wider mb-1 ${pkg.highlight ? 'text-white' : 'text-[#042C53]'}`}>{pkg.name}</h3>
-                      <p className={`text-xs mb-1 ${pkg.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>{pkg.description}</p>
+                      <h3 className="text-lg font-bold uppercase tracking-wider mb-1 text-[#042C53]">{pkg.name}</h3>
+                      <p className="text-xs mb-1 text-[#185FA5]">{pkg.description}</p>
                       {pkg.subNote && (
                         <p className="text-xs font-semibold text-[hsl(var(--primary))] mb-3">{pkg.subNote}</p>
                       )}
                       <div className="mb-5">
                         <span className="text-2xl sm:text-3xl font-black text-[hsl(var(--primary))] glow-text-cyan">{pkg.price}</span>
-                        <span className={`text-sm font-light ml-1 ${pkg.highlight ? 'text-white opacity-60' : 'text-[#185FA5]'}`}>/ project</span>
+                        <span className="text-sm font-light ml-1 text-[#185FA5]">/ project</span>
                       </div>
                       <ul className="flex flex-col gap-3 mb-6 flex-grow">
                         {pkg.features.map((f, i) => (
                           <li key={i} className="flex items-start gap-3">
                             <Check className="w-4 h-4 text-[hsl(var(--primary))] shrink-0 mt-0.5" />
-                            <span className={`font-light text-sm ${pkg.highlight ? 'text-white' : 'text-[#185FA5]'}`}>{f}</span>
+                            <span className="font-light text-sm text-[#185FA5]">{f}</span>
                           </li>
                         ))}
                       </ul>
                       <div className="flex flex-col gap-2">
                         <Link
                           to={`/order/${pkg.checkoutSlug}`}
-                          className={`w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 text-center block ${
-                            pkg.highlight
-                              ? 'bg-[hsl(var(--primary))] text-[hsl(var(--background))] hover:brightness-110 glow-cyan-subtle'
-                              : 'bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]'
-                          }`}
+                          className="w-full py-3 rounded-xl font-bold uppercase tracking-wider transition-all duration-300 text-center block bg-transparent text-[#042C53] hover:bg-[hsl(var(--primary))] hover:text-white border border-[hsl(var(--primary))]"
                         >
                           Get Started
                         </Link>
@@ -334,6 +395,7 @@ function PricingPage() {
                         )}
                       </div>
                     </div>
+                    )}
                   </FadeIn>
                 ))}
               </div>
