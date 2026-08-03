@@ -162,7 +162,7 @@ function GalleryCardCarousel({ images, name, onImageClick, isWideFormat }) {
     >
       <div className="absolute inset-0 bg-[hsl(var(--background))] opacity-20 group-hover:opacity-0 transition-opacity z-10 pointer-events-none" />
 
-      <div className="overflow-hidden h-full w-full" ref={emblaRef}>
+      <div className="overflow-hidden h-full w-full bg-[#042C53]" ref={emblaRef}>
         <div className="flex h-full w-full">
           {images.map((img, i) => (
             <div
@@ -173,7 +173,7 @@ function GalleryCardCarousel({ images, name, onImageClick, isWideFormat }) {
               <img
                 src={img}
                 alt={`${name} slide ${i + 1}`}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               {/* Zoom hint */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity z-10 pointer-events-none">
@@ -345,7 +345,7 @@ function PortfolioGalleryPage() {
                       </div>
                     ) : (
                       <div
-                        className={`relative overflow-hidden cursor-zoom-in ${
+                        className={`relative overflow-hidden cursor-zoom-in bg-[#042C53] ${
                           isWideFormat ? 'aspect-video w-full' : 'h-48 sm:h-64'
                         }`}
                         onClick={() => openLightbox(allImages, 0, project.name)}
@@ -354,7 +354,7 @@ function PortfolioGalleryPage() {
                         <img
                           src={displayImage}
                           alt={project.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
                         />
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
                           <div className="glass-panel p-3 rounded-full">

@@ -200,7 +200,7 @@ function ProjectDetailPage() {
 
           {/* Hero Carousel / Image */}
           <FadeIn delay={0} y={30}>
-            <div className="relative rounded-3xl overflow-hidden h-[45vw] min-h-[240px] max-h-[620px] mb-12 sm:mb-16 group">
+            <div className="relative rounded-3xl overflow-hidden h-[45vw] min-h-[240px] max-h-[620px] mb-12 sm:mb-16 group bg-[#042C53]">
               {allImages.length > 1 ? (
                 <>
                   <div className="overflow-hidden h-full w-full" ref={emblaRef}>
@@ -211,7 +211,7 @@ function ProjectDetailPage() {
                           className="flex-[0_0_100%] min-w-0 h-full cursor-zoom-in"
                           onClick={() => openLightbox(i)}
                         >
-                          <img src={img} alt={`${project.name} ${i + 1}`} className="w-full h-full object-cover" />
+                          <img src={img} alt={`${project.name} ${i + 1}`} className="w-full h-full object-contain" />
                         </div>
                       ))}
                     </div>
@@ -258,7 +258,7 @@ function ProjectDetailPage() {
                 </>
               ) : (
                 <div className="h-full w-full cursor-zoom-in" onClick={() => openLightbox(0)}>
-                  <img src={allImages[0]} alt={project.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={allImages[0]} alt={project.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                     <div className="bg-white/80 rounded-full p-3">
                       <ZoomIn className="w-6 h-6 text-[#042C53]" />
@@ -326,13 +326,13 @@ function ProjectDetailPage() {
                   {allImages.map((img, i) => (
                     <div
                       key={i}
-                      className="relative rounded-2xl overflow-hidden h-52 sm:h-64 cursor-zoom-in group/tile"
+                      className="relative rounded-2xl overflow-hidden h-52 sm:h-64 cursor-zoom-in group/tile bg-[#042C53]"
                       onClick={() => openLightbox(i)}
                     >
                       <img
                         src={img}
                         alt={`${project.name} ${i + 1}`}
-                        className="w-full h-full object-cover group-hover/tile:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-contain group-hover/tile:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover/tile:bg-black/30 transition-colors flex items-center justify-center">
                         <div className="opacity-0 group-hover/tile:opacity-100 transition-opacity bg-white/90 rounded-full p-2.5">

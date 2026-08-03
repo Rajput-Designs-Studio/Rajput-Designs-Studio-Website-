@@ -200,7 +200,7 @@ function ProjectCard({ project, index, totalCards }) {
           >
             {hasMultipleImages ? (
               <div className="h-full w-full relative">
-                <div className="overflow-hidden h-full w-full" ref={emblaRef}>
+                <div className="overflow-hidden h-full w-full bg-[#0A1F3D]" ref={emblaRef}>
                   <div className="flex h-full w-full">
                     {project.images.map((img, i) => (
                       <div
@@ -211,7 +211,7 @@ function ProjectCard({ project, index, totalCards }) {
                         <img
                           src={img}
                           alt={`${project.name} slide ${i + 1}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                     ))}
@@ -253,11 +253,11 @@ function ProjectCard({ project, index, totalCards }) {
                 </div>
               </div>
             ) : (
-              <div className="h-full w-full relative cursor-zoom-in" onClick={() => openLightbox(0)}>
+              <div className="h-full w-full relative cursor-zoom-in bg-[#0A1F3D]" onClick={() => openLightbox(0)}>
                 <img
                   src={displayImage}
                   alt={project.name}
-                  className="w-full h-full object-cover group-hover/image:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-contain group-hover/image:scale-105 transition-transform duration-700 ease-out"
                 />
                 {/* Zoom hint */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity z-10 pointer-events-none">
